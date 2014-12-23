@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 /**
  *
- * @author Rodolfo Melo, Henrique Melo, Xico
+ * @author Rodolfo Melo, Henrique Melo, Xica
  */
 public abstract class Alert implements Serializable{
 
