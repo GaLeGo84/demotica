@@ -30,7 +30,7 @@ public class File{
         return null;
     }
     
-    public void saveHome(Object home){
+    public static void saveHome(Object home){
         try{
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("home.dat"));
             oos.writeObject(home);

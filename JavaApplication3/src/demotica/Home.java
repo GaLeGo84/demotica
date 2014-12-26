@@ -57,6 +57,7 @@ public class Home implements Serializable{
     public void addDivisoes(Division div){
         divisions.add(div);
     }
+
     
     //Lista de sensores de movimento
     private LinkedList<IntruderAlert> listIntruderAlert(){

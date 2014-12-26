@@ -6,6 +6,7 @@
 package Swing;
 
 import demotica.Dashboard;
+import demotica.File;
 import java.awt.Font;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -807,6 +808,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton3.setText("Criar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -815,9 +821,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton4.setText("Limpar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
             }
         });
 
@@ -981,10 +987,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         JHome.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         JHome.setVisible(false);
         JCreateDivision.setVisible(true);
@@ -1077,7 +1079,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         load.setVisible(true);
         bar.setVisible(true);
-        Dashboard.carregarDados();
+        Dashboard.loadData();
         new Thread(new Timer()).start();
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -1085,6 +1087,22 @@ public class DashBoardExe extends javax.swing.JFrame {
         JBegin.setVisible(false);
         JCreateHome.setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        int nFloors = Integer.parseInt(jTextField1.getText());
+        int valueNL = Integer.parseInt(jTextField2.getText());
+        int valueW = Integer.parseInt(jTextField3.getText());
+        Dashboard.criarHome(nFloors, valueNL, valueW);
+        Dashboard.saveData();
+        JCreateHome.setVisible(false);
+        JHome.setVisible(true);
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments

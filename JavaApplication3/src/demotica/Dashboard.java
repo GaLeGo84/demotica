@@ -21,18 +21,21 @@ public class Dashboard implements Serializable{
         return home;
     }
 
+    public static void setHome(Home home) {
+        Dashboard.home = home;
+    }
+
     
-    public static Home carregarDados(){
+    public static void loadData(){
         home = File.loadHome();
-        return home;
     }
     
-    public static int[] a(){
-        int cont[]=null;
-        for(int i=0;i<Dashboard.getHome().getnFloors();i++)
-            cont[i]=i;
-        
-        return cont;
+    public static void saveData(){
+        File.saveHome(home);
+    }
+    
+    public static Home criarHome(int nFloors, int valueNL, int valueW){
+        return new Home(nFloors, valueNL, valueW);
     }
     
 }
