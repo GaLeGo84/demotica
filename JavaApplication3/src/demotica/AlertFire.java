@@ -13,4 +13,9 @@ import java.io.Serializable;
  */
 public class AlertFire extends Alert implements Serializable{
 
+    public AlertFire(Contact email) {
+        super(email);
+    }
+
+    
 }

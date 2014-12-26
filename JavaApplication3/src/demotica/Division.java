@@ -230,7 +230,7 @@ public class Division implements Serializable{
     }
     
     //mudar a intensidade da luz
-    public void changeLightIntensity(Light l, float value){
+    public void changeLightIntensity(Light l, int value){
         float valor;
         for (Light li:lights){
             if(li.getIntensity()==l.getIntensity())

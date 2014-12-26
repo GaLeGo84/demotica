@@ -154,8 +154,8 @@ public class main {
         File fi = new File();
         Home h = fi.loadHome();
         System.out.println(System.currentTimeMillis());
-        Dashboard dash= new Dashboard(home);
-        dash.MenuDivisions();
+        /*Dashboard dash= new Dashboard(home);
+        dash.MenuDivisions();*/
         
         
         //fi.saveHome(home);
