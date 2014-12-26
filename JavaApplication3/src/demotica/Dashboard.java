@@ -1,6 +1,8 @@
 package demotica;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -32,4 +34,5 @@ public class Dashboard implements Serializable{
         
         return cont;
     }
+    
 }

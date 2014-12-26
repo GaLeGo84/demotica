@@ -9,14 +9,13 @@ import java.io.Serializable;
  */
 /**
  *
- * @author Rodolfo Melo, Henrique Melo, Xicasssssssssssss
+ * @author Rodolfo Melo, Henrique Melo, Xico
  */
 public abstract class Alert implements Serializable{
 
     private boolean status;
     private Contact email;
     private boolean detection;
-    private int asaADSF;
 
     public Alert(Contact email) {
         this.email = email;

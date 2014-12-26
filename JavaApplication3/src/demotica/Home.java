@@ -106,20 +106,12 @@ public class Home implements Serializable{
                         lia.setDetection(true);                            
                     }       
                 }
-     }
-    
-    
-    
+     }   
     /*public void onAlertGasSmoke(){
         for (Division div:divisions)
             if(div.verifyOnSensorGas()==true || div.verifyOnSensorSmoke()==true)
                 
                 
     }*/
-
-    @Override
-    public String toString() {
-        return "Home{" + "nFloors=" + nFloors + ", alerts=" + alerts + ", divisions=" + divisions + '}';
-    }
     
 }
