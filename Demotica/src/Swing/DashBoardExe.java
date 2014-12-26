@@ -592,6 +592,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jButton7.setText("Concluido");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -716,6 +721,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton6.setText("Sair");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -1089,9 +1099,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
+        jTextField1.setText(null);
+        jTextField2.setText(null);
+        jTextField3.setText(null);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -1103,6 +1113,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         JCreateHome.setVisible(false);
         JHome.setVisible(true);
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+       JCreateDivision.setVisible(false);
+       JHome.setVisible(true);
+    }//GEN-LAST:event_jButton7MouseClicked
 
     /**
      * @param args the command line arguments
