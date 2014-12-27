@@ -118,7 +118,7 @@ public class Division implements Serializable{
    }
     
     //Lista de portas exteriores de Entrada
-    public LinkedList<ExteriorEntranceDoor> listSensorExteriorEntranceDoor(){
+    public LinkedList<ExteriorEntranceDoor> listExteriorEntranceDoor(){
        LinkedList<ExteriorEntranceDoor> aux=new LinkedList<>();
        for (Door doo:doors){
            if(doo instanceof ExteriorEntranceDoor)
@@ -156,6 +156,14 @@ public class Division implements Serializable{
        }
        return aux;
    }
+    
+    public int nDoors(){
+        return getDoors().size();
+    }
+    
+    public int nDoorsExtern(){
+        return listExteriorEntranceDoor().size();
+    }
     
     //média da luz natural da sala
     public float mediaNaturaLight(){
@@ -291,7 +299,7 @@ public class Division implements Serializable{
     public void onComponentSegurança(){
         home.onAlertMoviment();
         
-        for(ExteriorEntranceDoor doo:listSensorExteriorEntranceDoor())
+        for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
         
         lockWindows();
