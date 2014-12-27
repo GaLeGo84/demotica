@@ -102,7 +102,7 @@ public class Home implements Serializable{
     //Tentativa de abrir a janela e a porta
     public void alerTryOpenwindowsDoors(){
         for (Division div:divisions)
-            for(ExteriorEntranceDoor lsed:div.listSensorExteriorEntranceDoor())
+            for(ExteriorEntranceDoor lsed:div.listExteriorEntranceDoor())
                 if(lsed.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
                     for(IntruderAlert lia:listIntruderAlert()){
                         lia.setDetection(true);                            
