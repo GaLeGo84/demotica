@@ -6,8 +6,10 @@
 package Swing;
 
 import demotica.Dashboard;
+import demotica.Division;
 import demotica.File;
 import java.awt.Font;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -23,7 +25,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     public DashBoardExe() {
         initComponents();
         load.setVisible(false);
-        bar.setVisible(false);        
+        bar.setVisible(false);
     }
 
     /**
@@ -518,6 +520,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         JCreateDivision.setVisible(false);
         JCreateDivision.setEnabled(false);
         JCreateDivision.setPreferredSize(new java.awt.Dimension(600, 400));
+        JCreateDivision.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                JCreateDivisionAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel7.setText("DIVISÕES");
@@ -535,12 +546,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel11.setText("Nº de luzes:");
 
         comboFloor.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        comboFloor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "r/c", "1º", "2º" }));
-        comboFloor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboFloorActionPerformed(evt);
-            }
-        });
 
         jLabel12.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel12.setText("Piso:");
@@ -691,6 +696,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         JHome.setVisible(false);
         JHome.setEnabled(false);
         JHome.setPreferredSize(new java.awt.Dimension(600, 397));
+        JHome.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                JHomeAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -698,9 +712,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton5.setText("Divisões");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
             }
         });
 
@@ -726,27 +740,17 @@ public class DashBoardExe extends javax.swing.JFrame {
                 jButton6MouseClicked(evt);
             }
         });
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
 
         jButton8.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton8.setText("Configurar");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
             }
         });
 
         jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton9.setText("Alterar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout JHomeLayout = new javax.swing.GroupLayout(JHome);
         JHome.setLayout(JHomeLayout);
@@ -796,6 +800,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         JCreateHome.setVisible(false);
         JCreateHome.setEnabled(false);
         JCreateHome.setName("JCreateHome"); // NOI18N
+        JCreateHome.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                JCreateHomeAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -821,11 +834,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -992,27 +1000,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        JCreateHome.setVisible(false);
-        JHome.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        JHome.setVisible(false);
-        JCreateDivision.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void tblDivisionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDivisionsMouseClicked
         
     }//GEN-LAST:event_tblDivisionsMouseClicked
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void comboFloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboFloorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboFloorActionPerformed
 
     private void addBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBActionPerformed
         //lMessage.setText("");
@@ -1070,14 +1060,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         JHome.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -1123,6 +1105,34 @@ public class DashBoardExe extends javax.swing.JFrame {
        JHome.setVisible(true);
     }//GEN-LAST:event_jButton7MouseClicked
 
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        JHome.setVisible(false);
+        JCreateHome.setVisible(true);
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        JHome.setVisible(false);
+        JCreateDivision.setVisible(true);        
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void JCreateHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JCreateHomeAncestorAdded
+        jTextField1.setText(String.valueOf(Dashboard.getHome().getnFloors()));
+        jTextField2.setText(String.valueOf(Dashboard.getHome().getValueNL()));
+        jTextField3.setText(String.valueOf(Dashboard.getHome().getValueW()));
+    }//GEN-LAST:event_JCreateHomeAncestorAdded
+
+    private void JCreateDivisionAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JCreateDivisionAncestorAdded
+        nFloors();
+    }//GEN-LAST:event_JCreateDivisionAncestorAdded
+
+    private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        List<Division> a = Dashboard.getHome().getDivisions();
+        //modelo.getDataVector().clear();
+        for(Division div:a)
+            modelo.addRow(new Object[]{div.getName(),div.getFloor()});
+    }//GEN-LAST:event_JHomeAncestorAdded
+
     /**
      * @param args the command line arguments
      */
@@ -1156,7 +1166,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DashBoardExe().setVisible(true); 
+                new DashBoardExe().setVisible(true);
             }
             
         });
@@ -1173,7 +1183,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 Thread.sleep(10);
                 if(i==100){
                     JBegin.setVisible(false);
-                    JHome.setVisible(true);                    
+                    JHome.setVisible(true);
                 }
                 }catch(InterruptedException e){
                     JOptionPane.showMessageDialog(null, e);

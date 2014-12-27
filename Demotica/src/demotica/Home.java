@@ -16,11 +16,12 @@ import java.util.List;
  */
 public class Home implements Serializable{
 
+    private static final long serialVersionUID = -6231719377239289088L;
     private int nFloors;
     private List<Alert> alerts;
     private List<Division> divisions;
-    private static int valueNL;
-    private static int valueW;
+    private int valueNL;
+    private int valueW;
 
     public Home(int nFloors, int valueNL, int valueW) {
         this.nFloors = nFloors;
@@ -108,11 +109,19 @@ public class Home implements Serializable{
                     }       
                 }
      }   
+    
+    
+    
     /*public void onAlertGasSmoke(){
         for (Division div:divisions)
             if(div.verifyOnSensorGas()==true || div.verifyOnSensorSmoke()==true)
                 
                 
     }*/
+
+    @Override
+    public String toString() {
+        return "Home{" + "nFloors=" + nFloors + ", alerts=" + alerts + ", divisions=" + divisions + '}';
+    }
     
 }

@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,7 +26,7 @@ public class File{
             ois.close();
             return cAluno;
         } catch (Exception e) {
-            //JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, e);
         }
         return null;
     }
@@ -37,7 +38,7 @@ public class File{
             oos.close();
         }
         catch(Exception e){
-            //JOptionPane.showMessageDialog(null, e);      
+            JOptionPane.showMessageDialog(null, e);      
         }
     }
 }

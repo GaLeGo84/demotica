@@ -156,9 +156,9 @@ public class main {
         System.out.println(System.currentTimeMillis());
         /*Dashboard dash= new Dashboard(home);
         dash.MenuDivisions();*/
+        System.out.println(home.toString());
         
-        
-        //fi.saveHome(home);
+       //fi.saveHome(home);
         
         /*System.out.println(System.currentTimeMillis());
         File fi = new File();
