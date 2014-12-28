@@ -127,6 +127,16 @@ public class Division implements Serializable{
        return aux;
    }
     
+     //Lista de portas exteriores de Standard
+    public LinkedList<ExteriorDoorStandard> listExteriorStandardDoor(){
+       LinkedList<ExteriorDoorStandard> aux=new LinkedList<>();
+       for (Door doo:doors){
+           if(doo instanceof ExteriorDoorStandard)
+                aux.add((ExteriorDoorStandard)doo);
+       }
+       return aux;
+   }
+    
     //Lista de sensores de vento
     private LinkedList<Wind> listSensorWind(){
        LinkedList<Wind> aux=new LinkedList<>();
@@ -161,8 +171,20 @@ public class Division implements Serializable{
         return getDoors().size();
     }
     
-    public int nDoorsExtern(){
+    public int nWindows(){
+        return getWindows().size();
+    }
+    
+    public int nLights(){
+        return getLights().size();
+    }
+    
+    public int nDoorsExterior(){
         return listExteriorEntranceDoor().size();
+    }
+    
+    public int nDoorsExteriorStandard(){
+        return listExteriorStandardDoor().size();
     }
     
     //média da luz natural da sala

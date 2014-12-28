@@ -101,6 +101,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         JCreateDivision = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -556,6 +557,23 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tblDivisions);
+        if (tblDivisions.getColumnModel().getColumnCount() > 0) {
+            tblDivisions.getColumnModel().getColumn(0).setMinWidth(130);
+            tblDivisions.getColumnModel().getColumn(0).setPreferredWidth(130);
+            tblDivisions.getColumnModel().getColumn(0).setMaxWidth(130);
+            tblDivisions.getColumnModel().getColumn(1).setMinWidth(30);
+            tblDivisions.getColumnModel().getColumn(1).setPreferredWidth(30);
+            tblDivisions.getColumnModel().getColumn(1).setMaxWidth(30);
+            tblDivisions.getColumnModel().getColumn(2).setMinWidth(75);
+            tblDivisions.getColumnModel().getColumn(2).setPreferredWidth(75);
+            tblDivisions.getColumnModel().getColumn(2).setMaxWidth(75);
+            tblDivisions.getColumnModel().getColumn(3).setMinWidth(100);
+            tblDivisions.getColumnModel().getColumn(3).setPreferredWidth(100);
+            tblDivisions.getColumnModel().getColumn(3).setMaxWidth(100);
+            tblDivisions.getColumnModel().getColumn(4).setMinWidth(95);
+            tblDivisions.getColumnModel().getColumn(4).setPreferredWidth(95);
+            tblDivisions.getColumnModel().getColumn(4).setMaxWidth(95);
+        }
 
         jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton6.setText("Sair");
@@ -669,6 +687,14 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
+        btnBack.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnBack.setText("Voltar");
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBackMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JCreateHomeLayout = new javax.swing.GroupLayout(JCreateHome);
         JCreateHome.setLayout(JCreateHomeLayout);
         JCreateHomeLayout.setHorizontalGroup(
@@ -676,7 +702,9 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JCreateHomeLayout.createSequentialGroup()
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4))
@@ -695,7 +723,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 260, Short.MAX_VALUE))
+                        .addGap(0, 270, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -718,10 +746,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
         );
 
@@ -796,12 +825,30 @@ public class DashBoardExe extends javax.swing.JFrame {
                 "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
             }
         ));
-        tblDivisions1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblDivisions1MouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(tblDivisions1);
+        if (tblDivisions1.getColumnModel().getColumnCount() > 0) {
+            tblDivisions1.getColumnModel().getColumn(0).setMinWidth(10);
+            tblDivisions1.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tblDivisions1.getColumnModel().getColumn(0).setMaxWidth(10);
+            tblDivisions1.getColumnModel().getColumn(1).setMinWidth(300);
+            tblDivisions1.getColumnModel().getColumn(1).setPreferredWidth(300);
+            tblDivisions1.getColumnModel().getColumn(1).setMaxWidth(300);
+            tblDivisions1.getColumnModel().getColumn(2).setMinWidth(2);
+            tblDivisions1.getColumnModel().getColumn(2).setPreferredWidth(2);
+            tblDivisions1.getColumnModel().getColumn(2).setMaxWidth(2);
+            tblDivisions1.getColumnModel().getColumn(3).setMinWidth(3);
+            tblDivisions1.getColumnModel().getColumn(3).setPreferredWidth(3);
+            tblDivisions1.getColumnModel().getColumn(3).setMaxWidth(3);
+            tblDivisions1.getColumnModel().getColumn(4).setMinWidth(8);
+            tblDivisions1.getColumnModel().getColumn(4).setPreferredWidth(8);
+            tblDivisions1.getColumnModel().getColumn(4).setMaxWidth(8);
+            tblDivisions1.getColumnModel().getColumn(5).setMinWidth(3);
+            tblDivisions1.getColumnModel().getColumn(5).setPreferredWidth(3);
+            tblDivisions1.getColumnModel().getColumn(5).setMaxWidth(3);
+            tblDivisions1.getColumnModel().getColumn(6).setMinWidth(10);
+            tblDivisions1.getColumnModel().getColumn(6).setPreferredWidth(10);
+            tblDivisions1.getColumnModel().getColumn(6).setMaxWidth(10);
+        }
 
         jButton7.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jButton7.setText("Concluido");
@@ -894,9 +941,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(addB)
                             .addComponent(updateB)
                             .addComponent(removeB))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
                 .addComponent(jButton7)
                 .addGap(20, 20, 20))
         );
@@ -1046,15 +1093,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_removeBActionPerformed
 
-    private void tblDivisions1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDivisions1MouseClicked
-        DefaultTableModel model=(DefaultTableModel)tblDivisions.getModel();
-        tfName.setText(model.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        comboFloor.setSelectedItem(model.getValueAt(tblDivisions.getSelectedRow(), 1).toString());
-        tfDoors.setText(model.getValueAt(tblDivisions.getSelectedRow(), 2).toString());
-        tfWindows.setText(model.getValueAt(tblDivisions.getSelectedRow(), 3).toString());
-        tfLights.setText(model.getValueAt(tblDivisions.getSelectedRow(), 4).toString());
-    }//GEN-LAST:event_tblDivisions1MouseClicked
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         JCreateDivision.setVisible(false);
         JHome.setVisible(true);
@@ -1130,8 +1168,14 @@ public class DashBoardExe extends javax.swing.JFrame {
         List<Division> a = Dashboard.getHome().getDivisions();
         //modelo.getDataVector().clear();
         for(Division div:a)
-            modelo.addRow(new Object[]{div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExtern()});
+            modelo.addRow(new Object[]{div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
+            div.nWindows(), div.nLights()});
     }//GEN-LAST:event_JHomeAncestorAdded
+
+    private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
+        JCreateHome.setVisible(false);
+        JHome.setVisible(true);        
+    }//GEN-LAST:event_btnBackMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1206,6 +1250,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JPanel JPanel1;
     private javax.swing.JButton addB;
     private javax.swing.JProgressBar bar;
+    private javax.swing.JButton btnBack;
     private javax.swing.JLabel carregar1;
     private javax.swing.JLabel carregar4;
     private javax.swing.JLabel carregar5;
