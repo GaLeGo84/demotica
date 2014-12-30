@@ -164,12 +164,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         btnBack1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
+        JSimular.setPreferredSize(new java.awt.Dimension(700, 400));
 
         javax.swing.GroupLayout JSimularLayout = new javax.swing.GroupLayout(JSimular);
         JSimular.setLayout(JSimularLayout);
         JSimularLayout.setHorizontalGroup(
             JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         JSimularLayout.setVerticalGroup(
             JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,6 +181,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JConfiguration.setVisible(false);
         JConfiguration.setEnabled(false);
+        JConfiguration.setPreferredSize(new java.awt.Dimension(700, 400));
 
         jTabbedPane1.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
 
@@ -263,9 +267,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel37)
                             .addComponent(jLabel38))))
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addContainerGap(428, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(182, 572, Short.MAX_VALUE)
+                .addGap(182, 560, Short.MAX_VALUE)
                 .addComponent(btnVoltarDivisão)
                 .addContainerGap())
         );
@@ -298,7 +302,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(lblTempMax)
                     .addComponent(jLabel33)
                     .addComponent(jLabel38))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(btnVoltarDivisão)
                 .addContainerGap())
         );
@@ -370,7 +374,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(btnAdLuz)
                         .addGap(18, 18, 18)
                         .addComponent(btnRemLuz)))
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,7 +396,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel25))
                 .addGap(18, 18, 18)
                 .addComponent(btnSimul)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Luzes", jPanel3);
@@ -446,7 +450,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton26)
                     .addComponent(jButton27))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,7 +470,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Janelas", jPanel4);
@@ -520,7 +524,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton28)
                     .addComponent(jButton29))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -538,7 +542,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton29))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Portas", jPanel5);
@@ -585,7 +589,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton17)
                         .addGap(18, 18, 18)
                         .addComponent(jButton18)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -602,7 +606,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel32)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(357, Short.MAX_VALUE))
+                .addContainerGap(256, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Sensores", jPanel6);
@@ -679,7 +683,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel47)))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -706,7 +710,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel46)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Clima", jPanel7);
@@ -724,7 +728,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JHome.setVisible(false);
         JHome.setEnabled(false);
-        JHome.setPreferredSize(new java.awt.Dimension(600, 400));
+        JHome.setPreferredSize(new java.awt.Dimension(700, 400));
         JHome.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -818,7 +822,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
                         .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 369, Short.MAX_VALUE)
                         .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
                                 .addComponent(jButton9)
@@ -856,6 +860,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         JCreateHome.setVisible(false);
         JCreateHome.setEnabled(false);
         JCreateHome.setName("JCreateHome"); // NOI18N
+        JCreateHome.setPreferredSize(new java.awt.Dimension(700, 400));
 
         jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -918,7 +923,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 332, Short.MAX_VALUE))
+                        .addGap(0, 320, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -941,7 +946,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -950,7 +955,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JCreateDivision.setVisible(false);
         JCreateDivision.setEnabled(false);
-        JCreateDivision.setPreferredSize(new java.awt.Dimension(600, 400));
+        JCreateDivision.setPreferredSize(new java.awt.Dimension(700, 400));
         JCreateDivision.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1064,7 +1069,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JCreateDivisionLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7))
@@ -1136,40 +1141,40 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(updateB)
                             .addComponent(removeB))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
                 .addGap(7, 7, 7)
                 .addComponent(jButton7)
                 .addGap(20, 20, 20))
         );
 
         JBegin.setName("JBegin"); // NOI18N
-        JBegin.setPreferredSize(new java.awt.Dimension(600, 400));
+        JBegin.setPreferredSize(new java.awt.Dimension(700, 400));
         JBegin.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel1.setText("Inteligente");
         JBegin.add(jLabel1);
-        jLabel1.setBounds(190, 150, 280, 70);
+        jLabel1.setBounds(240, 140, 280, 70);
 
         jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel2.setText("Habitação");
         JBegin.add(jLabel2);
-        jLabel2.setBounds(110, 70, 250, 70);
+        jLabel2.setBounds(160, 60, 250, 70);
 
         load.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
         load.setText("Carregar");
         JBegin.add(load);
-        load.setBounds(270, 280, 60, 18);
+        load.setBounds(320, 270, 60, 18);
 
         jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
         JBegin.add(jLabel5);
-        jLabel5.setBounds(240, 380, 340, 13);
+        jLabel5.setBounds(350, 380, 340, 13);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
-        bar.setBounds(140, 300, 310, 20);
+        bar.setBounds(190, 290, 310, 20);
 
         jButton2.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
         jButton2.setText("Criar Habitação");
@@ -1180,7 +1185,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         JBegin.add(jButton2);
-        jButton2.setBounds(140, 330, 140, 30);
+        jButton2.setBounds(190, 320, 140, 30);
 
         jButton1.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
         jButton1.setText("Carregar Habitação");
@@ -1190,14 +1195,14 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         JBegin.add(jButton1);
-        jButton1.setBounds(290, 330, 160, 30);
+        jButton1.setBounds(340, 320, 160, 30);
         JBegin.add(jLabel3);
         jLabel3.setBounds(0, 0, 600, 400);
 
         JEditHome.setVisible(false);
         JEditHome.setEnabled(false);
         JEditHome.setName("JCreateHome"); // NOI18N
-        JEditHome.setPreferredSize(new java.awt.Dimension(600, 400));
+        JEditHome.setPreferredSize(new java.awt.Dimension(700, 400));
         JEditHome.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1269,7 +1274,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 220, Short.MAX_VALUE))
+                        .addGap(0, 320, Short.MAX_VALUE))
                     .addGroup(JEditHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -1314,22 +1319,22 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(20, 20, 20)
-                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                     .addGap(20, 20, 20)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 112, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1344,22 +1349,22 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(12, 12, 12)
-                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
                     .addGap(13, 13, 13)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 101, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
