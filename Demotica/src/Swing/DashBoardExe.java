@@ -37,8 +37,6 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JSimular = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jRegisterDOB2 = new com.toedter.calendar.JDateChooser();
         jLabel49 = new javax.swing.JLabel();
         JConfiguration = new javax.swing.JPanel();
@@ -179,9 +177,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Simular Presença");
 
-        jLabel48.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel48.setText("Divisão:");
-
         jLabel49.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel49.setText("Data:");
 
@@ -194,13 +189,10 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(JSimularLayout.createSequentialGroup()
-                        .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel48)
-                            .addComponent(jLabel49))
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel49)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         JSimularLayout.setVerticalGroup(
@@ -208,11 +200,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JSimularLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel17)
-                .addGap(18, 18, 18)
-                .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel48)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(48, 48, 48)
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel49))
@@ -1534,7 +1522,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         int n = JOptionPane.showConfirmDialog(JHome,
-        "Tens a ceerteza que queres sair?",
+        "Tens a certeza que queres sair?",
         "Sair",
         JOptionPane.YES_NO_OPTION);
         if(n==0){
@@ -1751,7 +1739,6 @@ JHome.setVisible(false);
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1773,7 +1760,6 @@ JHome.setVisible(false);
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
