@@ -37,8 +37,8 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JSimular = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jRegisterDOB2 = new org.netbeans.modules.form.InvalidComponent();
         jLabel49 = new javax.swing.JLabel();
+        jRegisterDOB = new com.toedter.calendar.JDateChooser();
         JConfiguration = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -191,9 +191,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addGroup(JSimularLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel49)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         JSimularLayout.setVerticalGroup(
             JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,10 +201,10 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel17)
                 .addGap(48, 48, 48)
-                .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel49)
+                    .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(280, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
@@ -1393,9 +1393,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 740, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1423,9 +1421,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE))
         );
 
         JEditHome.getAccessibleContext().setAccessibleName("");
@@ -1751,7 +1747,7 @@ JHome.setVisible(false);
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private org.netbeans.modules.form.InvalidComponent jRegisterDOB2;
+    private com.toedter.calendar.JDateChooser jRegisterDOB;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
