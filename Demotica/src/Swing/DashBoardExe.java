@@ -1097,27 +1097,27 @@ public class DashBoardExe extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblDivisions1);
         if (tblDivisions1.getColumnModel().getColumnCount() > 0) {
-            tblDivisions1.getColumnModel().getColumn(0).setMinWidth(10);
-            tblDivisions1.getColumnModel().getColumn(0).setPreferredWidth(10);
-            tblDivisions1.getColumnModel().getColumn(0).setMaxWidth(10);
-            tblDivisions1.getColumnModel().getColumn(1).setMinWidth(300);
-            tblDivisions1.getColumnModel().getColumn(1).setPreferredWidth(300);
-            tblDivisions1.getColumnModel().getColumn(1).setMaxWidth(300);
-            tblDivisions1.getColumnModel().getColumn(2).setMinWidth(2);
-            tblDivisions1.getColumnModel().getColumn(2).setPreferredWidth(2);
-            tblDivisions1.getColumnModel().getColumn(2).setMaxWidth(2);
-            tblDivisions1.getColumnModel().getColumn(3).setMinWidth(3);
-            tblDivisions1.getColumnModel().getColumn(3).setPreferredWidth(3);
-            tblDivisions1.getColumnModel().getColumn(3).setMaxWidth(3);
-            tblDivisions1.getColumnModel().getColumn(4).setMinWidth(8);
-            tblDivisions1.getColumnModel().getColumn(4).setPreferredWidth(8);
-            tblDivisions1.getColumnModel().getColumn(4).setMaxWidth(8);
-            tblDivisions1.getColumnModel().getColumn(5).setMinWidth(3);
-            tblDivisions1.getColumnModel().getColumn(5).setPreferredWidth(3);
-            tblDivisions1.getColumnModel().getColumn(5).setMaxWidth(3);
-            tblDivisions1.getColumnModel().getColumn(6).setMinWidth(10);
-            tblDivisions1.getColumnModel().getColumn(6).setPreferredWidth(10);
-            tblDivisions1.getColumnModel().getColumn(6).setMaxWidth(10);
+            tblDivisions1.getColumnModel().getColumn(0).setMinWidth(130);
+            tblDivisions1.getColumnModel().getColumn(0).setPreferredWidth(130);
+            tblDivisions1.getColumnModel().getColumn(0).setMaxWidth(130);
+            tblDivisions1.getColumnModel().getColumn(1).setMinWidth(35);
+            tblDivisions1.getColumnModel().getColumn(1).setPreferredWidth(35);
+            tblDivisions1.getColumnModel().getColumn(1).setMaxWidth(35);
+            tblDivisions1.getColumnModel().getColumn(2).setMinWidth(80);
+            tblDivisions1.getColumnModel().getColumn(2).setPreferredWidth(80);
+            tblDivisions1.getColumnModel().getColumn(2).setMaxWidth(80);
+            tblDivisions1.getColumnModel().getColumn(3).setMinWidth(105);
+            tblDivisions1.getColumnModel().getColumn(3).setPreferredWidth(105);
+            tblDivisions1.getColumnModel().getColumn(3).setMaxWidth(105);
+            tblDivisions1.getColumnModel().getColumn(4).setMinWidth(105);
+            tblDivisions1.getColumnModel().getColumn(4).setPreferredWidth(105);
+            tblDivisions1.getColumnModel().getColumn(4).setMaxWidth(105);
+            tblDivisions1.getColumnModel().getColumn(5).setMinWidth(102);
+            tblDivisions1.getColumnModel().getColumn(5).setPreferredWidth(102);
+            tblDivisions1.getColumnModel().getColumn(5).setMaxWidth(102);
+            tblDivisions1.getColumnModel().getColumn(6).setMinWidth(85);
+            tblDivisions1.getColumnModel().getColumn(6).setPreferredWidth(85);
+            tblDivisions1.getColumnModel().getColumn(6).setMaxWidth(85);
         }
 
         jButton7.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
@@ -1146,14 +1146,12 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton7))
                     .addComponent(jLabel7)
                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
                         .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel9)
-                            .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                    .addGap(104, 104, 104)
-                                    .addComponent(jLabel8))
-                                .addComponent(jLabel10))
-                            .addComponent(jLabel11))
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tfName)
@@ -1189,7 +1187,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
                     .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(tfDoors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1212,7 +1210,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(updateB)
                             .addComponent(removeB))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                 .addGap(7, 7, 7)
                 .addComponent(jButton7)
                 .addGap(20, 20, 20))
