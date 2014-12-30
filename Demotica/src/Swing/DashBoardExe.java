@@ -37,7 +37,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JSimular = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jRegisterDOB2 = new com.toedter.calendar.JDateChooser();
+        jRegisterDOB2 = new org.netbeans.modules.form.InvalidComponent();
         jLabel49 = new javax.swing.JLabel();
         JConfiguration = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -204,7 +204,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jRegisterDOB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel49))
-                .addContainerGap(259, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
@@ -1230,7 +1230,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
         JBegin.add(jLabel5);
-        jLabel5.setBounds(350, 380, 340, 13);
+        jLabel5.setBounds(350, 380, 340, 14);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
@@ -1751,7 +1751,7 @@ JHome.setVisible(false);
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private com.toedter.calendar.JDateChooser jRegisterDOB2;
+    private org.netbeans.modules.form.InvalidComponent jRegisterDOB2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
