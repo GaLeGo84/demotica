@@ -111,9 +111,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDivisions = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         JCreateHome = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         carregar1 = new javax.swing.JLabel();
@@ -813,19 +813,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton8.setText("Atualizar");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
-            }
-        });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
         jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton9.setText("Alterar");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -842,6 +829,14 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
+        jButton11.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        jButton11.setText("Atualizar");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton11MouseReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout JHomeLayout = new javax.swing.GroupLayout(JHome);
         JHome.setLayout(JHomeLayout);
         JHomeLayout.setHorizontalGroup(
@@ -850,21 +845,20 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(JHomeLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
-                                .addComponent(jButton9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6))
-                            .addGroup(JHomeLayout.createSequentialGroup()
-                                .addGap(145, 145, 145)
-                                .addComponent(jButton5)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                    .addGroup(JHomeLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 510, Short.MAX_VALUE)
+                        .addComponent(jButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6))
+                    .addGroup(JHomeLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton11)
+                        .addGap(155, 155, 155)
+                        .addComponent(jButton5)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton10)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -875,11 +869,11 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JHomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addGap(14, 14, 14)
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
@@ -1511,11 +1505,6 @@ public class DashBoardExe extends javax.swing.JFrame {
        JHome.setVisible(true);
     }//GEN-LAST:event_jButton7MouseClicked
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        JHome.setVisible(false);
-        JEditHome.setVisible(true);
-    }//GEN-LAST:event_jButton8MouseClicked
-
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         JHome.setVisible(false);
         JCreateDivision.setVisible(true);        
@@ -1533,10 +1522,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             modelo.addRow(new Object[]{div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
             div.nWindows(), div.nLights()});
     }//GEN-LAST:event_JHomeAncestorAdded
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
         Dashboard.getHome().setnFloors(Integer.parseInt(jTextField5.getText()));
@@ -1563,6 +1548,10 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseReleased
+JHome.setVisible(false);
+        JEditHome.setVisible(true);    }//GEN-LAST:event_jButton11MouseReleased
 
     /**
      * @param args the command line arguments
@@ -1654,6 +1643,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JComboBox comboFloor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -1675,7 +1665,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
