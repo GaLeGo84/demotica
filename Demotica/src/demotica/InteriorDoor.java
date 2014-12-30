@@ -17,9 +17,4 @@ public class InteriorDoor extends Door implements Serializable{
         super(num);
     }
 
-    
-    
-    
-    
-    
 }
