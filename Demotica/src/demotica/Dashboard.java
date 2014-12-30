@@ -25,7 +25,6 @@ public class Dashboard implements Serializable{
     public static void setHome(Home home) {
         Dashboard.home = home;
     }
-
     
     public static void loadData(){
         home = File.loadHome();
@@ -35,8 +34,8 @@ public class Dashboard implements Serializable{
         File.saveHome(home);
     }
     
-    public static Home criarHome(int nFloors, int valueNL, int valueW){
-        return new Home(nFloors, valueNL, valueW);
+    public static void criarHome(int nFloors, int valueNL, int valueW){
+        home = new Home(nFloors, valueNL, valueW);
     }
     
 }
