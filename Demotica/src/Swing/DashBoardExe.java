@@ -765,18 +765,18 @@ public class DashBoardExe extends javax.swing.JFrame {
             tblDivisions.getColumnModel().getColumn(0).setMinWidth(130);
             tblDivisions.getColumnModel().getColumn(0).setPreferredWidth(130);
             tblDivisions.getColumnModel().getColumn(0).setMaxWidth(130);
-            tblDivisions.getColumnModel().getColumn(1).setMinWidth(30);
-            tblDivisions.getColumnModel().getColumn(1).setPreferredWidth(30);
-            tblDivisions.getColumnModel().getColumn(1).setMaxWidth(30);
-            tblDivisions.getColumnModel().getColumn(2).setMinWidth(75);
-            tblDivisions.getColumnModel().getColumn(2).setPreferredWidth(75);
-            tblDivisions.getColumnModel().getColumn(2).setMaxWidth(75);
-            tblDivisions.getColumnModel().getColumn(3).setMinWidth(100);
-            tblDivisions.getColumnModel().getColumn(3).setPreferredWidth(100);
-            tblDivisions.getColumnModel().getColumn(3).setMaxWidth(100);
-            tblDivisions.getColumnModel().getColumn(4).setMinWidth(95);
-            tblDivisions.getColumnModel().getColumn(4).setPreferredWidth(95);
-            tblDivisions.getColumnModel().getColumn(4).setMaxWidth(95);
+            tblDivisions.getColumnModel().getColumn(1).setMinWidth(35);
+            tblDivisions.getColumnModel().getColumn(1).setPreferredWidth(35);
+            tblDivisions.getColumnModel().getColumn(1).setMaxWidth(35);
+            tblDivisions.getColumnModel().getColumn(2).setMinWidth(80);
+            tblDivisions.getColumnModel().getColumn(2).setPreferredWidth(80);
+            tblDivisions.getColumnModel().getColumn(2).setMaxWidth(80);
+            tblDivisions.getColumnModel().getColumn(3).setMinWidth(105);
+            tblDivisions.getColumnModel().getColumn(3).setPreferredWidth(105);
+            tblDivisions.getColumnModel().getColumn(3).setMaxWidth(105);
+            tblDivisions.getColumnModel().getColumn(4).setMinWidth(100);
+            tblDivisions.getColumnModel().getColumn(4).setPreferredWidth(100);
+            tblDivisions.getColumnModel().getColumn(4).setMaxWidth(100);
         }
 
         jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -817,14 +817,14 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                        .addComponent(jButton8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 273, Short.MAX_VALUE)
+                        .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
+                                .addComponent(jButton9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton6))
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
             .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JHomeLayout.createSequentialGroup()
@@ -1064,7 +1064,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JCreateDivisionLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7))
@@ -1136,7 +1136,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(updateB)
                             .addComponent(removeB))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                 .addGap(7, 7, 7)
                 .addComponent(jButton7)
                 .addGap(20, 20, 20))
@@ -1349,12 +1349,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -1454,8 +1454,8 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         int n = JOptionPane.showConfirmDialog(JHome,
-        "Would you like green eggs and ham?",
-        "An Inane Question",
+        "Tens a ceerteza que queres sair?",
+        "Sair",
         JOptionPane.YES_NO_OPTION);
         if(n==0){
             System.exit(0);
