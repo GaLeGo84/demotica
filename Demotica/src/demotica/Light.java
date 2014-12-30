@@ -1,9 +1,6 @@
 package demotica;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedList;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,15 +15,11 @@ public class Light implements Serializable{
     private String sn;
     private int intensity;   
     private boolean status;
-    private Date times;
-    private LinkedList<Time_Interval> time_interval;
 
     public Light(String sn) {
-        this.sn = sn;
-        SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd");
+        this.sn = sn;        
         this.intensity = 8; //é entre de 0 a 10
-        this.status = false;
-        this.times = ft.get2DigitYearStart();
+        this.status = false;        
     }
 
     public String getSn() {
@@ -47,14 +40,6 @@ public class Light implements Serializable{
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public Date getTimes() {
-        return times;
-    }
-
-    public void setTimes(Date times) {
-        this.times = times;
     }
 
     @Override

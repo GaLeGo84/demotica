@@ -39,6 +39,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
+        jRegisterDOB = new com.toedter.calendar.JDateChooser();
+        jLabel49 = new javax.swing.JLabel();
         JConfiguration = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -180,6 +182,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel48.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel48.setText("Divisão:");
 
+        jLabel49.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jLabel49.setText("Data:");
+
         javax.swing.GroupLayout JSimularLayout = new javax.swing.GroupLayout(JSimular);
         JSimular.setLayout(JSimularLayout);
         JSimularLayout.setHorizontalGroup(
@@ -189,9 +194,13 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(JSimularLayout.createSequentialGroup()
-                        .addComponent(jLabel48)
+                        .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel48)
+                            .addComponent(jLabel49))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         JSimularLayout.setVerticalGroup(
@@ -203,7 +212,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel48)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel49))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
@@ -369,6 +382,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         btnSimul.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         btnSimul.setText("Simular presença");
         btnSimul.setToolTipText("");
+        btnSimul.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSimulMouseClicked(evt);
+            }
+        });
         btnSimul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimulActionPerformed(evt);
@@ -1580,6 +1598,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 JHome.setVisible(false);
         JEditHome.setVisible(true);    }//GEN-LAST:event_jButton11MouseReleased
 
+    private void btnSimulMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSimulMouseClicked
+        JConfiguration.setVisible(false);
+        JSimular.setVisible(true);
+    }//GEN-LAST:event_btnSimulMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1731,6 +1754,7 @@ JHome.setVisible(false);
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1742,6 +1766,7 @@ JHome.setVisible(false);
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private com.toedter.calendar.JDateChooser jRegisterDOB;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

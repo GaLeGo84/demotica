@@ -23,6 +23,7 @@ public class Division implements Serializable{
     private List<Sensor> sensors;
     private List<Window> windows;
     private List<Door> doors;
+    private List<TimeIntervalLight> timeintervallight;
 
     public Division(Home h,String name, int floor, Climate climate){
         this.home=h;
@@ -33,6 +34,7 @@ public class Division implements Serializable{
         sensors = new LinkedList<Sensor>();
         windows = new LinkedList<Window>();
         doors = new LinkedList<Door>();
+        timeintervallight = new LinkedList<TimeIntervalLight>();
     }
 
     public int getFloor() {
