@@ -59,6 +59,13 @@ public class Home implements Serializable{
         divisions.add(div);
     }
 
+    public void setValueNL(int valueNL) {
+        this.valueNL = valueNL;
+    }
+
+    public void setValueW(int valueW) {
+        this.valueW = valueW;
+    }
     
     //Lista de sensores de movimento
     private LinkedList<IntruderAlert> listIntruderAlert(){

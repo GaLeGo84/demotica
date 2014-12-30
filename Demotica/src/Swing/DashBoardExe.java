@@ -788,7 +788,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         });
 
         jButton8.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton8.setText("Configurar");
+        jButton8.setText("Atualizar");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -817,14 +817,14 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 269, Short.MAX_VALUE)
-                        .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                                .addComponent(jButton9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6))
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
+                        .addComponent(jButton8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 362, Short.MAX_VALUE)
+                        .addComponent(jButton5)))
                 .addContainerGap())
             .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JHomeLayout.createSequentialGroup()
@@ -881,11 +881,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -1215,7 +1210,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel39.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("Casa");
+        jLabel39.setText("Atualizar Casa");
 
         carregar2.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         carregar2.setText("Nº. Pisos:");
@@ -1233,15 +1228,10 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTextField7.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
 
         jButton19.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton19.setText("Editar");
+        jButton19.setText("Atualizar");
         jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton19MouseClicked(evt);
-            }
-        });
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
             }
         });
 
@@ -1463,7 +1453,13 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        System.exit(0);
+        int n = JOptionPane.showConfirmDialog(JHome,
+        "Would you like green eggs and ham?",
+        "An Inane Question",
+        JOptionPane.YES_NO_OPTION);
+        if(n==0){
+            System.exit(0);
+        }
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
@@ -1499,11 +1495,14 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
-        // TODO add your handling code here:
+        Dashboard.getHome().setnFloors(Integer.parseInt(jTextField5.getText()));
+        Dashboard.getHome().setValueNL(Integer.parseInt(jTextField6.getText()));
+        Dashboard.getHome().setValueW(Integer.parseInt(jTextField7.getText()));
     }//GEN-LAST:event_jButton19MouseClicked
 
     private void btnBack1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBack1MouseClicked
-        // TODO add your handling code here:
+        JEditHome.setVisible(false);
+        JHome.setVisible(true);
     }//GEN-LAST:event_btnBack1MouseClicked
 
     private void JEditHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JEditHomeAncestorAdded
@@ -1516,14 +1515,6 @@ public class DashBoardExe extends javax.swing.JFrame {
        JHome.setVisible(false);
        JConfiguration.setVisible(true);
     }//GEN-LAST:event_jButton9MouseClicked
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
 
     /**
      * @param args the command line arguments
