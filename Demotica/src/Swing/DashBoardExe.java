@@ -754,7 +754,15 @@ public class DashBoardExe extends javax.swing.JFrame {
             new String [] {
                 "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, true, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblDivisions.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblDivisionsMouseClicked(evt);
@@ -774,9 +782,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             tblDivisions.getColumnModel().getColumn(3).setMinWidth(105);
             tblDivisions.getColumnModel().getColumn(3).setPreferredWidth(105);
             tblDivisions.getColumnModel().getColumn(3).setMaxWidth(105);
-            tblDivisions.getColumnModel().getColumn(4).setMinWidth(100);
-            tblDivisions.getColumnModel().getColumn(4).setPreferredWidth(100);
-            tblDivisions.getColumnModel().getColumn(4).setMaxWidth(100);
+            tblDivisions.getColumnModel().getColumn(4).setMinWidth(105);
+            tblDivisions.getColumnModel().getColumn(4).setPreferredWidth(105);
+            tblDivisions.getColumnModel().getColumn(4).setMaxWidth(105);
+            tblDivisions.getColumnModel().getColumn(5).setMinWidth(102);
+            tblDivisions.getColumnModel().getColumn(5).setPreferredWidth(102);
+            tblDivisions.getColumnModel().getColumn(5).setMaxWidth(102);
         }
 
         jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
