@@ -16,7 +16,7 @@ public abstract class Alert implements Serializable{
     private boolean status;
     private Contact email;
     private boolean detection;
-    private int num;
+    
 
     public Alert(Contact email) {
         this.email = email;
