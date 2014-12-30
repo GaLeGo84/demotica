@@ -4,16 +4,10 @@ import java.io.Serializable;
 
 public class Window implements Serializable{
 
-    private int num;
     private boolean status;
 
-    public Window(int num) {
-        this.num = num;
+    public Window() {
         this.status = false;
-    }
-
-    public int getNum() {
-        return num;
     }
 
     public boolean isStatus() {
@@ -26,7 +20,7 @@ public class Window implements Serializable{
 
     @Override
     public String toString() {
-        return "Window{" + "num=" + num + ", status=" + status + '}';
+        return "Window{" + " status=" + status + '}';
     }
 
 }

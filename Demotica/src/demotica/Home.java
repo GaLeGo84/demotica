@@ -55,7 +55,7 @@ public class Home implements Serializable{
         this.nFloors = nFloors;
     }
 
-    public void addDivisoes(Division div){
+    public void addDivision(Division div){
         divisions.add(div);
     }
 
@@ -66,6 +66,7 @@ public class Home implements Serializable{
     public void setValueW(int valueW) {
         this.valueW = valueW;
     }
+
     
     //Lista de sensores de movimento
     private LinkedList<IntruderAlert> listIntruderAlert(){
@@ -89,7 +90,7 @@ public class Home implements Serializable{
      //Tentativa de abrir a janela
     public boolean tryOpenwindows(){
         for (Division div:divisions)
-            for(Window w:div.getWindows())
+            for(Window w:div.getWindows().values())
                 if(w.isStatus()==true) 
                     return true;
                 

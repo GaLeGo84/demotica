@@ -3,6 +3,8 @@ package demotica;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,24 +17,22 @@ import java.util.List;
  */
 public class Division implements Serializable{
 
-    private Home home;
     private int floor;
     private String name;
     private Climate climate;
     private List<Light> lights;
     private List<Sensor> sensors;
-    private List<Window> windows;
+    private Map<Integer,Window> windows;
     private List<Door> doors;
     private List<TimeIntervalLight> timeintervallight;
 
-    public Division(Home h,String name, int floor, Climate climate){
-        this.home=h;
+    public Division(String name, int floor, Climate climate){
         this.floor = floor;
         this.name = name;
         this.climate = climate;
         lights = new LinkedList<Light>();
         sensors = new LinkedList<Sensor>();
-        windows = new LinkedList<Window>();
+        windows = new TreeMap<Integer,Window>();
         doors = new LinkedList<Door>();
         timeintervallight = new LinkedList<TimeIntervalLight>();
     }
@@ -41,17 +41,10 @@ public class Division implements Serializable{
         return floor;
     }
 
-    public Home getHome() {
-        return home;
-    }
-
     public Climate getClimate() {
         return climate;
     }
 
-    public void setHome(Home home) {
-        this.home = home;
-    }
     
     public List<Light> getLights() {
         return lights;
@@ -65,7 +58,7 @@ public class Division implements Serializable{
         return name;
     }
 
-    public List<Window> getWindows() {
+    public Map<Integer,Window> getWindows() {
         return windows;
     }
 
@@ -85,8 +78,8 @@ public class Division implements Serializable{
         doors.add(dor);
     }
     
-    public void addWindow(Window w){ 
-        windows.add(w);
+    public void addWindow(Window w){
+         windows.put(windows.size()+1, w);          
     }
     
     //Lista de sensores de Temperatura
@@ -239,9 +232,9 @@ public class Division implements Serializable{
     
     //Ligar as luzes da divisão quando a média da luz natural for menor do ke o valor minimo
     public boolean onLight(){
-        if(mediaNaturaLight()<home.getValueNL())
+        /*if(mediaNaturaLight()<home.getValueNL())
             return true;
-        else
+        else*/
             return false;            
     }
     
@@ -272,7 +265,7 @@ public class Division implements Serializable{
     
     public void exceedTemperature(){
         if(mediaTemperature()>climate.getMAXVALUE()){
-            for(Window w:windows)
+            for(Window w:windows.values())
                 if(w.isStatus()==false)
                     w.setStatus(true);
                 else{
@@ -289,7 +282,7 @@ public class Division implements Serializable{
     
     //Fechar as janelas
     public void lockWindows(){
-        for (Window w:windows)
+        for (Window w:windows.values())
             if(w.isStatus()== true){
                 w.setStatus(false);
                 climate.setAircon(false);
@@ -301,7 +294,7 @@ public class Division implements Serializable{
     }
     //Abrir as janelas
     public void openWindows(){
-        for (Window w:windows)
+        for (Window w:windows.values())
             if(w.isStatus()== false)
                 w.setStatus(true);
     }
@@ -321,7 +314,7 @@ public class Division implements Serializable{
     }
     
     public void onComponentSegurança(){
-        home.onAlertMoviment();
+        //home.onAlertMoviment();
         
         for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
@@ -338,7 +331,7 @@ public class Division implements Serializable{
         for (Wind sw:listSensorWind())
             sw.setStatus(false);
         
-        home.alerTryOpenwindowsDoors();
+        //home.alerTryOpenwindowsDoors();
     }
     
     public boolean verifyOnSensorGas(){

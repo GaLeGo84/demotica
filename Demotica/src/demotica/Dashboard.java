@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Dashboard implements Serializable{
  
     private static final long serialVersionUID = -6231719377239289088L;
-    static Home home;
+    static Home home;    
 
     public static Home getHome() {
         return home;
