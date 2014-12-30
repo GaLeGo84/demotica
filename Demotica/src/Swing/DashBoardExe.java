@@ -1481,6 +1481,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         "Sair",
         JOptionPane.YES_NO_OPTION);
         if(n==0){
+            Dashboard.saveData();
             System.exit(0);
         }
     }//GEN-LAST:event_jButton6MouseClicked
