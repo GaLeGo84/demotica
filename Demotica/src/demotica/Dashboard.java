@@ -2,6 +2,7 @@ package demotica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 /*
@@ -36,6 +37,15 @@ public class Dashboard implements Serializable{
     
     public static void criarHome(int nFloors, int valueNL, int valueW){
         home = new Home(nFloors, valueNL, valueW);
+    }
+    
+    public static int getIntMap(String name){
+        int n=0;
+        for (Map.Entry<Integer, Division> entry : home.getDivisions().entrySet())
+            if (entry.getValue().getName().equals(name))
+                n= entry.getKey();
+        
+        return n;
     }
     
 }

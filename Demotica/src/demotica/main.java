@@ -152,13 +152,13 @@ public class main {
           o valor do sensor é de 8
         */
         File fi = new File();
-        //Home h = fi.loadHome();
+        Home h = fi.loadHome();
         System.out.println(System.currentTimeMillis());
-        /*Dashboard dash= new Dashboard(home);
-        dash.MenuDivisions();*/
-        System.out.println(home.toString());
+        //Dashboard.getHome().toString();
+        System.out.println(Dashboard.getIntMap("Divisao de Entrada"));
+        //System.out.println(home.toString());
         
-       fi.saveHome(home);
+       //fi.saveHome(home);
         
         /*System.out.println(System.currentTimeMillis());
         File fi = new File();

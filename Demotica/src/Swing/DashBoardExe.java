@@ -9,6 +9,9 @@ import demotica.Climate;
 import demotica.Dashboard;
 import demotica.Division;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -906,7 +909,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11))
+                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1059,6 +1062,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         updateB.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         updateB.setText("Atualizar");
+        updateB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                updateBMouseReleased(evt);
+            }
+        });
         updateB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBActionPerformed(evt);
@@ -1078,33 +1086,40 @@ public class DashBoardExe extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
+                "id", "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
             }
         ));
-        tblDivisions1.setEnabled(false);
+        tblDivisions1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDivisions1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tblDivisions1);
         if (tblDivisions1.getColumnModel().getColumnCount() > 0) {
-            tblDivisions1.getColumnModel().getColumn(0).setMinWidth(130);
-            tblDivisions1.getColumnModel().getColumn(0).setPreferredWidth(130);
-            tblDivisions1.getColumnModel().getColumn(0).setMaxWidth(130);
-            tblDivisions1.getColumnModel().getColumn(1).setMinWidth(35);
-            tblDivisions1.getColumnModel().getColumn(1).setPreferredWidth(35);
-            tblDivisions1.getColumnModel().getColumn(1).setMaxWidth(35);
-            tblDivisions1.getColumnModel().getColumn(2).setMinWidth(80);
-            tblDivisions1.getColumnModel().getColumn(2).setPreferredWidth(80);
-            tblDivisions1.getColumnModel().getColumn(2).setMaxWidth(80);
-            tblDivisions1.getColumnModel().getColumn(3).setMinWidth(105);
-            tblDivisions1.getColumnModel().getColumn(3).setPreferredWidth(105);
-            tblDivisions1.getColumnModel().getColumn(3).setMaxWidth(105);
+            tblDivisions1.getColumnModel().getColumn(0).setMinWidth(30);
+            tblDivisions1.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tblDivisions1.getColumnModel().getColumn(0).setMaxWidth(30);
+            tblDivisions1.getColumnModel().getColumn(1).setMinWidth(130);
+            tblDivisions1.getColumnModel().getColumn(1).setPreferredWidth(130);
+            tblDivisions1.getColumnModel().getColumn(1).setMaxWidth(130);
+            tblDivisions1.getColumnModel().getColumn(2).setMinWidth(35);
+            tblDivisions1.getColumnModel().getColumn(2).setPreferredWidth(35);
+            tblDivisions1.getColumnModel().getColumn(2).setMaxWidth(35);
+            tblDivisions1.getColumnModel().getColumn(3).setMinWidth(80);
+            tblDivisions1.getColumnModel().getColumn(3).setPreferredWidth(80);
+            tblDivisions1.getColumnModel().getColumn(3).setMaxWidth(80);
             tblDivisions1.getColumnModel().getColumn(4).setMinWidth(105);
             tblDivisions1.getColumnModel().getColumn(4).setPreferredWidth(105);
             tblDivisions1.getColumnModel().getColumn(4).setMaxWidth(105);
-            tblDivisions1.getColumnModel().getColumn(5).setMinWidth(102);
-            tblDivisions1.getColumnModel().getColumn(5).setPreferredWidth(102);
-            tblDivisions1.getColumnModel().getColumn(5).setMaxWidth(102);
-            tblDivisions1.getColumnModel().getColumn(6).setMinWidth(85);
-            tblDivisions1.getColumnModel().getColumn(6).setPreferredWidth(85);
-            tblDivisions1.getColumnModel().getColumn(6).setMaxWidth(85);
+            tblDivisions1.getColumnModel().getColumn(5).setMinWidth(105);
+            tblDivisions1.getColumnModel().getColumn(5).setPreferredWidth(105);
+            tblDivisions1.getColumnModel().getColumn(5).setMaxWidth(105);
+            tblDivisions1.getColumnModel().getColumn(6).setMinWidth(102);
+            tblDivisions1.getColumnModel().getColumn(6).setPreferredWidth(102);
+            tblDivisions1.getColumnModel().getColumn(6).setMaxWidth(102);
+            tblDivisions1.getColumnModel().getColumn(7).setMinWidth(85);
+            tblDivisions1.getColumnModel().getColumn(7).setPreferredWidth(85);
+            tblDivisions1.getColumnModel().getColumn(7).setMaxWidth(85);
         }
 
         jButton7.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
@@ -1524,9 +1539,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        List<Division> a = Dashboard.getHome().getDivisions();
+        Map<Integer,Division> a = Dashboard.getHome().getDivisions();
         modelo.getDataVector().clear();
-        for(Division div:a)
+        for(Division div:a.values())
             modelo.addRow(new Object[]{div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
             div.nWindows(), div.nLights()});
     }//GEN-LAST:event_JHomeAncestorAdded
@@ -1572,6 +1587,21 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().addDivision(new Division(tfName.getText(),floor,new Climate()));
         updateTlmDivisions1();
     }//GEN-LAST:event_addBMouseClicked
+
+    private void tblDivisions1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDivisions1MouseClicked
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
+        tfName.setText(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
+        int n = Dashboard.getIntMap(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
+        tfLights.setText(String.valueOf(n));
+    }//GEN-LAST:event_tblDivisions1MouseClicked
+
+    private void updateBMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateBMouseReleased
+       //Dashboard.getHome().addDivision(new Division(tfName.getText(),floor,new Climate()));
+       DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
+       int n = Dashboard.getIntMap(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
+       tfLights.setText(String.valueOf(n));
+       updateTlmDivisions1();
+    }//GEN-LAST:event_updateBMouseReleased
 
     /**
      * @param args the command line arguments
@@ -1641,10 +1671,10 @@ public class DashBoardExe extends javax.swing.JFrame {
     
     private void updateTlmDivisions1(){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
-        List<Division> a = Dashboard.getHome().getDivisions();
+        Map<Integer,Division> a = Dashboard.getHome().getDivisions();
         modelo.getDataVector().clear();
-        for(Division div:a)
-            modelo.addRow(new Object[]{div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
+        for(Division div:a.values())
+            modelo.addRow(new Object[]{Dashboard.getIntMap(div.getName()),div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
             div.nWindows(), div.nLights()});
     }
 

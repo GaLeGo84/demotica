@@ -3,6 +3,9 @@ package demotica;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 
 /*
@@ -19,14 +22,14 @@ public class Home implements Serializable{
     private static final long serialVersionUID = -6231719377239289088L;
     private int nFloors;
     private List<Alert> alerts;
-    private List<Division> divisions;
+    private Map<Integer,Division> divisions;
     private int valueNL;
     private int valueW;
 
     public Home(int nFloors, int valueNL, int valueW) {
         this.nFloors = nFloors;
         this.alerts = new LinkedList<Alert>();
-        this.divisions = new LinkedList<Division>();
+        this.divisions = new TreeMap<Integer,Division>();
         this.valueNL = valueNL;
         this.valueW = valueW;
     }
@@ -39,7 +42,7 @@ public class Home implements Serializable{
         return alerts;
     }
 
-    public List<Division> getDivisions() {
+    public Map<Integer,Division> getDivisions() {
         return divisions;
     }
 
@@ -50,13 +53,14 @@ public class Home implements Serializable{
     public int getValueW() {
         return valueW;
     }
+    
 
     public void setnFloors(int nFloors) {
         this.nFloors = nFloors;
     }
 
     public void addDivision(Division div){
-        divisions.add(div);
+        divisions.put(divisions.size()+1,div);
     }
 
     public void setValueNL(int valueNL) {
@@ -79,7 +83,7 @@ public class Home implements Serializable{
    }
     
     public void onAlertMoviment(){
-        for (Division div:divisions)
+        for (Division div:divisions.values())
             if(div.onMovimentSensorAlarm()==true)
                 for(IntruderAlert lia:listIntruderAlert()){
                     lia.setDetection(true);
@@ -89,7 +93,7 @@ public class Home implements Serializable{
     
      //Tentativa de abrir a janela
     public boolean tryOpenwindows(){
-        for (Division div:divisions)
+        for (Division div:divisions.values())
             for(Window w:div.getWindows().values())
                 if(w.isStatus()==true) 
                     return true;
@@ -99,7 +103,7 @@ public class Home implements Serializable{
     
      //Tentativa de abrir a porta
     public boolean tryOpenDoors(){
-        for (Division div:divisions)
+        for (Division div:divisions.values())
             for(Door d:div.getDoors())
                 if(d.isStatus()==true)
                     return true;
@@ -109,7 +113,7 @@ public class Home implements Serializable{
     
     //Tentativa de abrir a janela e a porta
     public void alerTryOpenwindowsDoors(){
-        for (Division div:divisions)
+        for (Division div:divisions.values())
             for(ExteriorEntranceDoor lsed:div.listExteriorEntranceDoor())
                 if(lsed.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
                     for(IntruderAlert lia:listIntruderAlert()){
