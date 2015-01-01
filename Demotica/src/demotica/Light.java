@@ -12,18 +12,12 @@ import java.io.Serializable;
  */
 public class Light implements Serializable{
 
-    private String sn;
     private int intensity;   
     private boolean status;
 
-    public Light(String sn) {
-        this.sn = sn;        
+    public Light(){       
         this.intensity = 8; //é entre de 0 a 10
         this.status = false;        
-    }
-
-    public String getSn() {
-        return sn;
     }
 
     public float getIntensity() {

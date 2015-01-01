@@ -1,5 +1,6 @@
 package demotica;
 
+import static demotica.Dashboard.home;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
@@ -54,6 +55,14 @@ public class Home implements Serializable{
         return valueW;
     }
     
+    public int getIntMap(String name){
+        int n=0;
+        for (Map.Entry<Integer, Division> entry : home.getDivisions().entrySet())
+            if (entry.getValue().getName().equals(name))
+                n= entry.getKey();
+        
+        return n;
+    }    
 
     public void setnFloors(int nFloors) {
         this.nFloors = nFloors;
@@ -104,8 +113,8 @@ public class Home implements Serializable{
      //Tentativa de abrir a porta
     public boolean tryOpenDoors(){
         for (Division div:divisions.values())
-            for(Door d:div.getDoors())
-                if(d.isStatus()==true)
+            for(Map.Entry<Integer, Door> doo:div.getDoors().entrySet())
+                if(doo.getValue().isStatus()==true)
                     return true;
                 
         return false;
@@ -114,8 +123,8 @@ public class Home implements Serializable{
     //Tentativa de abrir a janela e a porta
     public void alerTryOpenwindowsDoors(){
         for (Division div:divisions.values())
-            for(ExteriorEntranceDoor lsed:div.listExteriorEntranceDoor())
-                if(lsed.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
+            for(Map.Entry<Integer, ExteriorEntranceDoor> doo:div.listExteriorEntranceDoor().entrySet())
+                if(doo.getValue().getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
                     for(IntruderAlert lia:listIntruderAlert()){
                         lia.setDetection(true);                            
                     }       

@@ -6,7 +6,7 @@ public class Window implements Serializable{
 
     private boolean status;
 
-    public Window() {
+    public Window(){
         this.status = false;
     }
 

@@ -23,7 +23,7 @@ public class Division implements Serializable{
     private List<Light> lights;
     private List<Sensor> sensors;
     private Map<Integer,Window> windows;
-    private List<Door> doors;
+    private Map<Integer,Door> doors;
     private List<TimeIntervalLight> timeintervallight;
 
     public Division(String name, int floor, Climate climate){
@@ -33,7 +33,7 @@ public class Division implements Serializable{
         lights = new LinkedList<Light>();
         sensors = new LinkedList<Sensor>();
         windows = new TreeMap<Integer,Window>();
-        doors = new LinkedList<Door>();
+        doors = new TreeMap<Integer,Door>();
         timeintervallight = new LinkedList<TimeIntervalLight>();
     }
 
@@ -44,7 +44,6 @@ public class Division implements Serializable{
     public Climate getClimate() {
         return climate;
     }
-
     
     public List<Light> getLights() {
         return lights;
@@ -62,7 +61,7 @@ public class Division implements Serializable{
         return windows;
     }
 
-    public List<Door> getDoors() {
+    public Map<Integer,Door> getDoors() {
         return doors;
     }
     
@@ -75,7 +74,7 @@ public class Division implements Serializable{
     }
     
     public void addDoor(Door dor){   
-        doors.add(dor);
+        doors.put(doors.size()+1,dor);
     }
     
     public void addWindow(Window w){
@@ -113,21 +112,21 @@ public class Division implements Serializable{
    }
     
     //Lista de portas exteriores de Entrada
-    public LinkedList<ExteriorEntranceDoor> listExteriorEntranceDoor(){
-       LinkedList<ExteriorEntranceDoor> aux=new LinkedList<>();
-       for (Door doo:doors){
+    public TreeMap<Integer,ExteriorEntranceDoor> listExteriorEntranceDoor(){
+       TreeMap<Integer,ExteriorEntranceDoor> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Door> doo:doors.entrySet()){
            if(doo instanceof ExteriorEntranceDoor)
-                aux.add((ExteriorEntranceDoor)doo);
+                aux.put(doo.getKey(), (ExteriorEntranceDoor)doo);
        }
        return aux;
    }
     
      //Lista de portas exteriores de Standard
-    public LinkedList<ExteriorDoorStandard> listExteriorStandardDoor(){
-       LinkedList<ExteriorDoorStandard> aux=new LinkedList<>();
-       for (Door doo:doors){
+    public TreeMap<Integer,ExteriorDoorStandard> listExteriorStandardDoor(){
+       TreeMap<Integer,ExteriorDoorStandard> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Door> doo:doors.entrySet()){
            if(doo instanceof ExteriorDoorStandard)
-                aux.add((ExteriorDoorStandard)doo);
+                aux.put(doo.getKey(), (ExteriorDoorStandard)doo);
        }
        return aux;
    }
@@ -301,23 +300,23 @@ public class Division implements Serializable{
     
     //Fechar as portas
     public void lockDoors(){
-        for (Door doo:doors)
-            if(doo.isStatus()== true)
-                doo.setStatus(false);
+        for (Map.Entry<Integer, Door> doo:doors.entrySet())
+            if(doo.getValue().isStatus()== true)
+                doo.getValue().setStatus(false);
     }
     
     //Abrir as portas
     public void openDoors(){
-        for (Door doo:doors)
-            if(doo.isStatus()== false)
-                doo.setStatus(true);
+        for (Map.Entry<Integer, Door> doo:doors.entrySet())
+            if(doo.getValue().isStatus()== false)
+                doo.getValue().setStatus(true);
     }
     
     public void onComponentSegurança(){
         //home.onAlertMoviment();
         
-        for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
-            doo.activeSecurity();
+        for(Map.Entry<Integer, ExteriorEntranceDoor> doo:listExteriorEntranceDoor().entrySet())
+            doo.getValue().activeSecurity();
         
         lockWindows();
         lockDoors(); 

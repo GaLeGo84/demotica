@@ -21,9 +21,7 @@ public class Climate implements Serializable{
     public Climate() {
         this.aircon = false;
         this.heating = false;
-    }
-    
-    
+    }   
 
     public int getMINVALUE() {
         return MINVALUE;
