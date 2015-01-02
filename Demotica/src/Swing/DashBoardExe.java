@@ -1611,7 +1611,7 @@ public class DashBoardExe extends javax.swing.JFrame {
        lblLuzes.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 7).toString());
        lblJanelas.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 6).toString());
        lblPortas.setText(String.valueOf(total));
-       lblSensors.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 7).toString());
+       lblSensors.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
        lblTempMin.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMINVALUE()));
        lblTempMax.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMAXVALUE()));
     }//GEN-LAST:event_jButton9MouseClicked
