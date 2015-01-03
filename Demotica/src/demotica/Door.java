@@ -13,16 +13,16 @@ import java.io.Serializable;
  */
 public class Door implements Serializable{
 
-    private int num;
+    private int ID;
     private boolean status;
 
-    public Door(int num) {
-        this.num = num;
+    public Door(int ID) {
+        this.ID = ID;
         this.status = false;
     }
 
-    public int getNum(){
-        return num;
+    public int getId(){
+        return ID;
     }
 
     public boolean isStatus() {
@@ -35,7 +35,7 @@ public class Door implements Serializable{
 
     @Override
     public String toString() {
-        return "Door{" + "num=" + num + ", status=" + status + '}';
+        return "Door{" + "num=" + ID + ", status=" + status + '}';
     }
 
 }

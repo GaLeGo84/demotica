@@ -20,7 +20,7 @@ public class Division implements Serializable{
     private int floor;
     private String name;
     private Climate climate;
-    private List<Light> lights;
+    private Map<Integer,Light> lights;
     private List<Sensor> sensors;
     private Map<Integer,Window> windows;
     private Map<Integer,Door> doors;
@@ -30,7 +30,7 @@ public class Division implements Serializable{
         this.floor = floor;
         this.name = name;
         this.climate = climate;
-        lights = new LinkedList<Light>();
+        lights = new TreeMap<Integer,Light>();
         sensors = new LinkedList<Sensor>();
         windows = new TreeMap<Integer,Window>();
         doors = new TreeMap<Integer,Door>();
@@ -45,7 +45,7 @@ public class Division implements Serializable{
         return climate;
     }
     
-    public List<Light> getLights() {
+    public Map<Integer,Light> getLights() {
         return lights;
     }
 
@@ -69,16 +69,44 @@ public class Division implements Serializable{
         sensors.add(sen);
     }
       
-    public void addLight(Light l){          
-        lights.add(l);
+    public void addLight(Light l){
+        int n=1;
+        while(n<=lights.size()){
+            if(lights.containsKey(n)==false){
+                lights.put(n, l);
+                break;
+            }            
+        n++;
+        }
+        
+        if(lights.size()<n)
+            lights.put(lights.size()+1,l);
+    }
+    
+    public void addWindow(Window w){
+        int n=1;
+        while(n<=windows.size()){
+            if(windows.containsKey(n)==false){
+                windows.put(n, w);
+                break;
+            }            
+        n++;
+        }
+        
+        if(windows.size()<n)
+            windows.put(windows.size()+1,w);          
+    }
+    
+    public void remLight(int key){          
+        lights.remove(key);
+    }
+    
+    public void remWindow(int key){          
+        windows.remove(key);
     }
     
     public void addDoor(Door dor){   
         doors.put(doors.size()+1,dor);
-    }
-    
-    public void addWindow(Window w){
-         windows.put(windows.size()+1, w);          
     }
     
     //Lista de sensores de Temperatura
@@ -212,8 +240,8 @@ public class Division implements Serializable{
                 sm.setDetection(true);
                 sm.setTime(timestamp);
                 if(onLight() == true){
-                    for (Light l:lights)
-                        l.setStatus(true);   
+                    for (Map.Entry<Integer, Light> l:lights.entrySet())
+                        l.getValue().setStatus(true);   
                 }
             }
         }  
@@ -246,8 +274,8 @@ public class Division implements Serializable{
                 if(timestamp>limit){
                     sm.setDetection(false);
                     sm.setTime(0);
-                    for (Light l:lights)
-                        l.setStatus(false);
+                    for (Map.Entry<Integer, Light> l:lights.entrySet())
+                        l.getValue().setStatus(false);
                 }
             }
         }
@@ -256,9 +284,9 @@ public class Division implements Serializable{
     //mudar a intensidade da luz
     public void changeLightIntensity(Light l, int value){
         float valor;
-        for (Light li:lights){
-            if(li.getIntensity()==l.getIntensity())
-                li.setIntensity(value);
+        for (Map.Entry<Integer, Light> li:lights.entrySet()){
+            if(li.getValue().getIntensity()==l.getIntensity())
+                li.getValue().setIntensity(value);
         }        
     }
     

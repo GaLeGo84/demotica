@@ -19,8 +19,7 @@ public class main {
     public static void main(String[] args) {
         //Criar a casa
         Home home = new Home(2,5,5);
-        
-        
+
         
         //Criar a Divisão com o andar
         Division div0 = new Division("Divisao de Entrada",0,new Climate());

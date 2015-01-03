@@ -13,10 +13,10 @@ import java.io.Serializable;
  */
 public class Climate implements Serializable{
 
-	private static int MINVALUE=12;
-	private static int MAXVALUE=25;
-	private boolean aircon;
-	private boolean heating;
+    private static int MINVALUE=12;
+    private static int MAXVALUE=25;
+    private boolean aircon;
+    private boolean heating;
 
     public Climate() {
         this.aircon = false;

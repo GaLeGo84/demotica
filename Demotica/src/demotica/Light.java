@@ -6,6 +6,7 @@ import java.io.Serializable;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author Rodolfo Melo, Henrique Melo, Xico
@@ -16,11 +17,11 @@ public class Light implements Serializable{
     private boolean status;
 
     public Light(){       
-        this.intensity = 8; //é entre de 0 a 10
+        this.intensity = 10; //é entre de 0 a 20
         this.status = false;        
     }
 
-    public float getIntensity() {
+    public int getIntensity() {
         return intensity;
     }
 
@@ -35,6 +36,7 @@ public class Light implements Serializable{
     public void setStatus(boolean status) {
         this.status = status;
     }
+    
 
     @Override
     public String toString() {
