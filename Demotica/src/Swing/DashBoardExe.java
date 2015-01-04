@@ -146,6 +146,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        JBegin = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        load = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        bar = new javax.swing.JProgressBar();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         JCreateDivision = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -167,15 +176,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         tfWindow = new javax.swing.JTextField();
         btnLimpar = new javax.swing.JButton();
-        JBegin = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        load = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        bar = new javax.swing.JProgressBar();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         JEditHome = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         carregar2 = new javax.swing.JLabel();
@@ -1314,6 +1314,61 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        JBegin.setName("JBegin"); // NOI18N
+        JBegin.setPreferredSize(new java.awt.Dimension(700, 400));
+        JBegin.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel1.setText("Inteligente");
+        JBegin.add(jLabel1);
+        jLabel1.setBounds(240, 140, 280, 70);
+
+        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel2.setText("Habitação");
+        JBegin.add(jLabel2);
+        jLabel2.setBounds(160, 60, 250, 70);
+
+        load.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        load.setForeground(new java.awt.Color(255, 153, 0));
+        load.setText("Carregar");
+        JBegin.add(load);
+        load.setBounds(320, 270, 60, 18);
+
+        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
+        JBegin.add(jLabel5);
+        jLabel5.setBounds(350, 380, 340, 14);
+
+        bar.setStringPainted(true);
+        JBegin.add(bar);
+        bar.setBounds(190, 290, 310, 20);
+
+        jButton2.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        jButton2.setText("Criar Habitação");
+        jButton2.setToolTipText("");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        JBegin.add(jButton2);
+        jButton2.setBounds(190, 320, 140, 30);
+
+        jButton1.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        jButton1.setText("Carregar Habitação");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        JBegin.add(jButton1);
+        jButton1.setBounds(340, 320, 160, 30);
+        JBegin.add(jLabel3);
+        jLabel3.setBounds(0, 0, 700, 400);
+
         JCreateDivision.setVisible(false);
         JCreateDivision.setEnabled(false);
         JCreateDivision.setPreferredSize(new java.awt.Dimension(700, 400));
@@ -1535,61 +1590,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        JBegin.setName("JBegin"); // NOI18N
-        JBegin.setPreferredSize(new java.awt.Dimension(700, 400));
-        JBegin.setLayout(null);
-
-        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel1.setText("Inteligente");
-        JBegin.add(jLabel1);
-        jLabel1.setBounds(240, 140, 280, 70);
-
-        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Habitação");
-        JBegin.add(jLabel2);
-        jLabel2.setBounds(160, 60, 250, 70);
-
-        load.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
-        load.setForeground(new java.awt.Color(255, 153, 0));
-        load.setText("Carregar");
-        JBegin.add(load);
-        load.setBounds(320, 270, 60, 18);
-
-        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
-        JBegin.add(jLabel5);
-        jLabel5.setBounds(350, 380, 340, 14);
-
-        bar.setStringPainted(true);
-        JBegin.add(bar);
-        bar.setBounds(190, 290, 310, 20);
-
-        jButton2.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
-        jButton2.setText("Criar Habitação");
-        jButton2.setToolTipText("");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
-        JBegin.add(jButton2);
-        jButton2.setBounds(190, 320, 140, 30);
-
-        jButton1.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
-        jButton1.setText("Carregar Habitação");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        JBegin.add(jButton1);
-        jButton1.setBounds(340, 320, 160, 30);
-        JBegin.add(jLabel3);
-        jLabel3.setBounds(0, 0, 700, 400);
-
         JEditHome.setVisible(false);
         JEditHome.setEnabled(false);
         JEditHome.setName("JCreateHome"); // NOI18N
@@ -1700,7 +1700,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 749, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(JCreateHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1725,10 +1725,15 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(24, 24, 24)
+                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(25, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 432, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(JCreateHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1753,6 +1758,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(16, Short.MAX_VALUE)))
         );
 
         JEditHome.getAccessibleContext().setAccessibleName("");
@@ -1852,7 +1862,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         JHome.setVisible(false);
-        JCreateDivision.setVisible(true);        
+        JCreateDivision.setVisible(true);
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void JCreateDivisionAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JCreateDivisionAncestorAdded

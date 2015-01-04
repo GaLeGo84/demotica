@@ -69,7 +69,17 @@ public class Home implements Serializable{
     }
 
     public void addDivision(Division div){
-        divisions.put(divisions.size()+1,div);
+        int n=1;
+        while(n<=divisions.size()){
+            if(divisions.containsKey(n)==false){
+                divisions.put(n, div);
+                break;
+            }            
+        n++;
+        }
+        
+        if(divisions.size()<n)
+            divisions.put(divisions.size()+1,div);
     }
 
     public void setValueNL(int valueNL) {
