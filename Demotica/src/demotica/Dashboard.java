@@ -1,9 +1,9 @@
 package demotica;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -47,7 +47,5 @@ public class Dashboard implements Serializable{
     public static void criarHome(int nFloors, int valueNL, int valueW){
         home = new Home(nFloors, valueNL, valueW);
     }
-    
-    
     
 }

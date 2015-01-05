@@ -2167,17 +2167,19 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
        try{
-        Integer.parseInt(jTextField1.getText());
+            Integer.parseInt(jTextField1.getText());
         }catch(NumberFormatException a){
-        JOptionPane.showMessageDialog(this, a);
+            JOptionPane.showMessageDialog(this, a);
+            jTextField1.setText("");
         }
     }//GEN-LAST:event_jTextField1KeyReleased
 
     private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
         try{
-        Integer.parseInt(jTextField2.getText());
+            Integer.parseInt(jTextField2.getText());
         }catch(NumberFormatException a){
-        JOptionPane.showMessageDialog(this, a);
+            JOptionPane.showMessageDialog(this, a);
+            jTextField2.setText("");
         }
     }//GEN-LAST:event_jTextField2KeyReleased
 
@@ -2187,10 +2189,10 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
         try{
-        Integer.parseInt(jTextField3.getText());
+            Integer.parseInt(jTextField3.getText());
         }catch(NumberFormatException a){
-        JOptionPane.showMessageDialog(this, a);
-        jTextField3.setText("");
+            JOptionPane.showMessageDialog(this, a);
+            jTextField3.setText("");
         }
     }//GEN-LAST:event_jTextField3KeyReleased
 
