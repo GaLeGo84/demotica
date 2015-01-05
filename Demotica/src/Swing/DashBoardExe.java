@@ -1144,7 +1144,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         });
 
         jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton9.setText("Alterar");
+        jButton9.setText("Configuração da divisão");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -1237,16 +1237,36 @@ public class DashBoardExe extends javax.swing.JFrame {
         carregar5.setText("Intensidade max/Vento:");
 
         jTextField1.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
 
         jTextField2.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField2KeyReleased(evt);
+            }
+        });
 
         jTextField3.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField3KeyReleased(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton3.setText("Criar");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton3MouseReleased(evt);
             }
         });
 
@@ -1277,14 +1297,14 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(JCreateHomeLayout.createSequentialGroup()
-                                .addComponent(carregar5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(JCreateHomeLayout.createSequentialGroup()
                                 .addComponent(carregar4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 370, Short.MAX_VALUE))
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JCreateHomeLayout.createSequentialGroup()
+                                .addComponent(carregar5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 307, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -1307,7 +1327,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1834,16 +1854,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTextField3.setText(null);
     }//GEN-LAST:event_jButton4MouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        int nFloors = Integer.parseInt(jTextField1.getText());
-        int valueNL = Integer.parseInt(jTextField2.getText());
-        int valueW = Integer.parseInt(jTextField3.getText());
-        Dashboard.criarHome(nFloors, valueNL, valueW);
-        Dashboard.saveData();
-        JCreateHome.setVisible(false);
-        JHome.setVisible(true);
-    }//GEN-LAST:event_jButton3MouseClicked
-
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         int n = JOptionPane.showConfirmDialog(JHome,
         "Tens a certeza que queres sair?",
@@ -2143,6 +2153,46 @@ public class DashBoardExe extends javax.swing.JFrame {
         else
             jComboBox2.setVisible(false);
     }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jButton3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseReleased
+
+        int nFloors = Integer.parseInt(jTextField1.getText());
+        int valueNL = Integer.parseInt(jTextField2.getText());
+        int valueW = Integer.parseInt(jTextField3.getText());
+        Dashboard.criarHome(nFloors, valueNL, valueW);
+        Dashboard.saveData();
+        JCreateHome.setVisible(false);
+        JHome.setVisible(true);
+    }//GEN-LAST:event_jButton3MouseReleased
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+       try{
+        Integer.parseInt(jTextField1.getText());
+        }catch(NumberFormatException a){
+        JOptionPane.showMessageDialog(this, a);
+        }
+    }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
+        try{
+        Integer.parseInt(jTextField2.getText());
+        }catch(NumberFormatException a){
+        JOptionPane.showMessageDialog(this, a);
+        }
+    }//GEN-LAST:event_jTextField2KeyReleased
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
+        try{
+        Integer.parseInt(jTextField3.getText());
+        }catch(NumberFormatException a){
+        JOptionPane.showMessageDialog(this, a);
+        jTextField3.setText("");
+        }
+    }//GEN-LAST:event_jTextField3KeyReleased
 
     /**
      * @param args the command line arguments
