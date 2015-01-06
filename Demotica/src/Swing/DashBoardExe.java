@@ -1414,6 +1414,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel11.setText("Nº de luzes:");
 
+        tfLights.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfLightsKeyReleased(evt);
+            }
+        });
+
         comboFloor.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
@@ -1510,6 +1516,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel10.setText("Nº de Janelas:");
+
+        tfWindow.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfWindowKeyReleased(evt);
+            }
+        });
 
         btnLimpar.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         btnLimpar.setText("Limpar");
@@ -1639,10 +1651,25 @@ public class DashBoardExe extends javax.swing.JFrame {
         carregar7.setText("Intensidade max/Vento:");
 
         jTextField5.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField5KeyReleased(evt);
+            }
+        });
 
         jTextField6.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField6KeyReleased(evt);
+            }
+        });
 
         jTextField7.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
+            }
+        });
 
         jButton19.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton19.setText("Atualizar");
@@ -1686,7 +1713,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 350, Short.MAX_VALUE))
+                        .addGap(0, 321, Short.MAX_VALUE))
                     .addGroup(JEditHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -1709,7 +1736,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2195,6 +2222,51 @@ public class DashBoardExe extends javax.swing.JFrame {
             jTextField3.setText("");
         }
     }//GEN-LAST:event_jTextField3KeyReleased
+
+    private void tfWindowKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfWindowKeyReleased
+        try{
+            Integer.parseInt(tfWindow.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(this, a);
+            tfWindow.setText("");
+        }
+    }//GEN-LAST:event_tfWindowKeyReleased
+
+    private void tfLightsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfLightsKeyReleased
+        try{
+            Integer.parseInt(tfLights.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(this, a);
+            tfLights.setText("");
+        }
+    }//GEN-LAST:event_tfLightsKeyReleased
+
+    private void jTextField5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyReleased
+        try{
+            Integer.parseInt(jTextField5.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(this, a);
+            jTextField5.setText("");
+        }
+    }//GEN-LAST:event_jTextField5KeyReleased
+
+    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
+        try{
+            Integer.parseInt(jTextField6.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(this, a);
+            jTextField6.setText("");
+        }
+    }//GEN-LAST:event_jTextField6KeyReleased
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        try{
+            Integer.parseInt(jTextField7.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(this, a);
+            jTextField7.setText("");
+        }
+    }//GEN-LAST:event_jTextField7KeyReleased
 
     /**
      * @param args the command line arguments

@@ -2205,6 +2205,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfLights">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tfLightsKeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="comboFloor">
           <Properties>
@@ -2373,6 +2376,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfWindow">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tfWindowKeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnLimpar">
           <Properties>
@@ -2434,7 +2440,7 @@
                                   <Component id="jTextField6" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="350" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="321" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -2465,7 +2471,7 @@
                       <Component id="carregar7" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton19" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="btnBack1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -2518,6 +2524,9 @@
               <Font name="Maiandra GD" size="18" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField5KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField6">
           <Properties>
@@ -2525,6 +2534,9 @@
               <Font name="Maiandra GD" size="18" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField6KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField7">
           <Properties>
@@ -2532,6 +2544,9 @@
               <Font name="Maiandra GD" size="18" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField7KeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton19">
           <Properties>
