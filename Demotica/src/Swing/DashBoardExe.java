@@ -11,10 +11,7 @@ import demotica.Division;
 import demotica.Door;
 import demotica.Light;
 import demotica.Window;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.TreeMap;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -190,9 +187,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel18.setText("jLabel18");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 410));
+        setResizable(false);
 
         JSimular.setVisible(false);  JSimular.setEnabled(false);
-        JSimular.setPreferredSize(new java.awt.Dimension(700, 400));
+        JSimular.setPreferredSize(new java.awt.Dimension(700, 410));
 
         jLabel17.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 102));
@@ -215,7 +214,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel49)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         JSimularLayout.setVerticalGroup(
             JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,15 +225,16 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel49)
                     .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
         JConfiguration.setEnabled(false);
-        JConfiguration.setPreferredSize(new java.awt.Dimension(700, 400));
+        JConfiguration.setPreferredSize(new java.awt.Dimension(700, 410));
 
         jTabbedPane1.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
 
+        jPanelView.setPreferredSize(new java.awt.Dimension(700, 400));
         jPanelView.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -364,7 +364,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(lblPortas1)
                         .addGap(149, 149, 149)
                         .addComponent(jLabel48)))
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addContainerGap(354, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelViewLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnVoltarDivisão)
@@ -398,7 +398,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
                             .addComponent(lblSensors))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE))
                     .addGroup(jPanelViewLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -414,9 +414,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(lblTempMax)
                     .addComponent(jLabel33)
                     .addComponent(jLabel38))
-                .addGap(18, 18, 18)
+                .addGap(41, 41, 41)
                 .addComponent(btnVoltarDivisão)
-                .addGap(34, 34, 34))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Divisão", jPanelView);
@@ -584,7 +584,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGroup(jPanelLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jDesligarLight)
                             .addComponent(jLigarLight, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(btnSimul)
                 .addContainerGap())
         );
@@ -675,7 +675,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jPanelWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton26)
                     .addComponent(jButton27))
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         jPanelWindowLayout.setVerticalGroup(
             jPanelWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -693,7 +693,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton27))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Janelas", jPanelWindow);
@@ -791,12 +791,12 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton28)
                     .addComponent(jButton29))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
             .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelDoorsLayout.createSequentialGroup()
                     .addGap(20, 20, 20)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(591, Short.MAX_VALUE)))
+                    .addContainerGap(582, Short.MAX_VALUE)))
         );
         jPanelDoorsLayout.setVerticalGroup(
             jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -817,14 +817,14 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton29)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDoorsLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42))))
             .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelDoorsLayout.createSequentialGroup()
                     .addGap(62, 62, 62)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(279, Short.MAX_VALUE)))
+                    .addContainerGap(283, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Portas", jPanelDoors);
@@ -871,7 +871,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton17)
                         .addGap(18, 18, 18)
                         .addComponent(jButton18)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         jPanelSensorsLayout.setVerticalGroup(
             jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -888,7 +888,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addGroup(jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel32)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Sensores", jPanelSensors);
@@ -1014,7 +1014,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGroup(jPanelClimateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton30)
                             .addComponent(jButton31))))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         jPanelClimateLayout.setVerticalGroup(
             jPanelClimateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1043,7 +1043,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47)
                     .addComponent(jButton31))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Clima", jPanelClimate);
@@ -1052,16 +1052,16 @@ public class DashBoardExe extends javax.swing.JFrame {
         JConfiguration.setLayout(JConfigurationLayout);
         JConfigurationLayout.setHorizontalGroup(
             JConfigurationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         JConfigurationLayout.setVerticalGroup(
             JConfigurationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
         );
 
         JHome.setVisible(false);
         JHome.setEnabled(false);
-        JHome.setPreferredSize(new java.awt.Dimension(700, 400));
+        JHome.setPreferredSize(new java.awt.Dimension(700, 410));
         JHome.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1080,8 +1080,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton5.setText("Adicionar Divisões");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton5MouseReleased(evt);
             }
         });
 
@@ -1102,6 +1102,9 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         tblDivisions.setFocusable(false);
+        tblDivisions.setMaximumSize(new java.awt.Dimension(800, 0));
+        tblDivisions.setMinimumSize(new java.awt.Dimension(800, 0));
+        tblDivisions.setPreferredSize(new java.awt.Dimension(700, 0));
         tblDivisions.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblDivisionsMouseClicked(evt);
@@ -1144,7 +1147,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         });
 
         jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton9.setText("Configuração da divisão");
+        jButton9.setText("Configurar Divisão");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -1166,11 +1169,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                 jButton11MouseClicked(evt);
             }
         });
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout JHomeLayout = new javax.swing.GroupLayout(JHome);
         JHome.setLayout(JHomeLayout);
@@ -1188,14 +1186,14 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(JHomeLayout.createSequentialGroup()
                         .addComponent(jButton9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton6))
                     .addComponent(jButton10)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
         JHomeLayout.setVerticalGroup(
@@ -1214,13 +1212,13 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         JCreateHome.setVisible(false);
         JCreateHome.setEnabled(false);
         JCreateHome.setName("JCreateHome"); // NOI18N
-        JCreateHome.setPreferredSize(new java.awt.Dimension(700, 400));
+        JCreateHome.setPreferredSize(new java.awt.Dimension(700, 410));
 
         jLabel4.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 102));
@@ -1304,7 +1302,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar5)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 307, Short.MAX_VALUE))
+                        .addGap(0, 306, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -1327,7 +1325,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1335,7 +1333,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         );
 
         JBegin.setName("JBegin"); // NOI18N
-        JBegin.setPreferredSize(new java.awt.Dimension(700, 400));
+        JBegin.setPreferredSize(new java.awt.Dimension(700, 410));
         JBegin.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
@@ -1360,7 +1358,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
         JBegin.add(jLabel5);
-        jLabel5.setBounds(350, 380, 340, 14);
+        jLabel5.setBounds(340, 360, 340, 13);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
@@ -1391,7 +1389,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         JCreateDivision.setVisible(false);
         JCreateDivision.setEnabled(false);
-        JCreateDivision.setPreferredSize(new java.awt.Dimension(700, 400));
+        JCreateDivision.setPreferredSize(new java.awt.Dimension(700, 410));
         JCreateDivision.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1411,6 +1409,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel9.setText("Nº de portas interiores:");
 
+        tfDoors.setEnabled(false);
+
         jLabel11.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel11.setText("Nº de luzes:");
 
@@ -1427,9 +1427,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         checkExt.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         checkExt.setText("Porta p/ o exterior");
+        checkExt.setEnabled(false);
 
         radioEnt.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         radioEnt.setText("Porta de entrada");
+        radioEnt.setEnabled(false);
 
         addB.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         addB.setText("Adicionar");
@@ -1538,94 +1540,105 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JCreateDivisionLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton7))
-                    .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7)
+                    .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton7)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                            .addComponent(addB)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(updateB)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(removeB)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btnLimpar))
+                        .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                            .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                                    .addComponent(jLabel8)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel12)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tfWindow))
                                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tfLights, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(addB)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(updateB)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(removeB))
-                                    .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel9)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel10))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                                .addComponent(tfDoors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(checkExt)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(radioEnt))
-                                            .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                                .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jLabel12)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(tfWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnLimpar)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                        .addComponent(tfLights, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                                    .addGap(21, 21, 21)
+                                    .addComponent(jLabel9)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(tfDoors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                                    .addGap(18, 18, 18)
+                                    .addComponent(checkExt)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(radioEnt))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JCreateDivisionLayout.setVerticalGroup(
             JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
-                    .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(tfWindow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(tfDoors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(checkExt)
-                    .addComponent(radioEnt))
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
+                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel12)
+                                    .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JCreateDivisionLayout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(tfDoors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(9, 9, 9)
+                                .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(checkExt)
+                                    .addComponent(radioEnt))
+                                .addGap(52, 52, 52)))
                         .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(addB)
                             .addComponent(updateB)
                             .addComponent(removeB)
-                            .addComponent(btnLimpar)))
-                    .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel11)
-                        .addComponent(tfLights, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                .addGap(7, 7, 7)
+                            .addComponent(btnLimpar))
+                        .addGap(11, 11, 11))
+                    .addGroup(JCreateDivisionLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(tfWindow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(tfLights, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
-                .addGap(20, 20, 20))
+                .addGap(21, 21, 21))
         );
 
         JEditHome.setVisible(false);
         JEditHome.setEnabled(false);
         JEditHome.setName("JCreateHome"); // NOI18N
-        JEditHome.setPreferredSize(new java.awt.Dimension(700, 400));
+        JEditHome.setPreferredSize(new java.awt.Dimension(700, 410));
         JEditHome.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1674,8 +1687,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton19.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton19.setText("Atualizar");
         jButton19.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton19MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton19MouseReleased(evt);
             }
         });
 
@@ -1713,7 +1726,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 321, Short.MAX_VALUE))
+                        .addGap(0, 320, Short.MAX_VALUE))
                     .addGroup(JEditHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -1736,7 +1749,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1747,69 +1760,51 @@ public class DashBoardExe extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 749, Short.MAX_VALUE)
+            .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(JCreateHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE))
+                .addComponent(JCreateHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(JHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JHome, javax.swing.GroupLayout.PREFERRED_SIZE, 699, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 4, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(JConfiguration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 703, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(JEditHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(20, 20, 20)
-                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
-                    .addGap(20, 20, 20)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 749, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(24, 24, 24)
-                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(25, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 432, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(JCreateHome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(JSimular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(JCreateHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addComponent(JHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addComponent(JConfiguration, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)
-                    .addGap(13, 13, 13)))
+                    .addComponent(JConfiguration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(JEditHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JEditHome, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(JSimular, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(16, Short.MAX_VALUE)))
+                    .addComponent(JBegin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 11, Short.MAX_VALUE)))
         );
 
         JEditHome.getAccessibleContext().setAccessibleName("");
@@ -1897,21 +1892,10 @@ public class DashBoardExe extends javax.swing.JFrame {
        JHome.setVisible(true);
     }//GEN-LAST:event_jButton7MouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        JHome.setVisible(false);
-        JCreateDivision.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseClicked
-
     private void JCreateDivisionAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JCreateDivisionAncestorAdded
         nFloors();
         updateTlmDivisions1();
     }//GEN-LAST:event_JCreateDivisionAncestorAdded
-
-    private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
-        Dashboard.getHome().setnFloors(Integer.parseInt(jTextField5.getText()));
-        Dashboard.getHome().setValueNL(Integer.parseInt(jTextField6.getText()));
-        Dashboard.getHome().setValueW(Integer.parseInt(jTextField7.getText()));
-    }//GEN-LAST:event_jButton19MouseClicked
 
     private void btnBack1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBack1MouseClicked
         JEditHome.setVisible(false);
@@ -1977,6 +1961,10 @@ public class DashBoardExe extends javax.swing.JFrame {
         tfWindow.enable(false);
         tfDoors.enable(false);
         tfLights.enable(false);
+        jLabel9.setVisible(true);
+        tfDoors.setVisible(true);
+        checkExt.setVisible(true);
+        radioEnt.setVisible(true);
     }//GEN-LAST:event_tblDivisions1MouseReleased
 
     private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
@@ -2066,10 +2054,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
         updateTlmDivisions();
     }//GEN-LAST:event_JHomeAncestorAdded
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
 
     private void btnLimparMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimparMouseReleased
         tfWindow.enable(true);
@@ -2267,6 +2251,22 @@ public class DashBoardExe extends javax.swing.JFrame {
             jTextField7.setText("");
         }
     }//GEN-LAST:event_jTextField7KeyReleased
+
+    private void jButton19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseReleased
+        Dashboard.getHome().setnFloors(Integer.parseInt(jTextField5.getText()));
+        Dashboard.getHome().setValueNL(Integer.parseInt(jTextField6.getText()));
+        Dashboard.getHome().setValueW(Integer.parseInt(jTextField7.getText()));
+        JOptionPane.showMessageDialog(null,"Atualização feita com Sucesso");
+    }//GEN-LAST:event_jButton19MouseReleased
+
+    private void jButton5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseReleased
+        JHome.setVisible(false);
+        JCreateDivision.setVisible(true);
+        jLabel9.setVisible(false);
+        tfDoors.setVisible(false);
+        checkExt.setVisible(false);
+        radioEnt.setVisible(false);
+    }//GEN-LAST:event_jButton5MouseReleased
 
     /**
      * @param args the command line arguments
