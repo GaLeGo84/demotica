@@ -24,10 +24,19 @@ public class Dashboard implements Serializable{
     }
     
     public static void countNumberWindows(int n){
-        int nDivisions = home.getDivisions().size()-1;
+        int nDivisions = home.getDivisions().size();
         int i=0;
         while(i<n){
             home.getDivisions().get(nDivisions).addWindow(new Window());
+            i++;
+        }
+    }
+    
+    public static void countNumberLights(int n){
+        int nDivisions = home.getDivisions().size();
+        int i=0;
+        while(i<n){
+            home.getDivisions().get(nDivisions).addLight(new Light());
             i++;
         }
     }
