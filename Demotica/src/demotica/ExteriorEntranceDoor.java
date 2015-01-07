@@ -35,5 +35,9 @@ public class ExteriorEntranceDoor extends ExteriorDoor implements Serializable{
     public void deactiveSecurity(){
         security.setStatus(false);
     }
-    
+
+    @Override
+    public String toString() {
+        return super.toString() +"de Entrada";
+    }
 }

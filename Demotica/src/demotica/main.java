@@ -51,8 +51,8 @@ public class main {
         div0.addSensor(new Moviment("SM00001",120000));
         div0.addSensor(new Temperature("ST00001"));
         div0.addSensor(new NaturaLight("SN00001"));
-        div0.addDoor(new ExteriorEntranceDoor(1, new Security()));
-        div0.addDoor(new InteriorDoor(12));
+        div0.addDoor(new ExteriorEntranceDoor(1234236, new Security()));
+        div0.addDoor(new InteriorDoor(1234566));
         div0.addWindow(new Window());
         div0.addWindow(new Window());
         div0.addLight(new Light());
@@ -62,11 +62,11 @@ public class main {
         div1.addSensor(new Moviment("SM00003",120));
         div1.addSensor(new Temperature("ST00002"));
         div1.addSensor(new NaturaLight("SN00002"));
-        div1.addDoor(new InteriorDoor(2));
-        div1.addDoor(new InteriorDoor(3));
-        div1.addDoor(new InteriorDoor(4));
-        div1.addDoor(new InteriorDoor(5));
-        div1.addDoor(new InteriorDoor(12));
+        div1.addDoor(new InteriorDoor(1234561));
+        div1.addDoor(new InteriorDoor(1234562));
+        div1.addDoor(new InteriorDoor(1234563));
+        div1.addDoor(new InteriorDoor(1234564));
+        div1.addDoor(new InteriorDoor(1234565));
         div1.addWindow(new Window());
         div1.addWindow(new Window());
         

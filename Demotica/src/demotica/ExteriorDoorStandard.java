@@ -18,4 +18,9 @@ public class ExteriorDoorStandard extends ExteriorDoor implements Serializable{
 
     }
     
+    @Override
+    public String toString() {
+        return super.toString() +"do Exterior";
+    }
+    
 }

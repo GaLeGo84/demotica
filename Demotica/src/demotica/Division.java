@@ -113,6 +113,10 @@ public class Division implements Serializable{
         windows.remove(key);
     }
     
+    public void remDoor(Door id){
+        doors.remove(id);
+    }
+    
     public void addDoor(Door dor){   
         doors.add(dor); 
     }

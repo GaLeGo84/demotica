@@ -17,4 +17,8 @@ public class InteriorDoor extends Door implements Serializable{
         super(num);
     }
 
+    @Override
+    public String toString() {
+        return "Interior";
+    }
 }
