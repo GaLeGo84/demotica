@@ -127,8 +127,8 @@ public class Home implements Serializable{
      //Tentativa de abrir a porta
     public boolean tryOpenDoors(){
         for (Division div:divisions.values())
-            for(Map.Entry<Integer, Door> doo:div.getDoors().entrySet())
-                if(doo.getValue().isStatus()==true)
+            for(Door doo:div.getDoors())
+                if(doo.isStatus()==true)
                     return true;
                 
         return false;
@@ -137,8 +137,8 @@ public class Home implements Serializable{
     //Tentativa de abrir a janela e a porta
     public void alerTryOpenwindowsDoors(){
         for (Division div:divisions.values())
-            for(Map.Entry<Integer, ExteriorEntranceDoor> doo:div.listExteriorEntranceDoor().entrySet())
-                if(doo.getValue().getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
+            for(ExteriorEntranceDoor doo:div.listExteriorEntranceDoor())
+                if(doo.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
                     for(IntruderAlert lia:listIntruderAlert()){
                         lia.setDetection(true);                            
                     }       
