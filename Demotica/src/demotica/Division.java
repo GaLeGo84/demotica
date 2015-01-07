@@ -114,8 +114,20 @@ public class Division implements Serializable{
     }
     
     public void addDoor(Door dor){   
-        doors.put(doors.size()+1,dor);
+        int n=1;
+        while(n<=doors.size()){
+            if(doors.containsKey(n)==false){
+                doors.put(n, dor);
+                break;
+            }            
+        n++;
+        }
+        
+        if(doors.size()<n)
+            doors.put(doors.size()+1,dor); 
     }
+    
+    
     
     //Lista de sensores de Temperatura
     public LinkedList<Temperature> listSensorTemperature(){
