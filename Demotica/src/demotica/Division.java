@@ -57,6 +57,14 @@ public class Division implements Serializable{
         return name;
     }
 
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     public Map<Integer,Window> getWindows() {
         return windows;
     }

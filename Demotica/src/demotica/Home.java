@@ -81,6 +81,10 @@ public class Home implements Serializable{
         if(divisions.size()<n)
             divisions.put(divisions.size()+1,div);
     }
+    
+    public void remDivision(int n){
+        divisions.remove(n);
+    }
 
     public void setValueNL(int valueNL) {
         this.valueNL = valueNL;
