@@ -18,7 +18,7 @@ public class Moviment extends Sensor implements Serializable{
     private int interval;
     private boolean detection;
 
-    public Moviment(String SNumber, int interval) {
+    public Moviment(int SNumber, int interval) {
         super(SNumber);
         this.time = System.currentTimeMillis();
         this.interval = interval;

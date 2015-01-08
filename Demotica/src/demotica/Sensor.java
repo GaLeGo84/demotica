@@ -13,21 +13,21 @@ import java.io.Serializable;
  */
 public class Sensor implements Serializable{
 
-    private String SNumber;
+    private int SNumber;
     private long timestamp;
     private boolean status;
 
-    public Sensor(String SNumber) {
+    public Sensor(int SNumber) {
         this.SNumber = SNumber;
         this.timestamp = System.currentTimeMillis();
         this.status = true;
     }
 
-    public String getSNumber() {
+    public int getSNumber() {
         return SNumber;
     }
 
-    public void setSNumber(String SNumber) {
+    public void setSNumber(int SNumber) {
         this.SNumber = SNumber;
     }
 

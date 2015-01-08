@@ -21,7 +21,7 @@ public class Division implements Serializable{
     private String name;
     private Climate climate;
     private Map<Integer,Light> lights;
-    private List<Sensor> sensors;
+    private Map<Integer,Sensor> sensors;
     private Map<Integer,Window> windows;
     private List<Door> doors;
     private List<TimeIntervalLight> timeintervallight;
@@ -31,7 +31,7 @@ public class Division implements Serializable{
         this.name = name;
         this.climate = climate;
         lights = new TreeMap<Integer,Light>();
-        sensors = new LinkedList<Sensor>();
+        sensors = new TreeMap<Integer,Sensor>();
         windows = new TreeMap<Integer,Window>();
         doors = new LinkedList<Door>();
         timeintervallight = new LinkedList<TimeIntervalLight>();
@@ -49,7 +49,7 @@ public class Division implements Serializable{
         return lights;
     }
 
-    public List<Sensor> getSensors() {
+    public Map<Integer,Sensor> getSensors() {
         return sensors;
     }
     
@@ -74,7 +74,17 @@ public class Division implements Serializable{
     }
     
     public void addSensor(Sensor sen){
-        sensors.add(sen);
+        int n=1;
+        while(n<=sensors.size()){
+            if(sensors.containsKey(n)==false){
+                sensors.put(sen.getSNumber(),sen);
+                break;
+            }            
+        n++;
+        }
+        
+        if(sensors.size()<n)
+            sensors.put(sensors.size()+1,sen);
     }
       
     public void addLight(Light l){
@@ -124,32 +134,32 @@ public class Division implements Serializable{
     
     
     //Lista de sensores de Temperatura
-    public LinkedList<Temperature> listSensorTemperature(){
-       LinkedList<Temperature> aux=new LinkedList<>();
-       for (Sensor s:sensors){
+    public Map<Integer,Temperature> listSensorTemperature(){
+       TreeMap<Integer,Temperature> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
            if(s instanceof Temperature)
-                aux.add((Temperature)s);
-       }
+                aux.put(s.getKey(), (Temperature)s);
+
        return aux;
    }
     
     //Lista de sensores de movimento
-    public LinkedList<Moviment> listSensorMoviment(){
-       LinkedList<Moviment> aux=new LinkedList<>();
-       for (Sensor s:sensors){
+    public  Map<Integer,Moviment> listSensorMoviment(){
+       TreeMap<Integer,Moviment> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
            if(s instanceof Moviment)
-                aux.add((Moviment)s);
-       }
+                aux.put(s.getKey(),(Moviment)s);
+       
        return aux;
    }
     
     //Lista de sensores de NaturaLight
-    public LinkedList<NaturaLight> listSensorNaturaLight(){
-       LinkedList<NaturaLight> aux=new LinkedList<>();
-       for (Sensor s:sensors){
+    public Map<Integer,NaturaLight> listSensorNaturaLight(){
+       TreeMap<Integer,NaturaLight> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
            if(s instanceof NaturaLight)
-                aux.add((NaturaLight)s);
-       }
+                aux.put(s.getKey(),(NaturaLight)s);
+
        return aux;
    }
     
@@ -174,32 +184,30 @@ public class Division implements Serializable{
    }
     
     //Lista de sensores de vento
-    private LinkedList<Wind> listSensorWind(){
-       LinkedList<Wind> aux=new LinkedList<>();
-       for (Sensor doo:sensors){
-           if(doo instanceof Wind)
-                aux.add((Wind)doo);
-       }
+    private Map<Integer,Wind> listSensorWind(){
+       TreeMap<Integer,Wind> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+           if(s instanceof Wind)
+                aux.put(s.getKey(),(Wind)s);
        return aux;
    }
     
     //Lista de sensores de gas
-    private LinkedList<Gas> listSensorGas(){
-       LinkedList<Gas> aux=new LinkedList<>();
-       for (Sensor doo:sensors){
-           if(doo instanceof Gas)
-                aux.add((Gas)doo);
-       }
+    private Map<Integer,Gas> listSensorGas(){
+       TreeMap<Integer,Gas> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+           if(s instanceof Gas)
+                aux.put(s.getKey(),(Gas)s);
        return aux;
    }
     
     //Lista de sensores de Smoke
-    private LinkedList<Smoke> listSensorSmoke(){
-       LinkedList<Smoke> aux=new LinkedList<>();
-       for (Sensor s:sensors){
+    private Map<Integer,Smoke> listSensorSmoke(){
+       TreeMap<Integer,Smoke> aux=new TreeMap<>();
+       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
            if(s instanceof Smoke)
-                aux.add((Smoke)s);
-       }
+                aux.put(s.getKey(),(Smoke)s);
+
        return aux;
    }
     
@@ -226,8 +234,8 @@ public class Division implements Serializable{
     //média da luz natural da sala
     public float mediaNaturaLight(){
         int media, soma=0, cont=0;
-        for (NaturaLight snl:listSensorNaturaLight()){
-            soma+=snl.getValue();
+        for (Map.Entry<Integer, NaturaLight> snl :listSensorNaturaLight().entrySet()){
+            soma+=snl.getValue().getValue();
             cont++;            
         }
         
@@ -237,8 +245,8 @@ public class Division implements Serializable{
     //temperatura média
     public float mediaTemperature(){
         int media, soma=0, cont=0;
-        for (Temperature lst:listSensorTemperature()){
-            soma+=lst.getValue();
+        for (Map.Entry<Integer, Temperature> snl :listSensorTemperature().entrySet()){
+            soma+=snl.getValue().getValue();
             cont++;            
         }
         
@@ -247,12 +255,12 @@ public class Division implements Serializable{
     
     
     //Ativar o Sensor de movimento para quando houver um movimento ligar a luz da divisão
-    public void onMovimentSensor(String SNumber){
+    public void onMovimentSensor(int SNumber){
         long timestamp= System.currentTimeMillis();
-        for (Moviment sm:listSensorMoviment()){
-            if(sm.getSNumber().equals(SNumber)){
-                sm.setDetection(true);
-                sm.setTime(timestamp);
+        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
+            if(sm.getValue().getSNumber()==SNumber){
+                sm.getValue().setDetection(true);
+                sm.getValue().setTime(timestamp);
                 if(onLight() == true){
                     for (Map.Entry<Integer, Light> l:lights.entrySet())
                         l.getValue().setStatus(true);   
@@ -263,8 +271,8 @@ public class Division implements Serializable{
     
     public boolean onMovimentSensorAlarm(){
         long timestamp= System.currentTimeMillis();
-        for (Moviment sm:listSensorMoviment()){
-            if(sm.isDetection()==true)
+        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
+            if(sm.getValue().isDetection()==true)
                 return true;                    
         }
         
@@ -282,12 +290,12 @@ public class Division implements Serializable{
     //Desligar as luzes sem que haja movimento
     public void offMovimentSensor(){
         long timestamp= System.currentTimeMillis();
-        for (Moviment sm:listSensorMoviment()){
-            if(sm.isDetection()==true){
-                long limit=sm.getTime()+sm.getInterval();
+        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
+            if(sm.getValue().isDetection()==true){
+                long limit=sm.getValue().getTime()+sm.getValue().getInterval();
                 if(timestamp>limit){
-                    sm.setDetection(false);
-                    sm.setTime(0);
+                    sm.getValue().setDetection(false);
+                    sm.getValue().setTime(0);
                     for (Map.Entry<Integer, Light> l:lights.entrySet())
                         l.getValue().setStatus(false);
                 }
@@ -362,30 +370,29 @@ public class Division implements Serializable{
         
         lockWindows();
         lockDoors(); 
+        for (Map.Entry<Integer, Temperature> sm :listSensorTemperature().entrySet())
+            sm.getValue().setStatus(false);
         
-        for (Temperature sm:listSensorTemperature())
-            sm.setStatus(false);
+        for (Map.Entry<Integer, NaturaLight> snl:listSensorNaturaLight().entrySet())
+            snl.getValue().setStatus(false);
         
-        for (NaturaLight snl:listSensorNaturaLight())
-            snl.setStatus(false);
-        
-        for (Wind sw:listSensorWind())
-            sw.setStatus(false);
+         for (Map.Entry<Integer, Wind> sw:listSensorWind().entrySet())
+            sw.getValue().setStatus(false);
         
         //home.alerTryOpenwindowsDoors();
     }
     
     public boolean verifyOnSensorGas(){
-        for (Gas g:listSensorGas())
-            if(g.isStatus()==true)
+        for (Map.Entry<Integer, Gas> g :listSensorGas().entrySet())
+            if(g.getValue().isStatus()==true)
                 return true;
         
         return false;                
     }
     
     public boolean verifyOnSensorSmoke(){
-        for (Smoke s:listSensorSmoke())
-            if(s.isStatus()==true)
+        for (Map.Entry<Integer, Smoke> s :listSensorSmoke().entrySet())
+            if(s.getValue().isStatus()==true)
                 return true;
         
         return false;                

@@ -15,12 +15,7 @@ public class Wind extends Sensor implements Serializable{
 
     private int intensity;
 
-    public Wind(String SNumber) {
+    public Wind(int SNumber) {
         super(SNumber);
     }
-
-
-    
-    
-
 }

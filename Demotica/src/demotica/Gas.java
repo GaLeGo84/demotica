@@ -15,7 +15,7 @@ public class Gas extends Sensor implements Serializable{
 
     private boolean detection;
 
-    public Gas(boolean detection, Security security, String SNumber) {
+    public Gas(boolean detection, Security security, int SNumber) {
         super(SNumber);
         this.detection = detection;
     }

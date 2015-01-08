@@ -48,9 +48,9 @@ public class main {
         home.addDivision(div10);
         
         //Adicionar sensores á Divisão de Entrada
-        div0.addSensor(new Moviment("SM00001",120000));
-        div0.addSensor(new Temperature("ST00001"));
-        div0.addSensor(new NaturaLight("SN00001"));
+        div0.addSensor(new Moviment(00001,120000));
+        div0.addSensor(new Temperature(00001));
+        div0.addSensor(new NaturaLight(00002));
         div0.addDoor(new ExteriorEntranceDoor(1234236, new Security()));
         div0.addDoor(new InteriorDoor(1234566));
         div0.addWindow(new Window());
@@ -58,10 +58,10 @@ public class main {
         div0.addLight(new Light());
         
         //Adicionar sensores do Corredor
-        div1.addSensor(new Moviment("SM00002",120));
-        div1.addSensor(new Moviment("SM00003",120));
-        div1.addSensor(new Temperature("ST00002"));
-        div1.addSensor(new NaturaLight("SN00002"));
+        div1.addSensor(new Moviment(00002,120));
+        div1.addSensor(new Moviment(00003,120));
+        div1.addSensor(new Temperature(00002));
+        div1.addSensor(new NaturaLight(00002));
         div1.addDoor(new InteriorDoor(1234561));
         div1.addDoor(new InteriorDoor(1234562));
         div1.addDoor(new InteriorDoor(1234563));
@@ -71,76 +71,76 @@ public class main {
         div1.addWindow(new Window());
         
         //Adicionar sensores do Quarto de Jantar
-        div2.addSensor(new Moviment("SM00004",2));
-        div2.addSensor(new Moviment("SM00005",2));
-        div2.addSensor(new Temperature("ST00003"));
-        div2.addSensor(new NaturaLight("SN00003"));
+        div2.addSensor(new Moviment(00004,2));
+        div2.addSensor(new Moviment(00005,2));
+        div2.addSensor(new Temperature(00003));
+        div2.addSensor(new NaturaLight(00003));
         div2.addDoor(new InteriorDoor(3));
         div2.addDoor(new InteriorDoor(6));
         div2.addWindow(new Window());
         
         //Adicionar sensores para Sala
-        div3.addSensor(new Moviment("SM00006",2));
-        div3.addSensor(new Moviment("SM00007",2));
-        div3.addSensor(new Temperature("ST00004"));
-        div3.addSensor(new NaturaLight("SN00004"));
+        div3.addSensor(new Moviment(00006,2));
+        div3.addSensor(new Moviment(00007,2));
+        div3.addSensor(new Temperature(00004));
+        div3.addSensor(new NaturaLight(00004));
         div3.addDoor(new InteriorDoor(2));
         div3.addDoor(new InteriorDoor(6));
         div3.addWindow(new Window());
 
         //Adicionar sensores do Quarto de banho1
-        div4.addSensor(new Moviment("SM00008",2));
-        div4.addSensor(new Temperature("ST00005"));
-        div4.addSensor(new NaturaLight("SN00005"));
+        div4.addSensor(new Moviment(00012,2));
+        div4.addSensor(new Temperature(00005));
+        div4.addSensor(new NaturaLight(00005));
         div4.addDoor(new InteriorDoor(4));
         div4.addWindow(new Window());
         
         //Adicionar sensores da cozinha
-        div5.addSensor(new Moviment("SM00009",5));
-        div5.addSensor(new Moviment("SM00010",5));
-        div5.addSensor(new Temperature("ST00006"));
-        div5.addSensor(new NaturaLight("SN00006"));
+        div5.addSensor(new Moviment(00013,5));
+        div5.addSensor(new Moviment(00010,5));
+        div5.addSensor(new Temperature(00006));
+        div5.addSensor(new NaturaLight(00006));
         div5.addDoor(new InteriorDoor(5));
         div5.addDoor(new ExteriorDoorStandard(7));
         div5.addWindow(new Window());
         div5.addWindow(new Window());
 
         //Adicionar sensores do Quarto solteiro1
-        div6.addSensor(new Moviment("SM00011",2));
-        div6.addSensor(new Temperature("ST00007"));
-        div6.addSensor(new NaturaLight("SN00007"));
+        div6.addSensor(new Moviment(00011,2));
+        div6.addSensor(new Temperature(00007));
+        div6.addSensor(new NaturaLight(00007));
         div6.addDoor(new InteriorDoor(10));
         div6.addWindow(new Window());
 
         //Adicionar sensores do Quarto solteiro2
-        div7.addSensor(new Moviment("SM00012",2));
-        div7.addSensor(new Temperature("ST00008"));
-        div7.addSensor(new NaturaLight("SN00008"));
+        div7.addSensor(new Moviment(00012,2));
+        div7.addSensor(new Temperature(00010));
+        div7.addSensor(new NaturaLight(00010));
         div7.addDoor(new InteriorDoor(11));
         div7.addWindow(new Window());
         
         //Adicionar sensores do Quarto de Casal
-        div8.addSensor(new Moviment("SM00013",2));
-        div8.addSensor(new Moviment("SM00014",2));
-        div8.addSensor(new Temperature("ST00009"));
-        div8.addSensor(new NaturaLight("SN00009"));
+        div8.addSensor(new Moviment(00013,2));
+        div8.addSensor(new Moviment(00014,2));
+        div8.addSensor(new Temperature(00011));
+        div8.addSensor(new NaturaLight(00011));
         div8.addDoor(new InteriorDoor(8));
         div8.addWindow(new Window());
         div8.addWindow(new Window());
         
         //Adicionar sensores do Quarto de banho2
-        div9.addSensor(new Moviment("SM00014",2));
-        div9.addSensor(new Temperature("ST000010"));
-        div9.addSensor(new NaturaLight("SN000010"));
+        div9.addSensor(new Moviment(00014,2));
+        div9.addSensor(new Temperature(000010));
+        div9.addSensor(new NaturaLight(000010));
         div9.addDoor(new InteriorDoor(9));
         div9.addWindow(new Window());
         
         //Adicionar sensores á Divisão de Entrada
-        div10.addSensor(new Moviment("SM00015",2));
-        div10.addSensor(new Moviment("SM00016",2));
-        div10.addSensor(new Moviment("SM00017",2));
-        div10.addSensor(new Temperature("ST000011"));
-        div10.addSensor(new NaturaLight("SN000011"));
+        div10.addSensor(new Moviment(00015,2));
+        div10.addSensor(new Moviment(00016,2));
+        div10.addSensor(new Moviment(00017,2));
+        div10.addSensor(new Temperature(000011));
+        div10.addSensor(new NaturaLight(000011));
         div10.addDoor(new InteriorDoor(8));
         div10.addDoor(new InteriorDoor(9));
         div10.addDoor(new InteriorDoor(10));

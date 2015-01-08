@@ -15,7 +15,7 @@ public class Smoke extends Sensor implements Serializable{
 
     private boolean detection;  
 
-    public Smoke(String SNumber) {
+    public Smoke(int SNumber) {
         super(SNumber);
     }
     
