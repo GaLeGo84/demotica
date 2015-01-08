@@ -44,7 +44,7 @@
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="JHome" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
@@ -70,10 +70,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="JSimular" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
-          </Group>
+          <Component id="JSimular" min="-2" max="-2" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="JCreateHome" alignment="0" min="-2" max="-2" attributes="0"/>
           </Group>
@@ -84,7 +81,7 @@
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-              <Component id="JConfiguration" alignment="0" pref="420" max="32767" attributes="0"/>
+              <Component id="JConfiguration" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
               <Component id="JEditHome" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -95,7 +92,7 @@
           <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                  <Component id="JCreateDivision" pref="410" max="32767" attributes="0"/>
+                  <Component id="JCreateDivision" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -143,7 +140,7 @@
                       <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
                       <Component id="jRegisterDOB" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="265" max="32767" attributes="0"/>
+                  <EmptySpace pref="269" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -193,7 +190,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jTabbedPane1" alignment="0" pref="420" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" alignment="0" pref="410" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -1031,7 +1028,7 @@
                                   <Component id="jButton29" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <EmptySpace pref="44" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1133,7 +1130,7 @@
                     <Property name="text" type="java.lang.String" value="Abrir"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton28ActionPerformed"/>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton28MouseReleased"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton29">
@@ -1143,6 +1140,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Fechar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton29MouseReleased"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox2">
                   <Properties>
@@ -1838,7 +1838,7 @@
                                   <Component id="jTextField3" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="307" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="306" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -1869,7 +1869,7 @@
                       <Component id="carregar5" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jButton3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -2146,7 +2146,7 @@
                                   <Component id="jTextField6" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="321" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="320" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -2179,7 +2179,7 @@
                       <Component id="carregar7" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace pref="68" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnBack1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jButton19" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -2419,7 +2419,7 @@
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" pref="152" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="157" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
