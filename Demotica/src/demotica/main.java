@@ -48,9 +48,9 @@ public class main {
         home.addDivision(div10);
         
         //Adicionar sensores á Divisão de Entrada
-        div0.addSensor(new Moviment(00001,120000));
-        div0.addSensor(new Temperature(00002));
-        div0.addSensor(new NaturaLight(00003));
+        div0.addSensor(new Moviment(1,120000));
+        div0.addSensor(new Temperature(2));
+        div0.addSensor(new NaturaLight(3));
         div0.addDoor(new ExteriorEntranceDoor(1234236, new Security()));
         div0.addDoor(new InteriorDoor(1234566));
         div0.addWindow(new Window());
@@ -73,8 +73,8 @@ public class main {
         //Adicionar sensores do Quarto de Jantar
         div2.addSensor(new Moviment(8,2));
         div2.addSensor(new Moviment(9,2));
-        div2.addSensor(new Temperature(00010));
-        div2.addSensor(new NaturaLight(00011));
+        div2.addSensor(new Temperature(10));
+        div2.addSensor(new NaturaLight(11));
         div2.addDoor(new InteriorDoor(3));
         div2.addDoor(new InteriorDoor(6));
         div2.addWindow(new Window());

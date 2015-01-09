@@ -18,8 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class File{
     
-    public static Home loadHome() {
-       
+    public static Home loadHome() {       
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("home2.dat"));
             Home cAluno = (Home) ois.readObject();
