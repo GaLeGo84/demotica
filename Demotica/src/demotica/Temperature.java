@@ -31,7 +31,6 @@ public class Temperature extends Sensor implements Serializable{
     @Override
     public String toString() {
         String su = super.toString();
-        String str = "Temperature{ "+su+" Value: "+value+"} ";
-        return str;
+        return su+"Temperatura";
     }
 }

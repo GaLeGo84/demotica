@@ -49,7 +49,8 @@ public class Sensor implements Serializable{
 
     @Override
     public String toString() {
-        return "SNumber= " + SNumber+" ";
+        return "Sensor ";
     }
 
+    
 }

@@ -19,6 +19,10 @@ public class Smoke extends Sensor implements Serializable{
         super(SNumber);
     }
     
-    
+    @Override
+    public String toString() {
+        String su = super.toString();
+        return su+"de Fumo";
+    }
 
 }

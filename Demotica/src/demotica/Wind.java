@@ -18,4 +18,10 @@ public class Wind extends Sensor implements Serializable{
     public Wind(int SNumber) {
         super(SNumber);
     }
+    
+    @Override
+    public String toString() {
+        String su = super.toString();
+        return su+"de Vento";
+    }
 }

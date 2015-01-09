@@ -29,10 +29,9 @@ public class NaturaLight extends Sensor implements Serializable{
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         String su = super.toString();
-        String str = "NaturaLight{ "+su+" Value: "+value+"} ";
-        return str;
+        return su+"Luz Natural";
     }
     
     

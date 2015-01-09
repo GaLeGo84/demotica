@@ -52,7 +52,6 @@ public class Moviment extends Sensor implements Serializable{
     @Override
     public String toString() {
         String su = super.toString();
-        String str = "Moviment{ "+su+" Detection: "+detection+"} ";
-        return str;
+        return su+"Movimento";
     }
 }

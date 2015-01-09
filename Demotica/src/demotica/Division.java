@@ -84,7 +84,7 @@ public class Division implements Serializable{
         }
         
         if(sensors.size()<n)
-            sensors.put(sensors.size()+1,sen);
+            sensors.put(sen.getSNumber(),sen);
     }
       
     public void addLight(Light l){
@@ -125,6 +125,10 @@ public class Division implements Serializable{
     
     public void remDoor(Door id){
          doors.remove(id);
+    }
+    
+    public void remSensor(int key){
+        sensors.remove(key);
     }
     
     public void addDoor(Door dor){   

@@ -15,13 +15,14 @@ public class Gas extends Sensor implements Serializable{
 
     private boolean detection;
 
-    public Gas(boolean detection, Security security, int SNumber) {
+    public Gas(int SNumber) {
         super(SNumber);
-        this.detection = detection;
+        this.detection = false;
     }
 
-
-    
-    
-
+    @Override
+    public String toString() {
+        String su = super.toString();
+        return su+" de Gas";
+    }
 }
