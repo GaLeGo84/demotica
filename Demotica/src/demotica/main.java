@@ -18,7 +18,7 @@ public class main {
      */
     public static void main(String[] args) {
         //Criar a casa
-        Home home = new Home(2,5,5);
+        Home home = new Home(2,10,5);
 
         
         //Criar a Divisão com o andar
@@ -51,6 +51,9 @@ public class main {
         div0.addSensor(new Moviment(1,120000));
         div0.addSensor(new Temperature(2));
         div0.addSensor(new NaturaLight(3));
+        div0.addSensor(new Wind(50));
+        div0.addSensor(new Gas(51));
+        div0.addSensor(new Smoke(52));
         div0.addDoor(new ExteriorEntranceDoor(1234236, new Security()));
         div0.addDoor(new InteriorDoor(1234566));
         div0.addWindow(new Window());
@@ -58,10 +61,11 @@ public class main {
         div0.addLight(new Light());
         
         //Adicionar sensores do Corredor
-        div1.addSensor(new Moviment(4,120));
-        div1.addSensor(new Moviment(5,120));
+        div1.addSensor(new Moviment(4,60));
+        div1.addSensor(new Moviment(5,123));
         div1.addSensor(new Temperature(6));
-        div1.addSensor(new NaturaLight(7));
+        div1.addSensor(new NaturaLight(15));
+        div1.addLight(new Light());
         div1.addDoor(new InteriorDoor(1234561));
         div1.addDoor(new InteriorDoor(1234562));
         div1.addDoor(new InteriorDoor(1234563));

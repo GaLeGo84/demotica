@@ -1,10 +1,13 @@
 package demotica;
 
+import Swing.DashBoardExe;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -138,34 +141,26 @@ public class Division implements Serializable{
     
     
     //Lista de sensores de Temperatura
-    public Map<Integer,Temperature> listSensorTemperature(){
-       TreeMap<Integer,Temperature> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    public void listSensorTemperature(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof Temperature)
-                aux.put(s.getKey(), (Temperature)s);
-
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Temperature)s).getValue()});
    }
     
-    //Lista de sensores de movimento
-    public  Map<Integer,Moviment> listSensorMoviment(){
-       TreeMap<Integer,Moviment> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    //DefaultTableModel de sensores de movimento
+    public void listSensorMoviment(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof Moviment)
-                aux.put(s.getKey(),(Moviment)s);
-       
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Moviment)s).getInterval(),((Moviment)s).isDetection()});
    }
     
     //Lista de sensores de NaturaLight
-    public Map<Integer,NaturaLight> listSensorNaturaLight(){
-       TreeMap<Integer,NaturaLight> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    public void listSensorNaturaLight(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof NaturaLight)
-                aux.put(s.getKey(),(NaturaLight)s);
-
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((NaturaLight)s).getValue()});
    }
+
     
     //Lista de portas exteriores de Entrada
     public LinkedList<ExteriorEntranceDoor> listExteriorEntranceDoor(){
@@ -188,31 +183,24 @@ public class Division implements Serializable{
    }
     
     //Lista de sensores de vento
-    private Map<Integer,Wind> listSensorWind(){
-       TreeMap<Integer,Wind> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    public void listSensorWind(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof Wind)
-                aux.put(s.getKey(),(Wind)s);
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Wind)s).getIntensity()});
    }
     
     //Lista de sensores de gas
-    private Map<Integer,Gas> listSensorGas(){
-       TreeMap<Integer,Gas> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    public void listSensorGas(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof Gas)
-                aux.put(s.getKey(),(Gas)s);
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Gas)s).isDetection()});
    }
     
     //Lista de sensores de Smoke
-    private Map<Integer,Smoke> listSensorSmoke(){
-       TreeMap<Integer,Smoke> aux=new TreeMap<>();
-       for (Map.Entry<Integer, Sensor> s : sensors.entrySet())
+    public void listSensorSmoke(DefaultTableModel Obj){
+       for (Sensor s : sensors.values())
            if(s instanceof Smoke)
-                aux.put(s.getKey(),(Smoke)s);
-
-       return aux;
+               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Smoke)s).isDetection()});
    }
     
     public int nDoors(){
@@ -237,10 +225,12 @@ public class Division implements Serializable{
     
     //média da luz natural da sala
     public float mediaNaturaLight(){
-        int media, soma=0, cont=0;
-        for (Map.Entry<Integer, NaturaLight> snl :listSensorNaturaLight().entrySet()){
-            soma+=snl.getValue().getValue();
-            cont++;            
+        int media=0, soma=0, cont=0;
+        for (Sensor snl :sensors.values()){
+            if(snl instanceof NaturaLight){
+                soma+=((NaturaLight)snl).getValue();
+                cont++;            
+            }
         }
         
         return media= soma/cont;
@@ -249,9 +239,11 @@ public class Division implements Serializable{
     //temperatura média
     public float mediaTemperature(){
         int media, soma=0, cont=0;
-        for (Map.Entry<Integer, Temperature> snl :listSensorTemperature().entrySet()){
-            soma+=snl.getValue().getValue();
-            cont++;            
+        for (Sensor snl :sensors.values()){
+            if(snl instanceof Temperature){
+                soma+=((Temperature)snl).getValue();
+                cont++;
+            }
         }
         
         return media= soma/cont;
@@ -261,23 +253,25 @@ public class Division implements Serializable{
     //Ativar o Sensor de movimento para quando houver um movimento ligar a luz da divisão
     public void onMovimentSensor(int SNumber){
         long timestamp= System.currentTimeMillis();
-        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
-            if(sm.getValue().getSNumber()==SNumber){
-                sm.getValue().setDetection(true);
-                sm.getValue().setTime(timestamp);
-                if(onLight() == true){
-                    for (Map.Entry<Integer, Light> l:lights.entrySet())
-                        l.getValue().setStatus(true);   
+        for (Sensor sm :sensors.values()){
+            if(sm instanceof Moviment)
+                if(sm.getSNumber()==SNumber){
+                    ((Moviment)sm).setDetection(true);
+                    ((Moviment)sm).setTime(timestamp);
+                    if(onLight() == true){
+                        for (Map.Entry<Integer, Light> l:lights.entrySet())
+                            l.getValue().setStatus(true);   
+                    }
                 }
-            }
-        }  
+        } 
     }
     
     public boolean onMovimentSensorAlarm(){
         long timestamp= System.currentTimeMillis();
-        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
-            if(sm.getValue().isDetection()==true)
-                return true;                    
+        for (Sensor sm :sensors.values()){
+            if(sm instanceof Moviment)
+                if(((Moviment)sm).isDetection()==true)
+                    return true;                    
         }
         
         return false;
@@ -285,25 +279,26 @@ public class Division implements Serializable{
     
     //Ligar as luzes da divisão quando a média da luz natural for menor do ke o valor minimo
     public boolean onLight(){
-        /*if(mediaNaturaLight()<home.getValueNL())
+        if(mediaNaturaLight()<Dashboard.getHome().getValueNL())
             return true;
-        else*/
+        else
             return false;            
     }
     
     //Desligar as luzes sem que haja movimento
     public void offMovimentSensor(){
         long timestamp= System.currentTimeMillis();
-        for (Map.Entry<Integer, Moviment> sm :listSensorMoviment().entrySet()){
-            if(sm.getValue().isDetection()==true){
-                long limit=sm.getValue().getTime()+sm.getValue().getInterval();
-                if(timestamp>limit){
-                    sm.getValue().setDetection(false);
-                    sm.getValue().setTime(0);
-                    for (Map.Entry<Integer, Light> l:lights.entrySet())
-                        l.getValue().setStatus(false);
+        for (Sensor sm :sensors.values()){
+            if(sm instanceof Moviment)
+                if(((Moviment)sm).isDetection()==true){
+                    long limit=((Moviment)sm).getTime()+Integer.parseInt(((Moviment)sm).getInterval()+"000");
+                    if(timestamp>limit){
+                        ((Moviment)sm).setDetection(false);
+                        ((Moviment)sm).setTime(0);
+                        for (Map.Entry<Integer, Light> l:lights.entrySet())
+                            l.getValue().setStatus(false);
+                    }
                 }
-            }
         }
     }
     
@@ -374,29 +369,34 @@ public class Division implements Serializable{
         
         lockWindows();
         lockDoors(); 
-        for (Map.Entry<Integer, Temperature> sm :listSensorTemperature().entrySet())
-            sm.getValue().setStatus(false);
+        for (Sensor snl :sensors.values())
+            if(snl instanceof Temperature)
+                snl.setStatus(false);
         
-        for (Map.Entry<Integer, NaturaLight> snl:listSensorNaturaLight().entrySet())
-            snl.getValue().setStatus(false);
+        for (Sensor snl:sensors.values())
+            if(snl instanceof NaturaLight)
+                ((NaturaLight)snl).setStatus(false);
         
-         for (Map.Entry<Integer, Wind> sw:listSensorWind().entrySet())
-            sw.getValue().setStatus(false);
+         for (Sensor s:sensors.values())
+            if(s instanceof Wind)
+                s.setStatus(false);
         
         //home.alerTryOpenwindowsDoors();
     }
     
     public boolean verifyOnSensorGas(){
-        for (Map.Entry<Integer, Gas> g :listSensorGas().entrySet())
-            if(g.getValue().isStatus()==true)
-                return true;
+        for (Sensor s : sensors.values())
+          if(s instanceof Gas)
+                if(((Gas)s).isDetection()==true)
+                    return true;
         
         return false;                
     }
     
     public boolean verifyOnSensorSmoke(){
-        for (Map.Entry<Integer, Smoke> s :listSensorSmoke().entrySet())
-            if(s.getValue().isStatus()==true)
+        for (Sensor s : sensors.values())
+           if(s instanceof Smoke)
+            if(((Smoke)s).isDetection()==true)
                 return true;
         
         return false;                

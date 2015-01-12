@@ -20,6 +20,16 @@ public class Gas extends Sensor implements Serializable{
         this.detection = false;
     }
 
+    public boolean isDetection() {
+        return detection;
+    }
+
+    public void setDetection(boolean detection) {
+        this.detection = detection;
+    }
+    
+    
+
     @Override
     public String toString() {
         String su = super.toString();

@@ -17,6 +17,15 @@ public class Smoke extends Sensor implements Serializable{
 
     public Smoke(int SNumber) {
         super(SNumber);
+        this.detection=false;
+    }
+
+    public boolean isDetection() {
+        return detection;
+    }
+
+    public void setDetection(boolean detection) {
+        this.detection = detection;
     }
     
     @Override

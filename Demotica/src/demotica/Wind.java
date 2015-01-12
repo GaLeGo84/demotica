@@ -17,7 +17,18 @@ public class Wind extends Sensor implements Serializable{
 
     public Wind(int SNumber) {
         super(SNumber);
+        this.intensity=20;
     }
+
+    public int getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(int intensity) {
+        this.intensity = intensity;
+    }
+    
+    
     
     @Override
     public String toString() {
