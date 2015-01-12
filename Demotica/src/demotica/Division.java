@@ -287,19 +287,23 @@ public class Division implements Serializable{
     
     //Desligar as luzes sem que haja movimento
     public void offMovimentSensor(){
+        int i=0;
         long timestamp= System.currentTimeMillis();
         for (Sensor sm :sensors.values()){
-            if(sm instanceof Moviment)
+            if(sm instanceof Moviment){
                 if(((Moviment)sm).isDetection()==true){
                     long limit=((Moviment)sm).getTime()+Integer.parseInt(((Moviment)sm).getInterval()+"000");
                     if(timestamp>limit){
                         ((Moviment)sm).setDetection(false);
                         ((Moviment)sm).setTime(0);
-                        for (Map.Entry<Integer, Light> l:lights.entrySet())
-                            l.getValue().setStatus(false);
                     }
+                    i++;
                 }
+            }   
         }
+        if(i==0)
+                for (Map.Entry<Integer, Light> l:lights.entrySet())
+                    l.getValue().setStatus(false);
     }
     
     //mudar a intensidade da luz
