@@ -163,6 +163,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTable5 = new javax.swing.JTable();
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
+        jButton53 = new javax.swing.JButton();
+        tfid8 = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
         jSWind = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
@@ -276,7 +279,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel18.setText("jLabel18");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(710, 420));
 
         JSimular.setVisible(false);  JSimular.setEnabled(false);
         JSimular.setPreferredSize(new java.awt.Dimension(700, 410));
@@ -315,7 +317,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel49)
                     .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
@@ -1411,6 +1413,17 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
+        jButton53.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jButton53.setText("Atualizar Sensor");
+        jButton53.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton53MouseReleased(evt);
+            }
+        });
+
+        jLabel70.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jLabel70.setText("Valor:");
+
         javax.swing.GroupLayout jSTemperatureLayout = new javax.swing.GroupLayout(jSTemperature);
         jSTemperature.setLayout(jSTemperatureLayout);
         jSTemperatureLayout.setHorizontalGroup(
@@ -1421,21 +1434,28 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addGroup(jSTemperatureLayout.createSequentialGroup()
                         .addComponent(jLabel59)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jSTemperatureLayout.createSequentialGroup()
                         .addComponent(jLabel57)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel58))
                     .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane9)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jSTemperatureLayout.createSequentialGroup()
+                                .addComponent(jButton36)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton37)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton53)))
+                        .addGap(27, 27, 27)
                         .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton39)
-                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addComponent(jButton36)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton37)))
+                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jSTemperatureLayout.setVerticalGroup(
@@ -1445,14 +1465,21 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel57)
                     .addComponent(jLabel58))
-                .addGap(8, 8, 8)
-                .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel59)
-                    .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel59)
+                        .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jSTemperatureLayout.createSequentialGroup()
+                        .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel70)
+                            .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(3, 3, 3)))
                 .addGap(6, 6, 6)
                 .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton36)
-                    .addComponent(jButton37))
+                    .addComponent(jButton37)
+                    .addComponent(jButton53))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1896,6 +1923,11 @@ public class DashBoardExe extends javax.swing.JFrame {
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
+        jPanelClimate.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jPanelClimateFocusLost(evt);
+            }
+        });
 
         jLabel40.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel40.setText("Ar Condicionado:");
@@ -2297,7 +2329,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar5)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 307, Short.MAX_VALUE))
+                        .addGap(0, 306, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -2320,7 +2352,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2355,7 +2387,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
         JBegin.add(jLabel5);
-        jLabel5.setBounds(340, 360, 340, 14);
+        jLabel5.setBounds(340, 360, 340, 13);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
@@ -2473,7 +2505,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 321, Short.MAX_VALUE))
+                        .addGap(0, 320, Short.MAX_VALUE))
                     .addGroup(JEditHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnBack1)
@@ -2498,7 +2530,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2987,13 +3019,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         refrashJTableWindow();
     }//GEN-LAST:event_jButton27MouseReleased
 
-    private void jPanelClimateAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelClimateAncestorAdded
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        jTextField8.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMINVALUE()));
-        jTextField9.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMAXVALUE()));
-    }//GEN-LAST:event_jPanelClimateAncestorAdded
-
     private void jButton22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseReleased
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3429,6 +3454,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseReleased
        DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
        tfid3.setText(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
+       tfid8.setText(modelo1.getValueAt(jTable5.getSelectedRow(), 2).toString());
     }//GEN-LAST:event_jTable5MouseReleased
 
     private void jButton38MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton38MouseReleased
@@ -3556,6 +3582,25 @@ public class DashBoardExe extends javax.swing.JFrame {
         refrashJTableSensorNaturaLight();
     }//GEN-LAST:event_jButton52MouseReleased
 
+    private void jButton53MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton53MouseReleased
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
+        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
+        ((Temperature)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setValue(Integer.parseInt(tfid8.getText()));
+        refrashJTableSensorTemperature();
+        Dashboard.getHome().getDivisions().get(n).exceedTemperature(jLabel41,jLabel43);
+        Dashboard.getHome().getDivisions().get(n).lowerTemperature(jLabel41,jLabel43);
+    }//GEN-LAST:event_jButton53MouseReleased
+
+    private void jPanelClimateFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanelClimateFocusLost
+        
+    }//GEN-LAST:event_jPanelClimateFocusLost
+
+    private void jPanelClimateAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelClimateAncestorAdded
+
+    }//GEN-LAST:event_jPanelClimateAncestorAdded
+
     /**
      * @param args the command line arguments
      */
@@ -3601,8 +3646,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                 Date date = new Date(); 
                 DateFormat formato = new SimpleDateFormat("HH:mm:ss.SSS"); 
                 String formattedDate = formato.format(date);
-                for(Division div:Dashboard.getHome().getDivisions().values())
+                for(Division div:Dashboard.getHome().getDivisions().values()){
                     div.offMovimentSensor();
+                }
                 
                 //Dashboard.getHome().getDivisions().get(2).offMovimentSensor();
             Thread.sleep(1000); 
@@ -3814,6 +3860,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton50;
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
+    private javax.swing.JButton jButton53;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
@@ -3885,6 +3932,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jLigarLight;
@@ -3959,6 +4007,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JTextField tfid5;
     private javax.swing.JTextField tfid6;
     private javax.swing.JTextField tfid7;
+    private javax.swing.JTextField tfid8;
     private javax.swing.JButton updateB;
     // End of variables declaration//GEN-END:variables
 }

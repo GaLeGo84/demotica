@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Vector;
+import javax.swing.JLabel;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -315,33 +316,44 @@ public class Division implements Serializable{
         }        
     }
     
-    public void exceedTemperature(){
+    public void exceedTemperature(JLabel jl,JLabel jl2){        
         if(mediaTemperature()>climate.getMAXVALUE()){
-            for(Window w:windows.values())
-                if(w.isStatus()==false)
-                    w.setStatus(true);
-                else{
+            for(Window w:windows.values()){
+                if(climate.isStatusAircon()==false)
+                    if(w.isStatus()==false){
+                        w.setStatus(true);
+                    }
+                
+                if(climate.isStatusAircon()==true){
                     w.setStatus(false);
                     climate.setAircon(true);
-                }
+                    jl.setText("Ligado");
+                    jl2.setText("Desligado");   
+                } 
+            }
         }
     }
     
-    public void lowerTemperature(){
-         if(mediaTemperature()<climate.getMINVALUE())
-            lockWindows();
+    public void lowerTemperature(JLabel jl,JLabel jl2){
+         if(mediaTemperature()<climate.getMINVALUE()){
+            lockWindows(jl,jl2);
+         }
     }
     
     //Fechar as janelas
-    public void lockWindows(){
+    public void lockWindows(JLabel jl,JLabel jl2){
         for (Window w:windows.values())
             if(w.isStatus()== true){
                 w.setStatus(false);
                 climate.setAircon(false);
+                jl.setText("Desligado");
                 climate.setHeating(true);
+                jl2.setText("Ligado");
             }else{
                 climate.setAircon(false);
-                climate.setHeating(true);            
+                jl.setText("Desligado");
+                climate.setHeating(true); 
+                jl2.setText("Ligado");
             }
     }
     //Abrir as janelas
@@ -365,13 +377,13 @@ public class Division implements Serializable{
                 doo.setStatus(true);
     }
     
-    public void onComponentSegurança(){
+    public void onComponentSegurança(JLabel lb, JLabel lb2){
         //home.onAlertMoviment();
         
         for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
         
-        lockWindows();
+        lockWindows(lb,lb2);
         lockDoors(); 
         for (Sensor snl :sensors.values())
             if(snl instanceof Temperature)

@@ -16,11 +16,15 @@ public class Climate implements Serializable{
     private static int MINVALUE=12;
     private static int MAXVALUE=25;
     private boolean aircon;
+    private boolean statusAircon;
     private boolean heating;
+    private boolean statusHeating;
 
     public Climate() {
         this.aircon = false;
+        this.statusAircon =false;
         this.heating = false;
+        this.statusHeating = false;
     }   
 
     public int getMINVALUE() {
@@ -37,6 +41,22 @@ public class Climate implements Serializable{
 
     public void setMAXVALUE(int MAXVALUE) {
         this.MAXVALUE = MAXVALUE;
+    }
+
+    public boolean isStatusAircon() {
+        return statusAircon;
+    }
+
+    public void setStatusAircon(boolean statusAircon) {
+        this.statusAircon = statusAircon;
+    }
+
+    public boolean isStatusHeating() {
+        return statusHeating;
+    }
+
+    public void setStatusHeating(boolean statusHeating) {
+        this.statusHeating = statusHeating;
     }
 
     public boolean isAircon() {
