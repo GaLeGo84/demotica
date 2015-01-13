@@ -15,6 +15,7 @@ public class Temperature extends Sensor implements Serializable{
 
     private int value;
 
+
     public Temperature(int SNumber) {
         super(SNumber);
         this.value = 15;
@@ -27,6 +28,7 @@ public class Temperature extends Sensor implements Serializable{
     public void setValue(int value) {
         this.value = value;
     }
+
     
     @Override
     public String toString() {

@@ -48,7 +48,7 @@ public class main {
         home.addDivision(div10);
         
         //Adicionar sensores á Divisão de Entrada
-        div0.addSensor(new Moviment(1,120000));
+        div0.addSensor(new Moviment(1,60));
         div0.addSensor(new Temperature(2));
         div0.addSensor(new NaturaLight(3));
         div0.addSensor(new Wind(50));

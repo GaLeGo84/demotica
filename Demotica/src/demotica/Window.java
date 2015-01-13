@@ -5,9 +5,11 @@ import java.io.Serializable;
 public class Window implements Serializable{
 
     private boolean status;
+    private boolean lock;
 
     public Window(){
         this.status = false;
+        this.lock = false;        
     }
 
     public boolean isStatus() {
@@ -16,6 +18,14 @@ public class Window implements Serializable{
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public boolean isLock() {
+        return lock;
+    }
+
+    public void setLock(boolean lock) {
+        this.lock = lock;
     }
 
     @Override

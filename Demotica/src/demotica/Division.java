@@ -266,17 +266,7 @@ public class Division implements Serializable{
                 }
         } 
     }
-    
-    public boolean onMovimentSensorAlarm(){
-        long timestamp= System.currentTimeMillis();
-        for (Sensor sm :sensors.values()){
-            if(sm instanceof Moviment)
-                if(((Moviment)sm).isDetection()==true)
-                    return true;                    
-        }
-        
-        return false;
-    }
+   
     
     //Ligar as luzes da divisão quando a média da luz natural for menor do ke o valor minimo
     public boolean onLight(){
@@ -296,7 +286,7 @@ public class Division implements Serializable{
                     long limit=((Moviment)sm).getTime()+Integer.parseInt(((Moviment)sm).getInterval()+"000");
                     if(timestamp>limit){
                         ((Moviment)sm).setDetection(false);
-                        ((Moviment)sm).setTime(0);
+                        ((Moviment)sm).setTime(60);
                     }
                     i++;
                 }
@@ -316,46 +306,66 @@ public class Division implements Serializable{
         }        
     }
     
-    public void exceedTemperature(JLabel jl,JLabel jl2){        
+    public void exceedTemperature(){        
         if(mediaTemperature()>climate.getMAXVALUE()){
             for(Window w:windows.values()){
-                if(climate.isStatusAircon()==false)
+                if(climate.isStatus()==false)
                     if(w.isStatus()==false){
                         w.setStatus(true);
                     }
                 
-                if(climate.isStatusAircon()==true){
+                if(climate.isStatus()==true){
                     w.setStatus(false);
-                    climate.setAircon(true);
-                    jl.setText("Ligado");
-                    jl2.setText("Desligado");   
+                    climate.setAircon(true); 
                 } 
             }
         }
     }
     
-    public void lowerTemperature(JLabel jl,JLabel jl2){
+    public void lowerTemperature(){
          if(mediaTemperature()<climate.getMINVALUE()){
-            lockWindows(jl,jl2);
+            lockWindows();
          }
     }
     
     //Fechar as janelas
-    public void lockWindows(JLabel jl,JLabel jl2){
+    public void lockWindows(){
         for (Window w:windows.values())
             if(w.isStatus()== true){
                 w.setStatus(false);
                 climate.setAircon(false);
-                jl.setText("Desligado");
                 climate.setHeating(true);
-                jl2.setText("Ligado");
+                w.setLock(true);
             }else{
                 climate.setAircon(false);
-                jl.setText("Desligado");
-                climate.setHeating(true); 
-                jl2.setText("Ligado");
+                climate.setHeating(true);
+                w.setLock(true);
             }
     }
+    
+    public void MovimentDoorExterior(int SNumber){
+        long timestamp= System.currentTimeMillis();
+        for(Sensor s:sensors.values())
+            if(s instanceof Moviment)
+                if(s.getSNumber()==SNumber){
+                    if(((Moviment)s).isDetection()==false && timestamp>s.getTimestamp())
+                        if(countDoorsExtern()!=0){
+                            lockDoorsExterior();
+                            ((Moviment)s).setDetection(true);
+                            ((Moviment)s).setTime(timestamp);
+                        }
+                }
+    }
+    
+    public int countDoorsExtern(){
+        int count=0;
+        for(Door d:doors)
+            if(d instanceof ExteriorDoor)
+                count++;
+        
+        return count;
+    }
+    
     //Abrir as janelas
     public void openWindows(){
         for (Window w:windows.values())
@@ -370,6 +380,15 @@ public class Division implements Serializable{
                 doo.setStatus(false);
     }
     
+    //Fechar as portas
+    public void lockDoorsExterior(){
+        for (Door doo:doors)
+            if(doo instanceof ExteriorDoor)
+                if(doo.isStatus()==false){
+                    doo.setStatus(true);
+                }
+    }
+    
     //Abrir as portas
     public void openDoors(){
         for (Door doo:doors)
@@ -377,13 +396,14 @@ public class Division implements Serializable{
                 doo.setStatus(true);
     }
     
-    public void onComponentSegurança(JLabel lb, JLabel lb2){
+    
+    public void onComponentSegurança(){
         //home.onAlertMoviment();
         
         for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
         
-        lockWindows(lb,lb2);
+        lockWindows();
         lockDoors(); 
         for (Sensor snl :sensors.values())
             if(snl instanceof Temperature)
@@ -417,6 +437,17 @@ public class Division implements Serializable{
         
         return false;                
     }
+    
+        public boolean onMovimentSensorAlarm(){
+            long timestamp= System.currentTimeMillis();
+            for (Sensor sm :sensors.values()){
+                if(sm instanceof Moviment)
+                    if(((Moviment)sm).isDetection()==true)
+                        return true;                    
+            }
+
+            return false;
+        }
     
     public void allDivision(){
         System.out.println("Sensores: "+getSensors()+"\n"
