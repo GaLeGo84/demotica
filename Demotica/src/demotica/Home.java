@@ -143,9 +143,97 @@ public class Home implements Serializable{
                         lia.setDetection(true);                            
                     }       
                 }
-     }   
+     }
+    
+    /*public void MovimentDoorExterior(){
+        long timestamp= System.currentTimeMillis();
+        for(Division div:divisions.values())
+            for(Sensor s:div.getSensors().values()){
+                long limit=((Moviment)s).getTime()+Integer.parseInt(((Moviment)s).getInterval()+"000");
+                if(s instanceof Moviment){
+                        if(((Moviment)s).isDetection()==false && timestamp>limit)
+                            if(countDoorsExtern()!=0){
+                                lockDoorsExterior();
+                                ((Moviment)s).setTime(timestamp);
+                            }
+                }
+            }
+    }*/
+    
+    //INICIO Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
+    public void MovimentDoorExterior(){
+        
+        for(Division div:divisions.values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Moviment){                    
+                    if(((Moviment)s).isDetection()==false){
+                        if(countMoviment1()==countMoviment2() )                        
+                            if(countDoorsExtern()!=0){
+                                lockDoorsExterior();
+                            }
+                    }
+                }
+    }
+    
+    public int countMoviment1(){
+        int count=0;
+        long timestamp= System.currentTimeMillis();
+        boolean n=false;
+        for(Division div:divisions.values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Moviment){
+                    long limit=((Moviment)s).getTime()+Integer.parseInt(((Moviment)s).getInterval()+"000");
+                    if(((Moviment)s).isDetection()==false && timestamp>limit)
+                        count+=1;
+                }
+        return count;
+    }
+    
+    public int countMoviment2(){
+        int count=0;
+        boolean n=false;
+        for(Division div:divisions.values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Moviment){
+                    count+=1;
+                }
+        return count;
+    }
+    
+    public int countDoorsExtern(){
+        int count=0;
+        for(Division div:divisions.values())
+                for(Door d:div.getDoors())
+                    if(d instanceof ExteriorDoor)
+                        count++;
+
+                return count;
+    }
     
     
+        //Fechar as portas
+    public void lockDoorsExterior(){
+        for(Division div:divisions.values())
+            for(Door d:div.getDoors())
+            if(d instanceof ExteriorDoor)
+                if(d.isStatus()==false)
+                    d.setStatus(true);
+    }
+    //FIM Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
+    
+    public void closeWindowsMoreIntensityWind(){
+        for(Division div:divisions.values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Wind)
+                    if(((Wind)s).getIntensity()>valueW)
+                        closeWindows();
+    }
+    
+    public void closeWindows(){
+        for(Division div:divisions.values())
+            for(Map.Entry<Integer,Window> w:div.getWindows().entrySet())
+                w.getValue().setStatus(false);
+    }
     
     /*public void onAlertGasSmoke(){
         for (Division div:divisions)

@@ -263,6 +263,11 @@ public class Division implements Serializable{
                         for (Map.Entry<Integer, Light> l:lights.entrySet())
                             l.getValue().setStatus(true);   
                     }
+                    for(Door d:doors)
+                        if(d instanceof ExteriorDoor)
+                            if(d.isStatus()==true)
+                                d.setStatus(false);
+                    
                 }
         } 
     }
@@ -286,7 +291,7 @@ public class Division implements Serializable{
                     long limit=((Moviment)sm).getTime()+Integer.parseInt(((Moviment)sm).getInterval()+"000");
                     if(timestamp>limit){
                         ((Moviment)sm).setDetection(false);
-                        ((Moviment)sm).setTime(60);
+                        ((Moviment)sm).setTime(timestamp);
                     }
                     i++;
                 }
@@ -343,28 +348,6 @@ public class Division implements Serializable{
             }
     }
     
-    public void MovimentDoorExterior(int SNumber){
-        long timestamp= System.currentTimeMillis();
-        for(Sensor s:sensors.values())
-            if(s instanceof Moviment)
-                if(s.getSNumber()==SNumber){
-                    if(((Moviment)s).isDetection()==false && timestamp>s.getTimestamp())
-                        if(countDoorsExtern()!=0){
-                            lockDoorsExterior();
-                            ((Moviment)s).setDetection(true);
-                            ((Moviment)s).setTime(timestamp);
-                        }
-                }
-    }
-    
-    public int countDoorsExtern(){
-        int count=0;
-        for(Door d:doors)
-            if(d instanceof ExteriorDoor)
-                count++;
-        
-        return count;
-    }
     
     //Abrir as janelas
     public void openWindows(){
@@ -380,13 +363,12 @@ public class Division implements Serializable{
                 doo.setStatus(false);
     }
     
-    //Fechar as portas
+        //Fechar as portas
     public void lockDoorsExterior(){
-        for (Door doo:doors)
-            if(doo instanceof ExteriorDoor)
-                if(doo.isStatus()==false){
-                    doo.setStatus(true);
-                }
+            for(Door d:doors)
+            if(d instanceof ExteriorDoor)
+                if(d.isStatus()==true)
+                    d.setStatus(false);
     }
     
     //Abrir as portas

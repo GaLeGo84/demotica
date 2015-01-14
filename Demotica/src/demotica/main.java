@@ -18,7 +18,7 @@ public class main {
      */
     public static void main(String[] args) {
         //Criar a casa
-        Home home = new Home(2,10,5);
+        Home home = new Home(2,10,25);
 
         
         //Criar a Divisão com o andar
