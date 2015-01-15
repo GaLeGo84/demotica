@@ -1,6 +1,8 @@
 package demotica;
 
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -37,7 +39,4 @@ public class Contact implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-
 }

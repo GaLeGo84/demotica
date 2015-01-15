@@ -297,6 +297,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         tfName1 = new javax.swing.JTextField();
+        comboFloor1 = new javax.swing.JComboBox();
+        jLabel79 = new javax.swing.JLabel();
 
         jLabel18.setText("jLabel18");
 
@@ -2958,6 +2960,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel78.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel78.setText("Email");
 
+        comboFloor1.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+
+        jLabel79.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        jLabel79.setText("Piso:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -2971,7 +2978,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel78)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel79)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(comboFloor1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(254, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -2979,11 +2990,14 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel25)
-                .addGap(36, 36, 36)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel78)
-                    .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(284, Short.MAX_VALUE))
+                    .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel79)
+                        .addComponent(comboFloor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(283, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -4135,6 +4149,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel carregar7;
     private javax.swing.JCheckBox checkExt;
     private javax.swing.JComboBox comboFloor;
+    private javax.swing.JComboBox comboFloor1;
     private javax.swing.JPanel j;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -4275,6 +4290,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jLigarLight;
