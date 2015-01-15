@@ -96,7 +96,7 @@ public class Home implements Serializable{
 
     
     //Lista de sensores de movimento
-    private LinkedList<IntruderAlert> listIntruderAlert(){
+    public LinkedList<IntruderAlert> listIntruderAlert(){
        LinkedList<IntruderAlert> aux=new LinkedList<>();
        for (Alert a:alerts){
            if(a instanceof IntruderAlert)
@@ -105,14 +105,7 @@ public class Home implements Serializable{
        return aux;
    }
     
-    public void onAlertMoviment(){
-        for (Division div:divisions.values())
-            if(div.onMovimentSensorAlarm()==true)
-                for(IntruderAlert lia:listIntruderAlert()){
-                    lia.setDetection(true);
-                    lia.getEmail(); //Fazer a função de enviar email
-                }    
-    }
+    
     
      //Tentativa de abrir a janela
     public boolean tryOpenwindows(){

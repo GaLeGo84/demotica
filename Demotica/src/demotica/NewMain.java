@@ -23,9 +23,13 @@ public class NewMain {
         int n=1;
         Map<Integer,List<Integer>> a=new TreeMap<Integer,List<Integer>>();
         LinkedList<Integer> list = new LinkedList<Integer>();
+        LinkedList<Integer> list2 = new LinkedList<Integer>();
         list.add(911656898);
         list.add(923454238);
+        list2.add(911656898);
+        
         a.put(a.size()+1, list);
+        a.put(a.size()+1, list2);
         
         for (Map.Entry<Integer,List<Integer>> b : a.entrySet())
                 System.out.println(b.getKey()+" - "+b.getValue().toString());

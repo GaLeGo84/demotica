@@ -83,4 +83,62 @@ public class Dashboard implements Serializable{
         }
     }
     
+    public static boolean ativeSensorMoviment(){
+        boolean status=false;
+        for(Division div:home.getDivisions().values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Moviment)
+                    if(((Moviment)s).isDetection()==true)
+                        status=true;
+        
+        return status;
+    }
+    
+    public static boolean movimentExteriorDoorOnHome(){
+        boolean status=false;
+        for(Division div:home.getDivisions().values())
+            for(Door d:div.getDoors())
+                if(d instanceof ExteriorDoor)
+                    if(d.isStatus()==true || d.isLock()==false)
+                        status=true;
+        
+        return status;
+    }
+    
+    public static boolean movimentWindowsOnHome(){
+        boolean status=false;
+        for(Division div:home.getDivisions().values())
+            for(Window w:div.getWindows().values())
+                    if(w.isStatus()==true || w.isLock()==false)
+                        status=true;
+        
+        return status;
+    }
+    
+    public static void ativetMoviment(){
+        for(IntruderAlert lia:home.listIntruderAlert()){
+            lia.setDetection(true);
+            //lia.getEmail(); //Fazer a função de enviar email
+        }    
+    }
+    
+    public static boolean verifySecurity(){
+        boolean status=false;
+        for(Division div:home.getDivisions().values())
+            for(Door d:div.getDoors())
+                if(d instanceof ExteriorEntranceDoor)
+                    status=((ExteriorEntranceDoor)d).getSecurity().isStatus();
+        
+        return status;
+    }
+    
+    public static void acionarAlarmeAndCloseDoorsWindows(){
+        if(verifySecurity()==true)
+            for (Division div:home.getDivisions().values())
+                if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){
+                    ativetMoviment();            
+                    JOptionPane.showMessageDialog(null, "Entrada de Intruso");
+                }
+    }
+    
 }
