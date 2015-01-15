@@ -12,7 +12,8 @@ import java.io.Serializable;
  * @author Rodolfo Melo, Henrique Melo, Xico
  */
 public abstract class Alert implements Serializable{
-
+    
+    private static final long serialVersionUID = 5455238796031916510L;
     private boolean status;
     private Contact email;
     private boolean detection;

@@ -265,8 +265,10 @@ public class Division implements Serializable{
                     }
                     for(Door d:doors)
                         if(d instanceof ExteriorDoor)
-                            if(d.isStatus()==true)
+                            if(d.isStatus()==true){
                                 d.setStatus(false);
+                                d.setLock(false);
+                            }
                     
                 }
         } 
@@ -329,12 +331,12 @@ public class Division implements Serializable{
     
     public void lowerTemperature(){
          if(mediaTemperature()<climate.getMINVALUE()){
-            lockWindows();
+            lockWithAirconWindows();
          }
     }
     
-    //Fechar as janelas
-    public void lockWindows(){
+    //Fechar as janelas por causa do ar condicionado
+    public void lockWithAirconWindows(){
         for (Window w:windows.values())
             if(w.isStatus()== true){
                 w.setStatus(false);
@@ -358,9 +360,18 @@ public class Division implements Serializable{
     
     //Fechar as portas
     public void lockDoors(){
-        for (Door doo:doors)
-            if(doo.isStatus()== true)
-                doo.setStatus(false);
+        for (Door doo:doors){
+            doo.setStatus(false);
+            doo.setLock(true);
+        }
+    }
+    
+    //Ferchar todas as Janelas
+    public void lockWindows(){
+        for (Window w:windows.values()){
+            w.setStatus(false);
+            w.setLock(true);
+       }
     }
     
         //Fechar as portas
@@ -374,7 +385,7 @@ public class Division implements Serializable{
     //Abrir as portas
     public void openDoors(){
         for (Door doo:doors)
-            if(doo.isStatus()== false)
+            if(doo.isStatus()==false)
                 doo.setStatus(true);
     }
     
@@ -393,7 +404,7 @@ public class Division implements Serializable{
         
         for (Sensor snl:sensors.values())
             if(snl instanceof NaturaLight)
-                ((NaturaLight)snl).setStatus(false);
+                snl.setStatus(false);
         
          for (Sensor s:sensors.values())
             if(s instanceof Wind)

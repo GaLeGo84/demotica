@@ -2,6 +2,8 @@ package demotica;
 
 import java.io.Serializable;
 import java.util.Map;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -57,6 +59,28 @@ public class Dashboard implements Serializable{
     
     public static void criarHome(int nFloors, int valueNL, int valueW){
         home = new Home(nFloors, valueNL, valueW);
+    }
+    
+    public static void verifyIfExteriorEntranceDoor(JButton b, JLabel j){
+        for(Division div:home.getDivisions().values())
+            if(div.listExteriorEntranceDoor().size()!=0){
+                b.setEnabled(true);
+                j.setVisible(true);
+            }
+    }
+    
+    public static void alarm(JButton j, JLabel jl){
+        if(j.isEnabled()==true){
+            int n = JOptionPane.showConfirmDialog(null,
+            "Queres Ligar o Alarme?",
+            "Alarme",
+            JOptionPane.YES_NO_OPTION);
+            if(n==0){
+                jl.setText("Ligado");
+                for(Division div:home.getDivisions().values())
+                    div.onComponentSegurança();
+            }
+        }
     }
     
 }

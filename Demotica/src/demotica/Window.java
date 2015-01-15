@@ -9,7 +9,7 @@ public class Window implements Serializable{
 
     public Window(){
         this.status = false;
-        this.lock = false;        
+        this.lock = true;        
     }
 
     public boolean isStatus() {

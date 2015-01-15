@@ -15,10 +15,12 @@ public class Door implements Serializable{
 
     private int ID;
     private boolean status;
+    private boolean lock;
 
     public Door(int ID) {
         this.ID = ID;
         this.status = false;
+        this.lock = true;
     }
 
     public int getId(){
@@ -27,6 +29,14 @@ public class Door implements Serializable{
 
     public boolean isStatus() {
         return status;
+    }
+
+    public boolean isLock() {
+        return lock;
+    }
+
+    public void setLock(boolean lock) {
+        this.lock = lock;
     }
 
     public void setStatus(boolean status) {

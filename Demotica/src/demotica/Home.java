@@ -20,7 +20,7 @@ import java.util.TreeMap;
  */
 public class Home implements Serializable{
 
-    private static final long serialVersionUID = -6231719377239289088L;
+    private static final long serialVersionUID = 5455238796031916510L;
     private int nFloors;
     private List<Alert> alerts;
     private Map<Integer,Division> divisions;
@@ -145,24 +145,9 @@ public class Home implements Serializable{
                 }
      }
     
-    /*public void MovimentDoorExterior(){
-        long timestamp= System.currentTimeMillis();
-        for(Division div:divisions.values())
-            for(Sensor s:div.getSensors().values()){
-                long limit=((Moviment)s).getTime()+Integer.parseInt(((Moviment)s).getInterval()+"000");
-                if(s instanceof Moviment){
-                        if(((Moviment)s).isDetection()==false && timestamp>limit)
-                            if(countDoorsExtern()!=0){
-                                lockDoorsExterior();
-                                ((Moviment)s).setTime(timestamp);
-                            }
-                }
-            }
-    }*/
     
     //INICIO Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
-    public void MovimentDoorExterior(){
-        
+    public void MovimentDoorExterior(){        
         for(Division div:divisions.values())
             for(Sensor s:div.getSensors().values())
                 if(s instanceof Moviment){                    
@@ -216,8 +201,10 @@ public class Home implements Serializable{
         for(Division div:divisions.values())
             for(Door d:div.getDoors())
             if(d instanceof ExteriorDoor)
-                if(d.isStatus()==false)
-                    d.setStatus(true);
+                if(d.isStatus()==false){
+                    d.setStatus(false);
+                    d.setLock(true);
+                }
     }
     //FIM Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
     
