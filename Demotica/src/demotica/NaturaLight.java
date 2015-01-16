@@ -15,8 +15,7 @@ public class NaturaLight extends Sensor implements Serializable{
 
     private int value;
 
-    public NaturaLight(int SNumber) {
-        super(SNumber);
+    public NaturaLight() {
         this.value = 15;
     }
 

@@ -144,8 +144,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jButton18 = new javax.swing.JButton();
-        jLabel34 = new javax.swing.JLabel();
-        tfid = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jButton32 = new javax.swing.JButton();
@@ -153,14 +151,10 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel54 = new javax.swing.JLabel();
         tfid1 = new javax.swing.JTextField();
         jSNaturalLight = new javax.swing.JPanel();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
-        tfid2 = new javax.swing.JTextField();
-        jLabel55 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
@@ -169,36 +163,26 @@ public class DashBoardExe extends javax.swing.JFrame {
         jSTemperature = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        tfid3 = new javax.swing.JTextField();
         jButton36 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
         jButton53 = new javax.swing.JButton();
         tfid8 = new javax.swing.JTextField();
         jLabel70 = new javax.swing.JLabel();
         jSWind = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        tfid4 = new javax.swing.JTextField();
         jButton40 = new javax.swing.JButton();
         jButton41 = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTable6 = new javax.swing.JTable();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
         jButton58 = new javax.swing.JButton();
         jLabel75 = new javax.swing.JLabel();
         tfid9 = new javax.swing.JTextField();
         jSGas = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        tfid5 = new javax.swing.JTextField();
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
         jScrollPane11 = new javax.swing.JScrollPane();
@@ -208,8 +192,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jSSmoke = new javax.swing.JPanel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        tfid6 = new javax.swing.JTextField();
         jButton48 = new javax.swing.JButton();
         jButton49 = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
@@ -307,15 +289,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jScrollPane13 = new javax.swing.JScrollPane();
         jTable9 = new javax.swing.JTable();
         btnVoltarDivisão1 = new javax.swing.JButton();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
         addB1 = new javax.swing.JButton();
         removeB1 = new javax.swing.JButton();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        jTable12 = new javax.swing.JTable();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        jTable13 = new javax.swing.JTable();
 
         jLabel18.setText("jLabel18");
 
@@ -347,7 +322,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel49)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         JSimularLayout.setVerticalGroup(
             JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -358,7 +333,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JSimularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel49)
                     .addComponent(jRegisterDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         JConfiguration.setVisible(false);
@@ -376,12 +351,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jPanelView.setPreferredSize(new java.awt.Dimension(700, 400));
         jPanelView.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanelViewAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -400,12 +375,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         lblLuzes.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         lblLuzes.setText("0");
         lblLuzes.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 lblLuzesAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -626,12 +601,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable1AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jScrollPane3.setViewportView(jTable1);
@@ -811,18 +786,18 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTableLight.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTableLightMouseReleased(evt);
-            }
-        });
         jTableLight.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTableLightAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+        });
+        jTableLight.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTableLightMouseReleased(evt);
             }
         });
         jScrollPane5.setViewportView(jTableLight);
@@ -909,12 +884,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTabbedPane1.addTab("Luzes", jPanelLight);
 
         jPanelDoors.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanelDoorsAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -1003,12 +978,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         });
         jTable2.setColumnSelectionAllowed(true);
         jTable2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable2AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1213,12 +1188,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable3AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1233,15 +1208,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton18MouseReleased(evt);
-            }
-        });
-
-        jLabel34.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel34.setText("ID:");
-
-        tfid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfidKeyReleased(evt);
             }
         });
 
@@ -1284,31 +1250,24 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSMovimentLayout.createSequentialGroup()
-                        .addComponent(jLabel34)
+                        .addComponent(jLabel30)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jLabel31))
+                    .addGroup(jSMovimentLayout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton33)
+                            .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jSMovimentLayout.createSequentialGroup()
+                        .addComponent(jButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton18))
+                    .addGroup(jSMovimentLayout.createSequentialGroup()
                         .addComponent(jLabel54)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jSMovimentLayout.createSequentialGroup()
-                        .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jSMovimentLayout.createSequentialGroup()
-                                .addComponent(jLabel30)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel31))
-                            .addGroup(jSMovimentLayout.createSequentialGroup()
-                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton33)
-                                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jSMovimentLayout.createSequentialGroup()
-                                .addComponent(jButton17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton18)))
-                        .addGap(0, 49, Short.MAX_VALUE))))
+                        .addComponent(tfid1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 61, Short.MAX_VALUE))
         );
         jSMovimentLayout.setVerticalGroup(
             jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1317,14 +1276,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(jLabel31))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54)
+                    .addComponent(tfid1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
-                .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34)
-                    .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(tfid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel54)
-                        .addComponent(tfid1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
                 .addGroup(jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton17)
                     .addComponent(jButton18))
@@ -1335,26 +1291,10 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton32)
                         .addGap(15, 15, 15)
                         .addComponent(jButton33)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Movimento", jSMoviment);
-
-        jButton34.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton34.setText("Fechar");
-        jButton34.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton34MouseReleased(evt);
-            }
-        });
-
-        jButton35.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton35.setText("Abrir");
-        jButton35.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton35MouseReleased(evt);
-            }
-        });
 
         jTable4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
@@ -1366,7 +1306,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Boolean.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -1381,12 +1321,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable4.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable4AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1411,15 +1351,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                 jButton21MouseReleased(evt);
             }
         });
-
-        tfid2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfid2KeyReleased(evt);
-            }
-        });
-
-        jLabel55.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel55.setText("ID:");
 
         jLabel32.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel32.setText("Sensor de Luz Natual:");
@@ -1452,30 +1383,21 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSNaturalLightLayout.createSequentialGroup()
-                        .addComponent(jLabel55)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel69)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSNaturalLightLayout.createSequentialGroup()
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel56))
-                    .addGroup(jSNaturalLightLayout.createSequentialGroup()
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton34)
-                            .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jSNaturalLightLayout.createSequentialGroup()
                         .addComponent(jButton21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton52)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton52))
+                    .addGroup(jSNaturalLightLayout.createSequentialGroup()
+                        .addComponent(jLabel69)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfid7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         jSNaturalLightLayout.setVerticalGroup(
             jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1486,8 +1408,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel56))
                 .addGap(8, 8, 8)
                 .addGroup(jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel55)
-                    .addComponent(tfid2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel69)
                     .addComponent(tfid7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1496,12 +1416,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jButton20)
                     .addComponent(jButton52))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jSNaturalLightLayout.createSequentialGroup()
-                        .addComponent(jButton35)
-                        .addGap(15, 15, 15)
-                        .addComponent(jButton34)))
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1512,15 +1427,6 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel58.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel58.setText("0");
-
-        jLabel59.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel59.setText("ID:");
-
-        tfid3.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfid3KeyReleased(evt);
-            }
-        });
 
         jButton36.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton36.setText("Adicionar Sensor");
@@ -1548,10 +1454,10 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Boolean.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, true
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1563,12 +1469,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable5.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable5AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1577,22 +1483,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jScrollPane9.setViewportView(jTable5);
-
-        jButton38.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton38.setText("Abrir");
-        jButton38.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton38MouseReleased(evt);
-            }
-        });
-
-        jButton39.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton39.setText("Fechar");
-        jButton39.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton39MouseReleased(evt);
-            }
-        });
 
         jButton53.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton53.setText("Atualizar Sensor");
@@ -1619,31 +1509,22 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addComponent(jLabel59)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel70)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSTemperatureLayout.createSequentialGroup()
                         .addComponent(jLabel57)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel58))
+                    .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane9)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jSTemperatureLayout.createSequentialGroup()
+                            .addComponent(jButton36)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton37)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton53)))
                     .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane9)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jSTemperatureLayout.createSequentialGroup()
-                                .addComponent(jButton36)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton37)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton53)))
-                        .addGap(27, 27, 27)
-                        .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton39)
-                            .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         jSTemperatureLayout.setVerticalGroup(
             jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1653,27 +1534,16 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel57)
                     .addComponent(jLabel58))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel59)
-                        .addComponent(tfid3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel70)
-                            .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(3, 3, 3)))
-                .addGap(6, 6, 6)
+                .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel70)
+                    .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton36)
                     .addComponent(jButton37)
                     .addComponent(jButton53))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jSTemperatureLayout.createSequentialGroup()
-                        .addComponent(jButton38)
-                        .addGap(15, 15, 15)
-                        .addComponent(jButton39)))
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1684,15 +1554,6 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel61.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel61.setText("0");
-
-        jLabel62.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel62.setText("ID:");
-
-        tfid4.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfid4KeyReleased(evt);
-            }
-        });
 
         jButton40.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton40.setText("Adicionar Sensor");
@@ -1720,7 +1581,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Boolean.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -1735,12 +1596,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable6.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable6AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1749,22 +1610,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jScrollPane10.setViewportView(jTable6);
-
-        jButton42.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton42.setText("Abrir");
-        jButton42.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton42MouseReleased(evt);
-            }
-        });
-
-        jButton43.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jButton43.setText("Fechar");
-        jButton43.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton43MouseReleased(evt);
-            }
-        });
 
         jButton58.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton58.setText("Atualizar Sensor");
@@ -1791,30 +1636,21 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSWindLayout.createSequentialGroup()
-                        .addComponent(jLabel62)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel75)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSWindLayout.createSequentialGroup()
                         .addComponent(jLabel60)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel61))
-                    .addGroup(jSWindLayout.createSequentialGroup()
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton43)
-                            .addComponent(jButton42, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jSWindLayout.createSequentialGroup()
                         .addComponent(jButton40)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton41)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton58)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton58))
+                    .addGroup(jSWindLayout.createSequentialGroup()
+                        .addComponent(jLabel75)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfid9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         jSWindLayout.setVerticalGroup(
             jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1823,26 +1659,17 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60)
                     .addComponent(jLabel61))
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jSWindLayout.createSequentialGroup()
-                        .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel62)
-                            .addComponent(tfid4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)
-                        .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton40)
-                            .addComponent(jButton41)
-                            .addComponent(jButton58))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jSWindLayout.createSequentialGroup()
-                                .addComponent(jButton42)
-                                .addGap(15, 15, 15)
-                                .addComponent(jButton43))))
                     .addComponent(jLabel75)
                     .addComponent(tfid9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton40)
+                    .addComponent(jButton41)
+                    .addComponent(jButton58))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1853,15 +1680,6 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel64.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel64.setText("0");
-
-        jLabel65.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel65.setText("ID:");
-
-        tfid5.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfid5KeyReleased(evt);
-            }
-        });
 
         jButton44.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton44.setText("Adicionar Sensor");
@@ -1889,7 +1707,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Boolean.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -1904,17 +1722,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable7.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable7AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        jTable7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable7MouseReleased(evt);
             }
         });
         jScrollPane11.setViewportView(jTable7);
@@ -1943,19 +1756,15 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSGasLayout.createSequentialGroup()
-                        .addComponent(jLabel65)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSGasLayout.createSequentialGroup()
                         .addComponent(jLabel63)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel64))
                     .addGroup(jSGasLayout.createSequentialGroup()
                         .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton47)
-                            .addComponent(jButton46, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton46, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(jButton47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jSGasLayout.createSequentialGroup()
                         .addComponent(jButton44)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1969,11 +1778,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel63)
                     .addComponent(jLabel64))
-                .addGap(8, 8, 8)
-                .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel65)
-                    .addComponent(tfid5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                .addGap(37, 37, 37)
                 .addGroup(jSGasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton44)
                     .addComponent(jButton45))
@@ -1994,15 +1799,6 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel67.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel67.setText("0");
-
-        jLabel68.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel68.setText("ID:");
-
-        tfid6.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tfid6KeyReleased(evt);
-            }
-        });
 
         jButton48.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton48.setText("Adicionar Sensor");
@@ -2045,17 +1841,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jTable8.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable8AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        jTable8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable8MouseReleased(evt);
             }
         });
         jScrollPane12.setViewportView(jTable8);
@@ -2084,10 +1875,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jSSmokeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jSSmokeLayout.createSequentialGroup()
-                        .addComponent(jLabel68)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfid6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jSSmokeLayout.createSequentialGroup()
                         .addComponent(jLabel66)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel67))
@@ -2110,11 +1897,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jSSmokeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel66)
                     .addComponent(jLabel67))
-                .addGap(8, 8, 8)
-                .addGroup(jSSmokeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel68)
-                    .addComponent(tfid6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                .addGap(37, 37, 37)
                 .addGroup(jSSmokeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton48)
                     .addComponent(jButton49))
@@ -2148,12 +1931,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTabbedPane1.addTab("Sensores", jPanelSensors);
 
         jPanelClimate.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanelClimateAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -2368,12 +2151,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         JHome.setRequestFocusEnabled(false);
         JHome.setVerifyInputWhenFocusTarget(false);
         JHome.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 JHomeAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -2529,7 +2312,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JHomeLayout.createSequentialGroup()
                     .addGap(132, 132, 132)
@@ -2626,7 +2409,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar5)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 271, Short.MAX_VALUE))
+                        .addGap(0, 306, Short.MAX_VALUE))
                     .addGroup(JCreateHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -2649,7 +2432,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(JCreateHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2718,12 +2501,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         JEditHome.setName("JCreateHome"); // NOI18N
         JEditHome.setPreferredSize(new java.awt.Dimension(700, 410));
         JEditHome.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 JEditHomeAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -2802,7 +2585,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(carregar6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 277, Short.MAX_VALUE))
+                        .addGap(0, 320, Short.MAX_VALUE))
                     .addGroup(JEditHomeLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnBack1)
@@ -2827,7 +2610,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carregar7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(JEditHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2838,12 +2621,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         JCreateDivision.setEnabled(false);
         JCreateDivision.setPreferredSize(new java.awt.Dimension(700, 400));
         JCreateDivision.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 JCreateDivisionAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -3063,7 +2846,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(removeB)
                         .addComponent(btnLimpar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
                 .addContainerGap())
@@ -3093,24 +2876,31 @@ public class DashBoardExe extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nome", "Email"
+                "Id", "Tipo", "Email"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         jTable9.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jTable9AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jTable9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3128,15 +2918,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
-        jLabel80.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel80.setText("Policia");
-
-        jLabel81.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel81.setText("Bombeiro");
-
-        jLabel82.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel82.setText("Outros");
-
         addB1.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         addB1.setText("Adicionar");
         addB1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3152,91 +2933,6 @@ public class DashBoardExe extends javax.swing.JFrame {
                 removeB1MouseReleased(evt);
             }
         });
-        removeB1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeB1ActionPerformed(evt);
-            }
-        });
-
-        jTable12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTable12.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Nome", "Email"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable12.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jTable12AncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        jTable12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable12MouseReleased(evt);
-            }
-        });
-        jScrollPane16.setViewportView(jTable12);
-
-        jTable13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTable13.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Nome", "Email"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable13.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jTable13AncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        jTable13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable13MouseReleased(evt);
-            }
-        });
-        jScrollPane17.setViewportView(jTable13);
 
         javax.swing.GroupLayout jContactLayout = new javax.swing.GroupLayout(jContact);
         jContact.setLayout(jContactLayout);
@@ -3244,6 +2940,11 @@ public class DashBoardExe extends javax.swing.JFrame {
             jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jContactLayout.createSequentialGroup()
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jContactLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(btnVoltarDivisão1))
                     .addGroup(jContactLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3261,36 +2962,13 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(removeB1))))
                     .addGroup(jContactLayout.createSequentialGroup()
                         .addGap(233, 233, 233)
-                        .addComponent(jLabel25))
-                    .addGroup(jContactLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel80))
-                        .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jContactLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnVoltarDivisão1)
-                                .addGap(14, 14, 14))
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel25)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jContactLayout.setVerticalGroup(
             jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jContactLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3304,24 +2982,13 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addB1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(removeB1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jContactLayout.createSequentialGroup()
-                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(206, 206, 206)
+                        .addComponent(btnVoltarDivisão1))
                     .addGroup(jContactLayout.createSequentialGroup()
-                        .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addComponent(jLabel80)
-                                .addGap(95, 95, 95)
-                                .addComponent(jLabel81))
-                            .addGroup(jContactLayout.createSequentialGroup()
-                                .addComponent(jLabel82)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnVoltarDivisão1)))
+                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -3350,7 +3017,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JCreateDivision, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -3432,8 +3099,8 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTableLightAncestorAdded
 
     private void jTableLightMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableLightMouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) jTableLight.getModel();
-        slIntensidade.setValue(Integer.parseInt(modelo.getValueAt(jTableLight.getSelectedRow(), 1).toString()));
+        //DefaultTableModel modelo = (DefaultTableModel) jTableLight.getModel();
+        //slIntensidade.setValue(Integer.parseInt(modelo.getValueAt(jTableLight.getSelectedRow(), 1).toString()));
         btnRemLuz.setEnabled(true);
     }//GEN-LAST:event_jTableLightMouseReleased
 
@@ -3766,9 +3433,15 @@ public class DashBoardExe extends javax.swing.JFrame {
                 Dashboard.getHome().getDivisions().get(n).addDoor(new InteriorDoor(Integer.parseInt(tfDoors1.getText())));
         }else if(jComboBox3.getSelectedIndex()==1){
             if(jComboBox2.getSelectedIndex()==0)
-                Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorDoorStandard(Integer.parseInt(tfDoors1.getText())));
+                if(tfDoors1.getText().equals(""))
+                    Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorDoorStandard(Integer.parseInt(jComboBox4.getSelectedItem().toString())));
+                else
+                    Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorDoorStandard(Integer.parseInt(tfDoors1.getText())));
             else
-                Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorEntranceDoor(Integer.parseInt(tfDoors1.getText()),new Security()));
+                if(tfDoors1.getText().equals(""))
+                    Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorEntranceDoor(Integer.parseInt(jComboBox4.getSelectedItem().toString()),new Security()));
+                else
+                    Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorEntranceDoor(Integer.parseInt(tfDoors1.getText()),new Security()));
         }
         jLabel29.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getDoors().size()));
         refrashJTableDoor();
@@ -3829,13 +3502,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jTable3AncestorAdded
 
-    private void jTable3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseReleased
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable3.getModel();
-        tfid.setText(modelo1.getValueAt(jTable3.getSelectedRow(), 0).toString());
-    }//GEN-LAST:event_jTable3MouseReleased
-
     private void jButton32MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton32MouseReleased
-        refrashJTableSensorMoviment();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable3.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3855,31 +3522,21 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton33MouseReleased
 
     private void jButton18MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton18MouseReleased
-        refrashJTableSensorMoviment();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable3.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable3.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel31.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jButton18MouseReleased
 
     private void jButton17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseReleased
-        refrashJTableSensorMoviment();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new Moviment(Integer.parseInt(tfid.getText()),Integer.parseInt(tfid1.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new Moviment(Integer.parseInt(tfid1.getText())));
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jButton17MouseReleased
-
-    private void jButton34MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton34MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton34MouseReleased
-
-    private void jButton35MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton35MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton35MouseReleased
 
     private void jTable4AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable4AncestorAdded
         refrashJTableSensorNaturaLight();
@@ -3887,44 +3544,39 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jTable4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseReleased
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
-        tfid2.setText(modelo1.getValueAt(jTable4.getSelectedRow(), 0).toString());
         tfid7.setText(modelo1.getValueAt(jTable4.getSelectedRow(), 2).toString());
     }//GEN-LAST:event_jTable4MouseReleased
 
     private void jButton20MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseReleased
-        refrashJTableSensorNaturaLight();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid2.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable4.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel56.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorNaturaLight();
     }//GEN-LAST:event_jButton20MouseReleased
 
     private void jButton21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseReleased
-        refrashJTableSensorNaturaLight();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new NaturaLight(Integer.parseInt(tfid2.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new NaturaLight());
         refrashJTableSensorNaturaLight();
     }//GEN-LAST:event_jButton21MouseReleased
 
     private void jButton36MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton36MouseReleased
-        refrashJTableSensorTemperature();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new Temperature(Integer.parseInt(tfid3.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new Temperature());
         refrashJTableSensorTemperature();
     }//GEN-LAST:event_jButton36MouseReleased
 
     private void jButton37MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton37MouseReleased
-        refrashJTableSensorTemperature();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid3.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel58.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorTemperature();
     }//GEN-LAST:event_jButton37MouseReleased
@@ -3935,33 +3587,22 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jTable5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseReleased
        DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
-       tfid3.setText(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
        tfid8.setText(modelo1.getValueAt(jTable5.getSelectedRow(), 2).toString());
     }//GEN-LAST:event_jTable5MouseReleased
 
-    private void jButton38MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton38MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38MouseReleased
-
-    private void jButton39MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton39MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton39MouseReleased
-
     private void jButton40MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton40MouseReleased
-        refrashJTableSensorWind();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new Wind(Integer.parseInt(tfid4.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new Wind());
         refrashJTableSensorWind();
     }//GEN-LAST:event_jButton40MouseReleased
 
     private void jButton41MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton41MouseReleased
-        refrashJTableSensorWind();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable6.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid4.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable6.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel61.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorWind();
     }//GEN-LAST:event_jButton41MouseReleased
@@ -3972,33 +3613,22 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jTable6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable6MouseReleased
        DefaultTableModel modelo1 = (DefaultTableModel) jTable6.getModel();
-       tfid4.setText(modelo1.getValueAt(jTable6.getSelectedRow(), 0).toString());
        tfid9.setText(modelo1.getValueAt(jTable6.getSelectedRow(), 2).toString());
     }//GEN-LAST:event_jTable6MouseReleased
 
-    private void jButton42MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton42MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton42MouseReleased
-
-    private void jButton43MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton43MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton43MouseReleased
-
     private void jButton44MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton44MouseReleased
-        refrashJTableSensorGas();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new Gas(Integer.parseInt(tfid5.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new Gas());
         refrashJTableSensorGas();
     }//GEN-LAST:event_jButton44MouseReleased
 
     private void jButton45MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton45MouseReleased
-        refrashJTableSensorGas();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable7.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid5.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel64.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorGas();
     }//GEN-LAST:event_jButton45MouseReleased
@@ -4007,34 +3637,37 @@ public class DashBoardExe extends javax.swing.JFrame {
         refrashJTableSensorGas();
     }//GEN-LAST:event_jTable7AncestorAdded
 
-    private void jTable7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable7MouseReleased
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable7.getModel();
-        tfid5.setText(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
-    }//GEN-LAST:event_jTable7MouseReleased
-
     private void jButton46MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton46MouseReleased
-        // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable7.getModel();
+        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
+        ((Gas)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
+        refrashJTableSensorGas();
     }//GEN-LAST:event_jButton46MouseReleased
 
     private void jButton47MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton47MouseReleased
-        // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable7.getModel();
+        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
+        ((Gas)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(false);
+        refrashJTableSensorGas();
     }//GEN-LAST:event_jButton47MouseReleased
 
     private void jButton48MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton48MouseReleased
-        refrashJTableSensorSmoke();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addSensor(new Smoke(Integer.parseInt(tfid6.getText())));
+        Dashboard.getHome().getDivisions().get(n).addSensor(new Smoke());
         refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton48MouseReleased
 
     private void jButton49MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton49MouseReleased
-        refrashJTableSensorSmoke();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable8.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int sn =Integer.parseInt(tfid6.getText());
-        Dashboard.getHome().getDivisions().get(n).remSensor(sn);
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel67.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
         refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton49MouseReleased
@@ -4043,17 +3676,22 @@ public class DashBoardExe extends javax.swing.JFrame {
         refrashJTableSensorSmoke();
     }//GEN-LAST:event_jTable8AncestorAdded
 
-    private void jTable8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable8MouseReleased
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable8.getModel();
-        tfid6.setText(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
-    }//GEN-LAST:event_jTable8MouseReleased
-
     private void jButton50MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton50MouseReleased
-        // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable8.getModel();
+        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
+        ((Smoke)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
+        refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton50MouseReleased
 
     private void jButton51MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton51MouseReleased
-        // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable8.getModel();
+        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
+        ((Smoke)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(false);
+        refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton51MouseReleased
 
     private void jButton52MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton52MouseReleased
@@ -4108,6 +3746,16 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel72.setText("Ligado");
         jLabel43.setText("Desligado");
         jLabel41.setText("Desligado");
+        jTextField8.setEnabled(true);
+        jTextField9.setEnabled(true);
+        jButton22.setEnabled(true);
+        jButton23.setEnabled(true);
+        jButton24.setEnabled(true);
+        jButton25.setEnabled(true);
+        jButton30.setEnabled(true);
+        jButton31.setEnabled(true);
+        jButton54.setEnabled(false);
+        jButton55.setEnabled(true);
     }//GEN-LAST:event_jButton54MouseReleased
 
     private void jButton55MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton55MouseReleased
@@ -4119,6 +3767,16 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel41.setText("Desligado");
         jTextField8.setText(null);
         jTextField9.setText(null);
+        jTextField8.setEnabled(false);
+        jTextField9.setEnabled(false);
+        jButton22.setEnabled(false);
+        jButton23.setEnabled(false);
+        jButton24.setEnabled(false);
+        jButton25.setEnabled(false);
+        jButton30.setEnabled(false);
+        jButton31.setEnabled(false);
+        jButton55.setEnabled(false);
+        jButton54.setEnabled(true);
     }//GEN-LAST:event_jButton55MouseReleased
 
     private void jButton56MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton56MouseReleased
@@ -4192,41 +3850,22 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable9MouseReleased
 
     private void jTable9AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable9AncestorAdded
-        updatePolice();
+        updateContacts();
     }//GEN-LAST:event_jTable9AncestorAdded
 
     private void addB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addB1MouseReleased
-        int floor = comboFloor1.getSelectedIndex();
-        Dashboard.getHome().addContact(new Contact(1,floor,tfName1.getText()));
+        Dashboard.getHome().addContact(new Contact(comboFloor1.getSelectedIndex(),tfName1.getText()));
         
-        updatePolice();
-            updateBombeiros();
-            updateOthers();        
+        updateContacts();      
     }//GEN-LAST:event_addB1MouseReleased
 
     private void removeB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeB1MouseReleased
-        // TODO add your handling code here:
+        int floor = comboFloor1.getSelectedIndex();
+        DefaultTableModel modelo = (DefaultTableModel) jTable9.getModel();     
+        int n = Integer.parseInt(modelo.getValueAt(jTable9.getSelectedRow(), 0).toString());      
+        Dashboard.getHome().remContact(n);
+        updateContacts();
     }//GEN-LAST:event_removeB1MouseReleased
-
-    private void removeB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeB1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_removeB1ActionPerformed
-
-    private void jTable12AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable12AncestorAdded
-        updateOthers();
-    }//GEN-LAST:event_jTable12AncestorAdded
-
-    private void jTable12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable12MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTable12MouseReleased
-
-    private void jTable13AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable13AncestorAdded
-        updateBombeiros();
-    }//GEN-LAST:event_jTable13AncestorAdded
-
-    private void jTable13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable13MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTable13MouseReleased
 
     private void btnVoltarDivisão1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVoltarDivisão1MouseReleased
         jContact.setVisible(false);
@@ -4289,8 +3928,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void slIntensidadeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_slIntensidadeMouseReleased
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        DefaultTableModel modelo1 = (DefaultTableModel) jTableLight.getModel();
         int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTableLight.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getLights().get(n1).setIntensity(slIntensidade.getValue());
         refrashJTableLight();
     }//GEN-LAST:event_slIntensidadeMouseReleased
@@ -4315,45 +3955,27 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.toInteger(jTextField9);
     }//GEN-LAST:event_jTextField9KeyReleased
 
-    private void tfidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfidKeyReleased
-        Dashboard.toInteger(tfid);
-    }//GEN-LAST:event_tfidKeyReleased
-
     private void tfid1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid1KeyReleased
         Dashboard.toInteger(tfid1);
     }//GEN-LAST:event_tfid1KeyReleased
-
-    private void tfid2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid2KeyReleased
-        Dashboard.toInteger(tfid2);
-    }//GEN-LAST:event_tfid2KeyReleased
 
     private void tfid7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid7KeyReleased
         Dashboard.toInteger(tfid7);
     }//GEN-LAST:event_tfid7KeyReleased
 
-    private void tfid3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid3KeyReleased
-        Dashboard.toInteger(tfid3);
-    }//GEN-LAST:event_tfid3KeyReleased
-
     private void tfid8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid8KeyReleased
         Dashboard.toInteger(tfid8);
     }//GEN-LAST:event_tfid8KeyReleased
-
-    private void tfid4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid4KeyReleased
-        Dashboard.toInteger(tfid4);
-    }//GEN-LAST:event_tfid4KeyReleased
 
     private void tfid9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid9KeyReleased
         Dashboard.toInteger(tfid9);
     }//GEN-LAST:event_tfid9KeyReleased
 
-    private void tfid5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid5KeyReleased
-        Dashboard.toInteger(tfid5);
-    }//GEN-LAST:event_tfid5KeyReleased
-
-    private void tfid6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid6KeyReleased
-        Dashboard.toInteger(tfid6);
-    }//GEN-LAST:event_tfid6KeyReleased
+    private void jTable3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseReleased
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable3.getModel();
+        String n = modelo1.getValueAt(jTable3.getSelectedRow(), 2).toString();
+        tfid1.setText(n);
+    }//GEN-LAST:event_jTable3MouseReleased
 
     /**
      * @param args the command line arguments
@@ -4544,29 +4166,20 @@ public class DashBoardExe extends javax.swing.JFrame {
         div.get(n).listSensorSmoke(modelo1);
     }
     
-    private void updatePolice(){
+    private void updateContacts(){
         DefaultTableModel modelo1 = (DefaultTableModel) jTable9.getModel();
         modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
-            if(b.getValue().getType()==0)
-                    modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
-    }
-    
-    private void updateBombeiros(){
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable13.getModel();
-        modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
-            if(b.getValue().getType()==1)
-                modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
-    }
-    
-    private void updateOthers(){
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable12.getModel();
-        modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
+        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet()){
+                if(b.getValue().getType()==0)
+                    modelo1.addRow(new Object[]{b.getKey(),"Policia",b.getValue().getEmail()});
+                if(b.getValue().getType()==1)
+                            modelo1.addRow(new Object[]{b.getKey(),"Bombeiros",b.getValue().getEmail()});
                 if(b.getValue().getType()==2)
-                modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
+                            modelo1.addRow(new Object[]{b.getKey(),"Outros",b.getValue().getEmail()});
+        }
+            
     }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -4624,17 +4237,11 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
     private javax.swing.JButton jButton44;
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
@@ -4689,7 +4296,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -4712,21 +4318,16 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
@@ -4740,9 +4341,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jLigarLight;
@@ -4763,8 +4361,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -4776,8 +4372,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable12;
-    private javax.swing.JTable jTable13;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
@@ -4817,13 +4411,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JTextField tfName;
     private javax.swing.JTextField tfName1;
     private javax.swing.JTextField tfWindow;
-    private javax.swing.JTextField tfid;
     private javax.swing.JTextField tfid1;
-    private javax.swing.JTextField tfid2;
-    private javax.swing.JTextField tfid3;
-    private javax.swing.JTextField tfid4;
-    private javax.swing.JTextField tfid5;
-    private javax.swing.JTextField tfid6;
     private javax.swing.JTextField tfid7;
     private javax.swing.JTextField tfid8;
     private javax.swing.JTextField tfid9;

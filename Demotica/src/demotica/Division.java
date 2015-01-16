@@ -81,14 +81,14 @@ public class Division implements Serializable{
         int n=1;
         while(n<=sensors.size()){
             if(sensors.containsKey(n)==false){
-                sensors.put(sen.getSNumber(),sen);
+                sensors.put(n, sen);
                 break;
             }            
         n++;
         }
         
         if(sensors.size()<n)
-            sensors.put(sen.getSNumber(),sen);
+            sensors.put(sensors.size()+1,sen);
     }
       
     public void addLight(Light l){
@@ -143,23 +143,23 @@ public class Division implements Serializable{
     
     //Lista de sensores de Temperatura
     public void listSensorTemperature(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof Temperature)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Temperature)s).getValue()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof Temperature)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Temperature)s.getValue()).getValue()});
    }
     
     //DefaultTableModel de sensores de movimento
     public void listSensorMoviment(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof Moviment)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Moviment)s).getInterval(),((Moviment)s).isDetection()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof Moviment)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Moviment)s.getValue()).getInterval(),((Moviment)s.getValue()).isDetection()});
    }
     
     //Lista de sensores de NaturaLight
     public void listSensorNaturaLight(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof NaturaLight)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((NaturaLight)s).getValue()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof NaturaLight)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((NaturaLight)s.getValue()).getValue()});
    }
 
     
@@ -185,23 +185,23 @@ public class Division implements Serializable{
     
     //Lista de sensores de vento
     public void listSensorWind(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof Wind)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Wind)s).getIntensity()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof Wind)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Wind)s.getValue()).getIntensity()});
    }
     
     //Lista de sensores de gas
     public void listSensorGas(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof Gas)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Gas)s).isDetection()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof Gas)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Gas)s.getValue()).isDetection()});
    }
     
     //Lista de sensores de Smoke
     public void listSensorSmoke(DefaultTableModel Obj){
-       for (Sensor s : sensors.values())
-           if(s instanceof Smoke)
-               Obj.addRow(new Object[]{s.getSNumber(),s.isStatus(),((Smoke)s).isDetection()});
+       for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+           if(s.getValue() instanceof Smoke)
+               Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Smoke)s.getValue()).isDetection()});
    }
     
     public int nDoors(){
@@ -259,11 +259,11 @@ public class Division implements Serializable{
     //Ativar o Sensor de movimento para quando houver um movimento ligar a luz da divisão
     public void onMovimentSensor(int SNumber){
         long timestamp= System.currentTimeMillis();
-        for (Sensor sm :sensors.values()){
-            if(sm instanceof Moviment)
-                if(sm.getSNumber()==SNumber){
-                    ((Moviment)sm).setDetection(true);
-                    ((Moviment)sm).setTime(timestamp);
+        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
+            if(s instanceof Moviment)
+                if(s.getKey()==SNumber){
+                    ((Moviment)s).setDetection(true);
+                    ((Moviment)s).setTime(timestamp);
                     if(onLight() == true){
                         for (Map.Entry<Integer, Light> l:lights.entrySet())
                             l.getValue().setStatus(true);   
@@ -276,7 +276,7 @@ public class Division implements Serializable{
                             }
                     
                 }
-        } 
+         
     }
    
     

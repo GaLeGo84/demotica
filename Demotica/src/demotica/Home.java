@@ -109,6 +109,10 @@ public class Home implements Serializable{
         divisions.remove(n);
     }
 
+    public void remContact(int n){
+        contacts.remove(n);
+    }
+    
     public void setValueNL(int valueNL) {
         this.valueNL = valueNL;
     }

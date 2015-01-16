@@ -26,21 +26,10 @@ public class NewMain {
         
         
             //for(Contact c:b.getValue())
-                
-                
-        /*int n=1;
-        Map<Integer,List<Integer>> a=new TreeMap<Integer,List<Integer>>();
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        LinkedList<Integer> list2 = new LinkedList<Integer>();
-        list.add(911656898);
-        list.add(923454238);
-        list2.add(911656898);
-        
-        a.put(a.size()+1, list);
-        a.put(a.size()+1, list2);
-        
-        for (Map.Entry<Integer,List<Integer>> b : a.entrySet())
-                System.out.println(b.getKey()+" - "+b.getValue().toString());*/
+        Home h = File.loadHome();        
+        for(Map.Entry<Integer,Sensor> s:h.getDivisions().get(3).getSensors().entrySet())  
+           if(s.getValue() instanceof Moviment)
+               System.out.println(s.getKey()+" - "+((Moviment)s.getValue()).getInterval());
       
         
         /*h.getDivisions().get(1).addWindow(new Window());
