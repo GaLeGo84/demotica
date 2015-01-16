@@ -6,6 +6,7 @@
 package Swing;
 
 import demotica.Climate;
+import demotica.Contact;
 import demotica.Dashboard;
 import demotica.Division;
 import demotica.Door;
@@ -26,6 +27,8 @@ import demotica.Window;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import javax.swing.JOptionPane;
@@ -128,6 +131,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton59 = new javax.swing.JButton();
         jButton60 = new javax.swing.JButton();
         jLabel77 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox();
+        jLabel83 = new javax.swing.JLabel();
         jPanelSensors = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         j = new javax.swing.JPanel();
@@ -630,10 +635,6 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
         jScrollPane3.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Estado");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Trancada");
-        }
 
         jButton26.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton26.setText("Abrir");
@@ -757,6 +758,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         slIntensidade.setPaintTicks(true);
         slIntensidade.setToolTipText("");
         slIntensidade.setValue(10);
+        slIntensidade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                slIntensidadeMouseReleased(evt);
+            }
+        });
 
         btnRemLuz.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         btnRemLuz.setText("Remover Luz");
@@ -965,6 +971,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel52.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel52.setText("ID:");
 
+        tfDoors1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfDoors1KeyReleased(evt);
+            }
+        });
+
         jTable2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -975,7 +987,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false
@@ -1032,37 +1044,30 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel77.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel77.setText("Estado");
 
+        jComboBox4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+
+        jLabel83.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        jLabel83.setText("Porta Existentes:");
+
         javax.swing.GroupLayout jPanelDoorsLayout = new javax.swing.GroupLayout(jPanelDoors);
         jPanelDoors.setLayout(jPanelDoorsLayout);
         jPanelDoorsLayout.setHorizontalGroup(
             jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDoorsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelDoorsLayout.createSequentialGroup()
-                        .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelDoorsLayout.createSequentialGroup()
-                                .addComponent(jButton15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton16))
-                            .addGroup(jPanelDoorsLayout.createSequentialGroup()
-                                .addComponent(jLabel52)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfDoors1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(jLabel53)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelDoorsLayout.createSequentialGroup()
                         .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelDoorsLayout.createSequentialGroup()
                                 .addComponent(jLabel28)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel29)
-                                .addGap(0, 411, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1075,8 +1080,28 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jButton29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButton60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jLabel77))
-                        .addGap(32, 32, 32))))
+                            .addComponent(jLabel77)))
+                    .addGroup(jPanelDoorsLayout.createSequentialGroup()
+                        .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelDoorsLayout.createSequentialGroup()
+                                .addComponent(jButton15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton16))
+                            .addGroup(jPanelDoorsLayout.createSequentialGroup()
+                                .addComponent(jLabel52)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfDoors1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel83)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel53)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32))
         );
         jPanelDoorsLayout.setVerticalGroup(
             jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1091,7 +1116,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                     .addComponent(jLabel53)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel52))
+                    .addComponent(jLabel52)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel83))
                 .addGap(19, 19, 19)
                 .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton15)
@@ -1208,6 +1235,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel34.setText("ID:");
 
+        tfid.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfidKeyReleased(evt);
+            }
+        });
+
         jLabel30.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel30.setText("Sensor de Movimento");
 
@@ -1232,6 +1265,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel54.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel54.setText("Intervalo de tempo:");
+
+        tfid1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid1KeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout jSMovimentLayout = new javax.swing.GroupLayout(jSMoviment);
         jSMoviment.setLayout(jSMovimentLayout);
@@ -1369,6 +1408,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
+        tfid2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid2KeyReleased(evt);
+            }
+        });
+
         jLabel55.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel55.setText("ID:");
 
@@ -1380,6 +1425,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel69.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel69.setText("Valor:");
+
+        tfid7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid7KeyReleased(evt);
+            }
+        });
 
         jButton52.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton52.setText("Atualizar Sensor");
@@ -1461,6 +1512,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel59.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel59.setText("ID:");
 
+        tfid3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid3KeyReleased(evt);
+            }
+        });
+
         jButton36.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton36.setText("Adicionar Sensor");
         jButton36.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1538,6 +1595,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton53MouseReleased(evt);
+            }
+        });
+
+        tfid8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid8KeyReleased(evt);
             }
         });
 
@@ -1620,6 +1683,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel62.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel62.setText("ID:");
+
+        tfid4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid4KeyReleased(evt);
+            }
+        });
 
         jButton40.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton40.setText("Adicionar Sensor");
@@ -1704,6 +1773,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel75.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel75.setText("Valor:");
 
+        tfid9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid9KeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jSWindLayout = new javax.swing.GroupLayout(jSWind);
         jSWind.setLayout(jSWindLayout);
         jSWindLayout.setHorizontalGroup(
@@ -1777,6 +1852,12 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel65.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel65.setText("ID:");
+
+        tfid5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid5KeyReleased(evt);
+            }
+        });
 
         jButton44.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton44.setText("Adicionar Sensor");
@@ -1913,6 +1994,12 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel68.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel68.setText("ID:");
 
+        tfid6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfid6KeyReleased(evt);
+            }
+        });
+
         jButton48.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton48.setText("Adicionar Sensor");
         jButton48.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2044,13 +2131,13 @@ public class DashBoardExe extends javax.swing.JFrame {
         jPanelSensorsLayout.setHorizontalGroup(
             jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSensorsLayout.createSequentialGroup()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
         jPanelSensorsLayout.setVerticalGroup(
             jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSensorsLayout.createSequentialGroup()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
 
@@ -2108,11 +2195,23 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel44.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel44.setText("Temperatura mínima:");
 
+        jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField8KeyReleased(evt);
+            }
+        });
+
         jLabel45.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel45.setText("ºC");
 
         jLabel46.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel46.setText("Temperatura máxima:");
+
+        jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField9KeyReleased(evt);
+            }
+        });
 
         jLabel47.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel47.setText("ºC");
@@ -2290,32 +2389,32 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton6.setText("Sair");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton6MouseReleased(evt);
             }
         });
 
         jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton9.setText("Configurar Divisão");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton9MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton9MouseReleased(evt);
             }
         });
 
         jButton10.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton10.setText("Contatos");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton10MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton10MouseReleased(evt);
             }
         });
 
         jButton11.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         jButton11.setText("Configurar Casa");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton11MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton11MouseReleased(evt);
             }
         });
 
@@ -2365,12 +2464,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton12.setAutoscrolls(true);
         jButton12.setEnabled(false);
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton12MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton12MouseExited(evt);
-            }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton12MouseReleased(evt);
             }
@@ -2585,9 +2678,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel5.setText("app@masters: Francisco Simas; Henrique Melo; Rodolfo Melo");
+        jLabel5.setText("app@masters: Rodolfo Melo; Henrique Melo; Francisco Simas;  ");
         JBegin.add(jLabel5);
-        jLabel5.setBounds(340, 360, 340, 13);
+        jLabel5.setBounds(330, 360, 350, 13);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
@@ -2597,8 +2690,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton2.setText("Criar Habitação");
         jButton2.setToolTipText("");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton2MouseReleased(evt);
             }
         });
         JBegin.add(jButton2);
@@ -2676,8 +2769,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         btnBack1.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         btnBack1.setText("Voltar");
         btnBack1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnBack1MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnBack1MouseReleased(evt);
             }
         });
 
@@ -2762,6 +2855,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel9.setEnabled(false);
 
         tfDoors.setEnabled(false);
+        tfDoors.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfDoorsKeyReleased(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel11.setText("Nº de luzes:");
@@ -2837,8 +2935,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jButton7.setText("Voltar");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton7MouseClicked(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton7MouseReleased(evt);
             }
         });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -2994,16 +3092,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                 "Nome", "Email"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -3298,32 +3389,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSimulActionPerformed
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        JBegin.setVisible(false);
-        JCreateHome.setVisible(true);
-    }//GEN-LAST:event_jButton2MouseClicked
-
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         jTextField1.setText(null);
         jTextField2.setText(null);
         jTextField3.setText(null);
     }//GEN-LAST:event_jButton4MouseClicked
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        int n = JOptionPane.showConfirmDialog(JHome,
-        "Tens a certeza que queres sair?",
-        "Sair",
-        JOptionPane.YES_NO_OPTION);
-        if(n==0){
-            Dashboard.saveData();
-            System.exit(0);
-        }
-    }//GEN-LAST:event_jButton6MouseClicked
-
-    private void btnBack1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBack1MouseClicked
-        JEditHome.setVisible(false);
-        JHome.setVisible(true);
-    }//GEN-LAST:event_btnBack1MouseClicked
 
     private void JEditHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JEditHomeAncestorAdded
         jTextField5.setText(String.valueOf(Dashboard.getHome().getnFloors()));
@@ -3331,47 +3401,13 @@ public class DashBoardExe extends javax.swing.JFrame {
         jTextField7.setText(String.valueOf(Dashboard.getHome().getValueW()));
     }//GEN-LAST:event_JEditHomeAncestorAdded
 
-    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-       JHome.setVisible(false);
-       JConfiguration.setVisible(true);
-       DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-       int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-       lblLuzes.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 7).toString());
-       lblJanelas.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 6).toString());
-       lblPortas1.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 3).toString());
-       lblPortas2.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 4).toString());
-       lblPortas3.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 5).toString());
-       lblTempMin.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMINVALUE()));
-       lblTempMax.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMAXVALUE()));
-       lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));
-       jLabel27.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getWindows().size()));
-       jLabel29.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getDoors().size()));
-       jLabel31.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
-    }//GEN-LAST:event_jButton9MouseClicked
-
-    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-        JHome.setVisible(false);
-        jContact.setVisible(true);
-    }//GEN-LAST:event_jButton10MouseClicked
-
     private void btnSimulMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSimulMouseClicked
         JConfiguration.setVisible(false);
         JSimular.setVisible(true);
     }//GEN-LAST:event_btnSimulMouseClicked
 
-    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        JHome.setVisible(false);
-        JEditHome.setVisible(true);
-    }//GEN-LAST:event_jButton11MouseClicked
-
     private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        modelo1.getDataVector().clear();        
-        Map<Integer,Division> div = Dashboard.getHome().getDivisions();        
-        for(Map.Entry<Integer, Window> win:div.get(n).getWindows().entrySet())
-            modelo1.addRow(new Object[]{win.getKey(),win.getValue().isStatus(),win.getValue().isLock()});
+        refrashJTableWindow(); 
     }//GEN-LAST:event_jTable1AncestorAdded
 
     private void jTable2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable2AncestorAdded
@@ -3420,19 +3456,17 @@ public class DashBoardExe extends javax.swing.JFrame {
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).addLight(new Light());
-        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));
-        
+        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));        
         refrashJTableLight();
     }//GEN-LAST:event_btnAdLuzMouseReleased
 
     private void btnRemLuzMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemLuzMouseReleased
-        refrashJTableLight();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTableLight.getModel();
-        int n2 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n3 = Integer.parseInt(modelo1.getValueAt(jTableLight.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n2).remLight(n3);
-        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n2).getLights().size()));
+        int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo1.getValueAt(jTableLight.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).remLight(n1);
+        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));
         refrashJTableLight();
     }//GEN-LAST:event_btnRemLuzMouseReleased
 
@@ -3445,21 +3479,20 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jButton13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseReleased
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).addWindow(new Window());
-        refrashJTableWindow();
+        Dashboard.getHome().getDivisions().get(n).addWindow(new Window());        
         jLabel27.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getWindows().size()));
-        lblJanelas.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getWindows().size()));
+        //lblJanelas.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getWindows().size()));
+        refrashJTableWindow();
     }//GEN-LAST:event_jButton13MouseReleased
 
     private void jButton14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseReleased
-        refrashJTableWindow();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
         int n2 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();        
         int n3 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n2).remWindow(n3);
-        jLabel27.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n2).getWindows().size()));
-        refrashJTableWindow();        
+        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n2).getWindows().size()));
+        refrashJTableWindow();       
     }//GEN-LAST:event_jButton14MouseReleased
 
     private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseReleased
@@ -3472,6 +3505,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(true);
+        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(false);
         refrashJTableWindow();
     }//GEN-LAST:event_jButton26MouseReleased
 
@@ -3523,6 +3557,9 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void jPanelDoorsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelDoorsAncestorAdded
         jComboBox2.setVisible(false);
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        Dashboard.allDoors(jComboBox4);
     }//GEN-LAST:event_jPanelDoorsAncestorAdded
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
@@ -3566,39 +3603,19 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
-        try{
-            Integer.parseInt(jTextField3.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            jTextField3.setText("");
-        }
+        Dashboard.toInteger(jTextField3);
     }//GEN-LAST:event_jTextField3KeyReleased
 
     private void jTextField5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyReleased
-        try{
-            Integer.parseInt(jTextField5.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            jTextField5.setText("");
-        }
+        Dashboard.toInteger(jTextField5);
     }//GEN-LAST:event_jTextField5KeyReleased
 
     private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
-        try{
-            Integer.parseInt(jTextField6.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            jTextField6.setText("");
-        }
+        Dashboard.toInteger(jTextField6);
     }//GEN-LAST:event_jTextField6KeyReleased
 
     private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
-        try{
-            Integer.parseInt(jTextField7.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            jTextField7.setText("");
-        }
+        Dashboard.toInteger(jTextField7);
     }//GEN-LAST:event_jTextField7KeyReleased
 
     private void jButton19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseReleased
@@ -3676,12 +3693,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         tfWindow.enable(false);
         tfDoors.enable(false);
         tfLights.enable(false);
+        addB.setEnabled(false);
     }//GEN-LAST:event_tblDivisions1MouseReleased
-
-    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        JCreateDivision.setVisible(false);
-        JHome.setVisible(true);
-    }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         JCreateDivision.setVisible(false);
@@ -3707,21 +3720,11 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_JCreateDivisionAncestorAdded
 
     private void tfWindowKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfWindowKeyReleased
-        try{
-            Integer.parseInt(tfWindow.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            tfWindow.setText("");
-        }
+        Dashboard.toInteger(tfWindow);
     }//GEN-LAST:event_tfWindowKeyReleased
 
     private void tfLightsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfLightsKeyReleased
-        try{
-            Integer.parseInt(tfLights.getText());
-        }catch(NumberFormatException a){
-            JOptionPane.showMessageDialog(this, a);
-            tfLights.setText("");
-        }
+       Dashboard.toInteger(tfLights);
     }//GEN-LAST:event_tfLightsKeyReleased
 
     private void removeBMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeBMouseReleased
@@ -3789,8 +3792,10 @@ public class DashBoardExe extends javax.swing.JFrame {
         int a =Integer.parseInt(tfDoors1.getText());
         for (Map.Entry<Integer, Division> d : Dashboard.getHome().getDivisions().entrySet()){
             for(int j=0;j<d.getValue().getDoors().size();j++)
-                if(d.getValue().getDoors().get(j).getId()==a)
+                if(d.getValue().getDoors().get(j).getId()==a){
                     d.getValue().getDoors().get(j).setStatus(true);
+                    d.getValue().getDoors().get(j).setLock(false);
+                }
         }
         refrashJTableDoor();
     }//GEN-LAST:event_jButton28MouseReleased
@@ -4106,6 +4111,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(false);
         Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(true);
         refrashJTableWindow();
     }//GEN-LAST:event_jButton56MouseReleased
@@ -4132,14 +4138,6 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.alarm(jButton12,jLabel24);
     }//GEN-LAST:event_jButton12MouseReleased
 
-    private void jButton12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseExited
-        
-    }//GEN-LAST:event_jButton12MouseExited
-
-    private void jButton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseEntered
-        
-    }//GEN-LAST:event_jButton12MouseEntered
-
     private void jButton59MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton59MouseReleased
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable2.getModel();
@@ -4148,8 +4146,10 @@ public class DashBoardExe extends javax.swing.JFrame {
         int a =Integer.parseInt(tfDoors1.getText());
         for (Map.Entry<Integer, Division> d : Dashboard.getHome().getDivisions().entrySet()){
             for(int j=0;j<d.getValue().getDoors().size();j++)
-                if(d.getValue().getDoors().get(j).getId()==a)
+                if(d.getValue().getDoors().get(j).getId()==a){
+                    d.getValue().getDoors().get(j).setStatus(false);
                     d.getValue().getDoors().get(j).setLock(true);
+                }
         }
         refrashJTableDoor();
     }//GEN-LAST:event_jButton59MouseReleased
@@ -4173,11 +4173,27 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable9MouseReleased
 
     private void jTable9AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable9AncestorAdded
-        // TODO add your handling code here:
+        updatePolice();
     }//GEN-LAST:event_jTable9AncestorAdded
 
     private void addB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addB1MouseReleased
-        // TODO add your handling code here:
+        int floor = comboFloor1.getSelectedIndex();
+        List<Contact> c = new LinkedList<Contact>();
+        for (Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
+            for(int i=0;i<b.getValue().size();i++)
+            if(b.getKey()==i)
+                b.getValue().add(null);
+        
+        
+        /*if(floor==0){
+            aux.add(new Contact(1,tfName1.getText()));
+            updatePolice();
+        }else if(floor==1){
+            updateBombeiros();
+        }else if(floor==2){
+            updateOthers();
+        }
+        Dashboard.getHome().addContact(floor,aux);*/
     }//GEN-LAST:event_addB1MouseReleased
 
     private void removeB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeB1MouseReleased
@@ -4189,7 +4205,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_removeB1ActionPerformed
 
     private void jTable12AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable12AncestorAdded
-        // TODO add your handling code here:
+        updateOthers();
     }//GEN-LAST:event_jTable12AncestorAdded
 
     private void jTable12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable12MouseReleased
@@ -4197,7 +4213,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable12MouseReleased
 
     private void jTable13AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable13AncestorAdded
-        // TODO add your handling code here:
+        updateBombeiros();
     }//GEN-LAST:event_jTable13AncestorAdded
 
     private void jTable13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable13MouseReleased
@@ -4208,6 +4224,128 @@ public class DashBoardExe extends javax.swing.JFrame {
         jContact.setVisible(false);
         JHome.setVisible(true);
     }//GEN-LAST:event_btnVoltarDivisão1MouseReleased
+
+    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+        JBegin.setVisible(false);
+        JCreateHome.setVisible(true);
+    }//GEN-LAST:event_jButton2MouseReleased
+
+    private void jButton11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseReleased
+        JHome.setVisible(false);
+        JEditHome.setVisible(true);
+    }//GEN-LAST:event_jButton11MouseReleased
+
+    private void jButton10MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseReleased
+        JHome.setVisible(false);
+        jContact.setVisible(true);
+    }//GEN-LAST:event_jButton10MouseReleased
+
+    private void jButton9MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseReleased
+       JHome.setVisible(false);
+       JConfiguration.setVisible(true);
+       DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+       int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+       lblLuzes.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 7).toString());
+       lblJanelas.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 6).toString());
+       lblPortas1.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 3).toString());
+       lblPortas2.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 4).toString());
+       lblPortas3.setText(modelo.getValueAt(tblDivisions.getSelectedRow(), 5).toString());
+       lblTempMin.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMINVALUE()));
+       lblTempMax.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getClimate().getMAXVALUE()));
+       lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));
+       jLabel27.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getWindows().size()));
+       jLabel29.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getDoors().size()));
+       jLabel31.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getSensors().size()));
+    }//GEN-LAST:event_jButton9MouseReleased
+
+    private void jButton6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseReleased
+        int n = JOptionPane.showConfirmDialog(JHome,
+        "Tens a certeza que queres sair?",
+        "Sair",
+        JOptionPane.YES_NO_OPTION);
+        if(n==0){
+            Dashboard.saveData();
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton6MouseReleased
+
+    private void btnBack1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBack1MouseReleased
+        JEditHome.setVisible(false);
+        JHome.setVisible(true);
+    }//GEN-LAST:event_btnBack1MouseReleased
+
+    private void jButton7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseReleased
+        JCreateDivision.setVisible(false);
+        JHome.setVisible(true);
+    }//GEN-LAST:event_jButton7MouseReleased
+
+    private void slIntensidadeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_slIntensidadeMouseReleased
+        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+        int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        int n1 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+        Dashboard.getHome().getDivisions().get(n).getLights().get(n1).setIntensity(slIntensidade.getValue());
+        refrashJTableLight();
+    }//GEN-LAST:event_slIntensidadeMouseReleased
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void tfDoorsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfDoorsKeyReleased
+        Dashboard.toInteger(jTextField7);
+    }//GEN-LAST:event_tfDoorsKeyReleased
+
+    private void tfDoors1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfDoors1KeyReleased
+        Dashboard.toInteger(tfDoors1);
+    }//GEN-LAST:event_tfDoors1KeyReleased
+
+    private void jTextField8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyReleased
+        Dashboard.toInteger(jTextField8);
+    }//GEN-LAST:event_jTextField8KeyReleased
+
+    private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
+        Dashboard.toInteger(jTextField9);
+    }//GEN-LAST:event_jTextField9KeyReleased
+
+    private void tfidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfidKeyReleased
+        Dashboard.toInteger(tfid);
+    }//GEN-LAST:event_tfidKeyReleased
+
+    private void tfid1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid1KeyReleased
+        Dashboard.toInteger(tfid1);
+    }//GEN-LAST:event_tfid1KeyReleased
+
+    private void tfid2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid2KeyReleased
+        Dashboard.toInteger(tfid2);
+    }//GEN-LAST:event_tfid2KeyReleased
+
+    private void tfid7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid7KeyReleased
+        Dashboard.toInteger(tfid7);
+    }//GEN-LAST:event_tfid7KeyReleased
+
+    private void tfid3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid3KeyReleased
+        Dashboard.toInteger(tfid3);
+    }//GEN-LAST:event_tfid3KeyReleased
+
+    private void tfid8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid8KeyReleased
+        Dashboard.toInteger(tfid8);
+    }//GEN-LAST:event_tfid8KeyReleased
+
+    private void tfid4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid4KeyReleased
+        Dashboard.toInteger(tfid4);
+    }//GEN-LAST:event_tfid4KeyReleased
+
+    private void tfid9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid9KeyReleased
+        Dashboard.toInteger(tfid9);
+    }//GEN-LAST:event_tfid9KeyReleased
+
+    private void tfid5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid5KeyReleased
+        Dashboard.toInteger(tfid5);
+    }//GEN-LAST:event_tfid5KeyReleased
+
+    private void tfid6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfid6KeyReleased
+        Dashboard.toInteger(tfid6);
+    }//GEN-LAST:event_tfid6KeyReleased
 
     /**
      * @param args the command line arguments
@@ -4256,6 +4394,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 Dashboard.getHome().MovimentDoorExterior();
                 Dashboard.getHome().closeWindowsMoreIntensityWind();
                 Dashboard.acionarAlarmeAndCloseDoorsWindows();
+                Dashboard.acionarAlarmeGasSmoke();
                 for(Division div:Dashboard.getHome().getDivisions().values()){
                     div.offMovimentSensor();       
                     div.exceedTemperature();                    
@@ -4397,6 +4536,33 @@ public class DashBoardExe extends javax.swing.JFrame {
         div.get(n).listSensorSmoke(modelo1);
     }
     
+    private void updatePolice(){
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable9.getModel();
+        modelo1.getDataVector().clear();
+        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
+            for(Contact c:b.getValue())
+                if(b.getKey()==0)
+                    modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+    }
+    
+    private void updateBombeiros(){
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable13.getModel();
+        modelo1.getDataVector().clear();
+        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
+            for(Contact c:b.getValue())
+                if(b.getKey()==1)
+                modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+    }
+    
+    private void updateOthers(){
+        DefaultTableModel modelo1 = (DefaultTableModel) jTable12.getModel();
+        modelo1.getDataVector().clear();
+        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
+            for(Contact c:b.getValue())
+                if(b.getKey()==2)
+                modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JBegin;
@@ -4488,6 +4654,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
+    private javax.swing.JComboBox jComboBox4;
     private javax.swing.JPanel jContact;
     private javax.swing.JButton jDesligarLight;
     private javax.swing.JLabel jLabel1;
@@ -4571,6 +4738,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jLigarLight;
     private javax.swing.JPanel jPanelClimate;

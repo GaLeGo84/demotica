@@ -26,6 +26,7 @@ public class Home implements Serializable{
     private Map<Integer,Division> divisions;
     private int valueNL;
     private int valueW;
+    private Map<Integer,List<Contact>> contacts;
 
     public Home(int nFloors, int valueNL, int valueW) {
         this.nFloors = nFloors;
@@ -33,6 +34,7 @@ public class Home implements Serializable{
         this.divisions = new TreeMap<Integer,Division>();
         this.valueNL = valueNL;
         this.valueW = valueW;
+        this.contacts = new TreeMap<Integer,List<Contact>>();
     }
 
     public int getnFloors() {
@@ -54,6 +56,11 @@ public class Home implements Serializable{
     public int getValueW() {
         return valueW;
     }
+
+    public Map<Integer, List<Contact>> getContacts() {
+        return contacts;
+    }
+
     
     public int getIntMap(String name){
         int n=0;
@@ -66,6 +73,10 @@ public class Home implements Serializable{
 
     public void setnFloors(int nFloors) {
         this.nFloors = nFloors;
+    }
+    
+    public void addContact(int key,List<Contact> l){
+        contacts.put(key, l);
     }
 
     public void addDivision(Division div){
@@ -101,6 +112,16 @@ public class Home implements Serializable{
        for (Alert a:alerts){
            if(a instanceof IntruderAlert)
                 aux.add((IntruderAlert)a);
+       }
+       return aux;
+   }
+    
+    //Lista de sensores de movimento
+    public LinkedList<SoundAlert> listSoundAlert(){
+       LinkedList<SoundAlert> aux=new LinkedList<>();
+       for (Alert a:alerts){
+           if(a instanceof SoundAlert)
+                aux.add((SoundAlert)a);
        }
        return aux;
    }

@@ -5,6 +5,9 @@
  */
 package demotica;
 
+import static demotica.Dashboard.home;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +23,27 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int n=1;
+        
+        
+        Home h = File.loadHome();
+        h.getAlerts().add(new IntruderAlert());
+        List<Contact> aux = new LinkedList<Contact>();
+        List<Contact> aux1 = new LinkedList<>();
+        aux.add(new Contact(1,"melorodolfo"));
+        aux.add(new Contact(2,"sdfdhgg"));
+        aux.add(new Contact(3,"melorodolfo2"));
+        aux1.add(new Contact(3,"melorodolfo2"));
+        h.addContact(0,aux);
+        h.addContact(1,aux1);
+        
+        for (Map.Entry<Integer,List<Contact>> b : h.getContacts().entrySet())
+            if(b.getKey()==0)
+                System.out.println(b.getKey()+" - "+b.getValue());
+        
+            //for(Contact c:b.getValue())
+                
+                
+        /*int n=1;
         Map<Integer,List<Integer>> a=new TreeMap<Integer,List<Integer>>();
         LinkedList<Integer> list = new LinkedList<Integer>();
         LinkedList<Integer> list2 = new LinkedList<Integer>();
@@ -32,8 +55,22 @@ public class NewMain {
         a.put(a.size()+1, list2);
         
         for (Map.Entry<Integer,List<Integer>> b : a.entrySet())
-                System.out.println(b.getKey()+" - "+b.getValue().toString());
-
+                System.out.println(b.getKey()+" - "+b.getValue().toString());*/
+      
+        
+        /*h.getDivisions().get(1).addWindow(new Window());
+         h.getDivisions().get(1).addWindow(new Window());
+          h.getDivisions().get(1).addWindow(new Window());
+            for(Map.Entry<Integer,Window> w:h.getDivisions().get(1).getWindows().entrySet())
+               System.out.println(w.getKey());
+            
+        System.out.println();   
+        h.getDivisions().get(1).remWindow(5); 
+        h.getDivisions().get(1).remWindow(4);    
+        
+        for(Map.Entry<Integer,Window> w:h.getDivisions().get(1).getWindows().entrySet())
+               System.out.println(w.getKey());*/
+        
     }
     
 }

@@ -16,20 +16,20 @@ import java.util.List;
 public class Contact implements Serializable{
 
     private static final long serialVersionUID = 5455238796031916510L;
-    private String name;
+    private int id;
     private String email;
 
-    public Contact(String name, String email) {
-        this.name = name;
+    public Contact(int id, String email) {
+        this.id = id;
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(int id) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -39,4 +39,11 @@ public class Contact implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Contact{" + "id=" + id + ", email=" + email + '}';
+    }
+    
+    
 }

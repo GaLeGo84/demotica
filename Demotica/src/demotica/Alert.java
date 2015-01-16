@@ -19,11 +19,9 @@ public abstract class Alert implements Serializable{
     
     private static final long serialVersionUID = 5455238796031916510L;
     private boolean status;
-    private Map<Integer,List<Contact>> emails;
     private boolean detection;
 
     public Alert() {
-        this.emails = new TreeMap<Integer,List<Contact>>();
         this.status = true;
         this.detection = false;
     }
@@ -36,28 +34,6 @@ public abstract class Alert implements Serializable{
         this.status = status;
     }
 
-    public Map<Integer, List<Contact>> getEmails() {
-        return emails;
-    }
-
-    public void setEmails(Map<Integer, List<Contact>> emails) {
-        this.emails = emails;
-    }
-    
-    public void addContact(LinkedList<Contact> listC,Contact ctc){
-        int n=1;
-        while(n<=emails.size()){
-            if(emails.containsKey(n)==false){
-                emails.put(n+1, listC);
-                break;
-            }            
-            n++;
-        }
-        
-       /*if(emails.size()<n)
-            emails.put(sen.getSNumber(),sen);*/
-    }
-
     public boolean isDetection() {
         return detection;
     }
@@ -65,5 +41,8 @@ public abstract class Alert implements Serializable{
     public void setDetection(boolean detection) {
         this.detection = detection;
     }
+
+    
+    
 
 }

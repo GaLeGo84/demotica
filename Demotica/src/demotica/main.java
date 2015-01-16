@@ -5,6 +5,8 @@
  */
 package demotica;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -19,6 +21,13 @@ public class main {
     public static void main(String[] args) {
         //Criar a casa
         Home home = new Home(2,10,25);
+        
+        /*home.getAlerts().add(new IntruderAlert());
+        List<Contact> aux = new LinkedList<>();
+        aux.add(new Contact(1,"melorodolfo"));
+        aux.add(new Contact(2,"sdfdhgg"));
+        aux.add(new Contact(3,"melorodolfo2"));
+        home.addContact(0,aux);*/
 
         
         //Criar a Divisão com o andar

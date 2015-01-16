@@ -11,11 +11,12 @@ import java.io.Serializable;
  *
  * @author Rodolfo Melo, Henrique Melo, Xico
  */
-public class AlertFire extends Alert implements Serializable{
+public class SoundAlert extends Alert implements Serializable{
 
-    public AlertFire(Contact email) {
-        super(email);
+    public SoundAlert() {
     }
+
+    
 
     
 }

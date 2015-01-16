@@ -119,7 +119,7 @@ public class Division implements Serializable{
             windows.put(windows.size()+1,w);          
     }
     
-    public void remLight(int key){          
+    public void remLight(int key){            
         lights.remove(key);
     }
     
@@ -238,16 +238,21 @@ public class Division implements Serializable{
     }
     
     //temperatura média
-    public float mediaTemperature(){
-        int media, soma=0, cont=0;
+    public double mediaTemperature(){
+        int soma=0, cont=0;
+        double media=0;
         for (Sensor snl :sensors.values()){
             if(snl instanceof Temperature){
                 soma+=((Temperature)snl).getValue();
-                cont++;
+                cont+=1;
             }
         }
+         if(cont!=0)
+           media=soma/cont;
+        else
+            media=0;
         
-        return media= soma/cont;
+        return media;
     }
     
     

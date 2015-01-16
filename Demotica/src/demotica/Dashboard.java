@@ -1,8 +1,11 @@
 package demotica;
 
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -115,7 +118,7 @@ public class Dashboard implements Serializable{
         return status;
     }
     
-    public static void ativetMoviment(){
+    public static void ativeIntruderAlert(){
         for(IntruderAlert lia:home.listIntruderAlert()){
             lia.setDetection(true);
             //lia.getEmail(); //Fazer a função de enviar email
@@ -136,9 +139,74 @@ public class Dashboard implements Serializable{
         if(verifySecurity()==true)
             for (Division div:home.getDivisions().values())
                 if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){
-                    ativetMoviment();            
+                    ativeIntruderAlert();            
                     JOptionPane.showMessageDialog(null, "Entrada de Intruso");
                 }
+    }
+    
+    public static boolean existOnSensorGas(){
+        boolean status=false;
+        for (Division div:home.getDivisions().values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Gas)
+                    if(((Gas)s).isDetection()==true)
+                        status=true;
+        
+        return status;
+    }
+    
+    public static boolean existOnSensorSmoke(){
+        boolean status=false;
+        for (Division div:home.getDivisions().values())
+            for(Sensor s:div.getSensors().values())
+                if(s instanceof Smoke)
+                    if(((Smoke)s).isDetection()==true)
+                        status=true;
+        
+        return status;
+    }
+    
+    public static void ativeSoundAlert(){
+        for(SoundAlert lia:home.listSoundAlert()){
+            lia.setDetection(true);
+            //lia.getEmail(); //Fazer a função de enviar email
+        }    
+    }
+    
+    public static void acionarAlarmeGasSmoke(){
+        if(verifySecurity()==true)
+            for (Division div:home.getDivisions().values())
+                if(existOnSensorGas()==true || existOnSensorSmoke()==true){
+                    ativeSoundAlert();            
+                    JOptionPane.showMessageDialog(null, "Alerta Sonoro");
+                }
+    }
+    
+    public static void allDoors(JComboBox j){
+        for (Division div:home.getDivisions().values())
+            for(Door d:div.getDoors())
+                if(d instanceof InteriorDoor)
+                    j.addItem(d.getId());
+        
+    }
+    
+    public static void toInteger(JTextField str){
+        try{
+            Integer.parseInt(str.getText());
+        }catch(NumberFormatException a){
+            JOptionPane.showMessageDialog(null, "O campo tem de ser do tipo numérico");
+            str.setText("");
+        }
+        
+    }
+    
+    public static LinkedList<Contact> a(){
+        LinkedList<Contact> aux = new LinkedList<>();
+        for(Map.Entry<Integer, List<Contact>> c:home.getContacts().entrySet())
+            for(Contact d:c.getValue())
+                aux.add(d);
+        
+        return aux;
     }
     
 }

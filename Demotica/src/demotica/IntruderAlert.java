@@ -13,11 +13,7 @@ import java.io.Serializable;
  */
 public class IntruderAlert extends Alert implements Serializable{
 
-    public IntruderAlert(Contact email) {
-        super(email);
+    public IntruderAlert() {
     }
 
-    
-
-    
 }
