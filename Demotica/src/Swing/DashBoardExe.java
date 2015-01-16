@@ -3486,13 +3486,15 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13MouseReleased
 
     private void jButton14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        int n2 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();        
-        int n3 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n2).remWindow(n3);
-        lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n2).getWindows().size()));
-        refrashJTableWindow();       
+        if(jButton14.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            int n2 = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();        
+            int n3 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n2).remWindow(n3);
+            lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n2).getWindows().size()));
+            refrashJTableWindow();  
+        }
     }//GEN-LAST:event_jButton14MouseReleased
 
     private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseReleased
@@ -3500,22 +3502,26 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseReleased
 
     private void jButton26MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton26MouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(true);
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(false);
-        refrashJTableWindow();
+        if(jButton26.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(true);
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(false);
+            refrashJTableWindow();
+        }
     }//GEN-LAST:event_jButton26MouseReleased
 
     private void jButton27MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton27MouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(false);
-        refrashJTableWindow();
+        if(jButton27.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(false);
+            refrashJTableWindow();
+        }
     }//GEN-LAST:event_jButton27MouseReleased
 
     private void jButton22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseReleased
@@ -4107,22 +4113,26 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton55MouseReleased
 
     private void jButton56MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton56MouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(false);
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(true);
-        refrashJTableWindow();
+        if(jButton56.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setStatus(false);
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(true);
+            refrashJTableWindow();
+        }
     }//GEN-LAST:event_jButton56MouseReleased
 
     private void jButton57MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton57MouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(false);
-        refrashJTableWindow();
+        if(jButton27.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) jTable1.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            int n1 = Integer.parseInt(modelo1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).getWindows().get(n1).setLock(false);
+            refrashJTableWindow();
+        }
     }//GEN-LAST:event_jButton57MouseReleased
 
     private void jButton58MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton58MouseReleased
@@ -4178,22 +4188,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void addB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addB1MouseReleased
         int floor = comboFloor1.getSelectedIndex();
-        List<Contact> c = new LinkedList<Contact>();
-        for (Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
-            for(int i=0;i<b.getValue().size();i++)
-            if(b.getKey()==i)
-                b.getValue().add(null);
+        Dashboard.getHome().addContact(new Contact(1,floor,tfName1.getText()));
         
-        
-        /*if(floor==0){
-            aux.add(new Contact(1,tfName1.getText()));
-            updatePolice();
-        }else if(floor==1){
+        updatePolice();
             updateBombeiros();
-        }else if(floor==2){
-            updateOthers();
-        }
-        Dashboard.getHome().addContact(floor,aux);*/
+            updateOthers();        
     }//GEN-LAST:event_addB1MouseReleased
 
     private void removeB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeB1MouseReleased
@@ -4539,28 +4538,25 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void updatePolice(){
         DefaultTableModel modelo1 = (DefaultTableModel) jTable9.getModel();
         modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
-            for(Contact c:b.getValue())
-                if(b.getKey()==0)
-                    modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
+            if(b.getValue().getType()==0)
+                    modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
     }
     
     private void updateBombeiros(){
         DefaultTableModel modelo1 = (DefaultTableModel) jTable13.getModel();
         modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
-            for(Contact c:b.getValue())
-                if(b.getKey()==1)
-                modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
+            if(b.getValue().getType()==1)
+                modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
     }
     
     private void updateOthers(){
         DefaultTableModel modelo1 = (DefaultTableModel) jTable12.getModel();
         modelo1.getDataVector().clear();
-        for(Map.Entry<Integer,List<Contact>> b : Dashboard.getHome().getContacts().entrySet())
-            for(Contact c:b.getValue())
-                if(b.getKey()==2)
-                modelo1.addRow(new Object[]{c.getId(),c.getEmail()});
+        for(Map.Entry<Integer,Contact> b : Dashboard.getHome().getContacts().entrySet())
+                if(b.getValue().getType()==2)
+                modelo1.addRow(new Object[]{b.getValue().getId(),b.getValue().getEmail()});
     }
     
 

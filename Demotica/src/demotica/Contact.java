@@ -17,10 +17,12 @@ public class Contact implements Serializable{
 
     private static final long serialVersionUID = 5455238796031916510L;
     private int id;
+    private int type;
     private String email;
 
-    public Contact(int id, String email) {
+    public Contact(int id, int type, String email) {
         this.id = id;
+        this.type = type;
         this.email = email;
     }
 
@@ -40,6 +42,16 @@ public class Contact implements Serializable{
         this.email = email;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+    
+
+    
     @Override
     public String toString() {
         return "Contact{" + "id=" + id + ", email=" + email + '}';

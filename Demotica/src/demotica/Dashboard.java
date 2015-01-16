@@ -200,13 +200,5 @@ public class Dashboard implements Serializable{
         
     }
     
-    public static LinkedList<Contact> a(){
-        LinkedList<Contact> aux = new LinkedList<>();
-        for(Map.Entry<Integer, List<Contact>> c:home.getContacts().entrySet())
-            for(Contact d:c.getValue())
-                aux.add(d);
-        
-        return aux;
-    }
     
 }

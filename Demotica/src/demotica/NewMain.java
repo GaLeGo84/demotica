@@ -25,21 +25,6 @@ public class NewMain {
     public static void main(String[] args) {
         
         
-        Home h = File.loadHome();
-        h.getAlerts().add(new IntruderAlert());
-        List<Contact> aux = new LinkedList<Contact>();
-        List<Contact> aux1 = new LinkedList<>();
-        aux.add(new Contact(1,"melorodolfo"));
-        aux.add(new Contact(2,"sdfdhgg"));
-        aux.add(new Contact(3,"melorodolfo2"));
-        aux1.add(new Contact(3,"melorodolfo2"));
-        h.addContact(0,aux);
-        h.addContact(1,aux1);
-        
-        for (Map.Entry<Integer,List<Contact>> b : h.getContacts().entrySet())
-            if(b.getKey()==0)
-                System.out.println(b.getKey()+" - "+b.getValue());
-        
             //for(Contact c:b.getValue())
                 
                 

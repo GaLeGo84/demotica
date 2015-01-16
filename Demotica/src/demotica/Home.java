@@ -26,7 +26,7 @@ public class Home implements Serializable{
     private Map<Integer,Division> divisions;
     private int valueNL;
     private int valueW;
-    private Map<Integer,List<Contact>> contacts;
+    private Map<Integer,Contact> contacts;
 
     public Home(int nFloors, int valueNL, int valueW) {
         this.nFloors = nFloors;
@@ -34,7 +34,7 @@ public class Home implements Serializable{
         this.divisions = new TreeMap<Integer,Division>();
         this.valueNL = valueNL;
         this.valueW = valueW;
-        this.contacts = new TreeMap<Integer,List<Contact>>();
+        this.contacts = new TreeMap<Integer,Contact>();
     }
 
     public int getnFloors() {
@@ -57,7 +57,7 @@ public class Home implements Serializable{
         return valueW;
     }
 
-    public Map<Integer, List<Contact>> getContacts() {
+    public Map<Integer, Contact> getContacts() {
         return contacts;
     }
 
@@ -75,9 +75,21 @@ public class Home implements Serializable{
         this.nFloors = nFloors;
     }
     
-    public void addContact(int key,List<Contact> l){
-        contacts.put(key, l);
+    public void addContact(Contact l){
+        int n=1;
+        while(n<=contacts.size()){
+            if(contacts.containsKey(n)==false){
+                contacts.put(n,l);
+                break;
+            }            
+        n++;
+        }
+        
+        if(contacts.size()<n)
+            contacts.put(getContacts().size()+1,l);
     }
+    
+    
 
     public void addDivision(Division div){
         int n=1;
