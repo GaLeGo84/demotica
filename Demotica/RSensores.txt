@@ -1,1 +1,43 @@
-truetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetruetrue
+01:58:42,Divisao de Entrada,1
+01:58:42,Divisao de Entrada,2
+01:58:42,Divisao de Entrada,3
+01:58:42,Divisao de Entrada,4
+01:58:42,Divisao de Entrada,5
+01:58:42,Divisao de Entrada,6
+01:58:42,Corredor,1
+01:58:42,Corredor,2
+01:58:42,Corredor,3
+01:58:42,Corredor,4
+01:58:42,Quarto de Jantar,1
+01:58:42,Quarto de Jantar,2
+01:58:42,Quarto de Jantar,3
+01:58:42,Quarto de Jantar,4
+01:58:42,Sala,1
+01:58:42,Sala,2
+01:58:42,Sala,3
+01:58:42,Sala,4
+01:58:42,Quarto de banho1,1
+01:58:42,Quarto de banho1,2
+01:58:42,Quarto de banho1,3
+01:58:42,Cozinha,1
+01:58:42,Cozinha,2
+01:58:42,Cozinha,3
+01:58:42,Cozinha,4
+01:58:42,Quarto solteiro1,1
+01:58:42,Quarto solteiro1,2
+01:58:42,Quarto solteiro1,3
+01:58:42,Quarto solteiro2,1
+01:58:42,Quarto solteiro2,2
+01:58:42,Quarto solteiro2,3
+01:58:42,Quarto de casal,1
+01:58:42,Quarto de casal,2
+01:58:42,Quarto de casal,3
+01:58:42,Quarto de casal,4
+01:58:42,Quarto de banho2,1
+01:58:42,Quarto de banho2,2
+01:58:42,Quarto de banho2,3
+01:58:42,Quarto largo,1
+01:58:42,Quarto largo,2
+01:58:42,Quarto largo,3
+01:58:42,Quarto largo,4
+01:58:42,Quarto largo,5

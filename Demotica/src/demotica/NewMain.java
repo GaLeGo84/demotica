@@ -30,11 +30,15 @@ public class NewMain {
     public static void main(String[] args) throws IOException {
             Home h = File.loadHome();
             BufferedWriter writer=null;
+            Date d= new Date();
+            SimpleDateFormat ft =new SimpleDateFormat("hh:mm:ss");
+            ft.format(d);
             try{
                 writer=new BufferedWriter(new FileWriter("RSensores.txt"));
                 for(Map.Entry<Integer,Division> div:h.getDivisions().entrySet())
                     for(Map.Entry<Integer,Sensor> s:div.getValue().getSensors().entrySet()){
-                        writer.write(String.valueOf(s.getValue().isStatus()));
+                        writer.write(String.valueOf(ft.format(d)+","+div.getValue().getName()+","+s.getKey()));
+                        writer.newLine();
                     }
                        //System.out.println(s.getKey()+" - "+s.getValue().isStatus());
             
