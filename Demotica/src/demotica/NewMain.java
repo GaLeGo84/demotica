@@ -6,10 +6,14 @@
 package demotica;
 
 import static demotica.Dashboard.home;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -23,12 +27,14 @@ import java.util.TreeMap;
  * @author Rodolfo
  */
 public class NewMain {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-            Home h = File.loadHome();
+            
+        
+        
+        /*Home h = File.loadHome();
             BufferedWriter writer=null;
             Date d= new Date();
             SimpleDateFormat ft =new SimpleDateFormat("hh:mm:ss");
@@ -40,11 +46,10 @@ public class NewMain {
                         writer.write(String.valueOf(ft.format(d)+","+div.getValue().getName()+","+s.getKey()));
                         writer.newLine();
                     }
-                       //System.out.println(s.getKey()+" - "+s.getValue().isStatus());
             
             }catch (FileNotFoundException e) {
                 System.out.println("Não é possivel criar o ficheiro");
-            }writer.close();
+            }writer.close();*/
         
         
             //for(Contact c:b.getValue())

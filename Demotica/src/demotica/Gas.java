@@ -26,12 +26,13 @@ public class Gas extends Sensor implements Serializable{
     public void setDetection(boolean detection) {
         this.detection = detection;
     }
-    
-    
 
     @Override
     public String toString() {
         String su = super.toString();
-        return su+" de Gas";
+        return su+"Gás{" + "Deteção=" + detection + '}';
     }
+    
+    
+    
 }

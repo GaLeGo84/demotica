@@ -26,12 +26,14 @@ public class Wind extends Sensor implements Serializable{
     public void setIntensity(int intensity) {
         this.intensity = intensity;
     }
-    
-    
-    
+
     @Override
     public String toString() {
         String su = super.toString();
-        return su+"de Vento";
+        return su+"Vento{" + "Intensidade=" + intensity + '}';
     }
+    
+    
+    
+    
 }

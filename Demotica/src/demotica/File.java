@@ -46,14 +46,14 @@ public class File{
         }
     }
     
-    public static double[] loadRSensores() {
+    public static String[] loadRSensores() {
         int i = 0;
-        double[] aux = new double[3];
+        String[] aux = new String[loadRSensores2()];
         try {
             BufferedReader in = new BufferedReader(new FileReader("RSensores.txt"));
             String linha = in.readLine();
             while (linha != null) {
-                aux[i] = Double.valueOf(linha);
+                aux[i] = linha;
                 i++;
 
                 linha = in.readLine();
@@ -71,15 +71,37 @@ public class File{
             return aux;
         }
     }
-
-    public static void saveRSensores(double[] ag){
+    
+    public static int loadRSensores2() {
+        int i = 0;
         try {
-            BufferedWriter out = new BufferedWriter(new FileWriter("RSensores.txt"));
-            for (int i = 0; i < ag.length; i++) {
-                out.write(String.valueOf(ag[i]));
-                out.newLine();
+            BufferedReader in = new BufferedReader(new FileReader("RSensores.txt"));
+            String linha = in.readLine();
+            while (linha != null) {
+                i++;
+
+                linha = in.readLine();
             }
 
+            in.close();
+
+        } catch (FileNotFoundException ex) {
+            System.out.println("Ficheiro inexistente!");
+
+        } catch (IOException ex) {
+            System.out.println("Erro de leitura!");
+
+        } finally {
+            return i;
+        }
+    }
+
+    public static void saveRSensores(String[] ag){
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("RSensores.txt",true));
+            out.append(String.valueOf(ag[0]+" - "+ag[1]+";"));
+            out.newLine();
+            
             out.close();
         } catch (IOException ex) {
             System.out.println("Erro de escrita!");

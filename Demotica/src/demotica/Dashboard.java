@@ -1,6 +1,9 @@
 package demotica;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +12,9 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 
 /*
@@ -199,6 +204,70 @@ public class Dashboard implements Serializable{
             str.setText("");
         }
         
+    }
+    
+    public static void registoSensorMoviment(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((Moviment)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void registoSensorNaturaLight(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((NaturaLight)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void registoSensorTemperature(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((Temperature)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void registoSensorWind(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((Wind)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void registoSensorGas(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((Gas)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void registoSensorSmoke(int div,int n,DefaultTableModel modelo1,JTable jTable3){
+        Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        String[] a=new String[2];
+        a[0] = formato.format(date);
+        a[1] = ((Smoke)home.getDivisions().get(div).getSensors().get(n)).toString();
+        File.saveRSensores(a);
+    }
+    
+    public static void load(JTextArea a){
+        a.setText(null);
+        String[] loads= File.loadRSensores(); 
+        for(String l:loads){
+            a.append(l.toString());
+            a.append("\n");
+        }
+         
     }
     
     

@@ -12,6 +12,8 @@ import demotica.Division;
 import demotica.Door;
 import demotica.ExteriorDoorStandard;
 import demotica.ExteriorEntranceDoor;
+import demotica.File;
+import static demotica.File.loadRSensores;
 import demotica.Gas;
 import demotica.Home;
 import demotica.InteriorDoor;
@@ -3508,6 +3510,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable3.getSelectedRow(), 0).toString());
         ((Moviment)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
+        Dashboard.registoSensorMoviment(n,n1,modelo,jTable3);
         Dashboard.getHome().getDivisions().get(n).onMovimentSensor(n1);
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jButton32MouseReleased
@@ -3518,6 +3521,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable3.getSelectedRow(), 0).toString());
         ((Moviment)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(false);
+        Dashboard.registoSensorMoviment(n,n1,modelo,jTable3);
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jButton33MouseReleased
 
@@ -3643,6 +3647,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
         ((Gas)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
+        Dashboard.registoSensorGas(n, n1, modelo, jTable7);
         refrashJTableSensorGas();
     }//GEN-LAST:event_jButton46MouseReleased
 
@@ -3652,6 +3657,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable7.getSelectedRow(), 0).toString());
         ((Gas)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(false);
+        Dashboard.registoSensorGas(n, n1, modelo, jTable7);
         refrashJTableSensorGas();
     }//GEN-LAST:event_jButton47MouseReleased
 
@@ -3682,6 +3688,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
         ((Smoke)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
+        Dashboard.registoSensorSmoke(n, n1, modelo, jTable8);
         refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton50MouseReleased
 
@@ -3691,6 +3698,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable8.getSelectedRow(), 0).toString());
         ((Smoke)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(false);
+        Dashboard.registoSensorSmoke(n, n1, modelo, jTable8);
         refrashJTableSensorSmoke();
     }//GEN-LAST:event_jButton51MouseReleased
 
@@ -3700,6 +3708,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable4.getSelectedRow(), 0).toString());
         ((NaturaLight)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setValue(Integer.parseInt(tfid7.getText()));
+        Dashboard.registoSensorNaturaLight(n,n1,modelo,jTable4);
         refrashJTableSensorNaturaLight();
     }//GEN-LAST:event_jButton52MouseReleased
 
@@ -3709,6 +3718,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
         ((Temperature)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setValue(Integer.parseInt(tfid8.getText()));
+        Dashboard.registoSensorTemperature(n,n1,modelo,jTable5);
         refrashJTableSensorTemperature();
         Dashboard.getHome().getDivisions().get(n).exceedTemperature();
         Dashboard.getHome().getDivisions().get(n).lowerTemperature();
@@ -3808,6 +3818,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable6.getSelectedRow(), 0).toString());
         ((Wind)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setIntensity(Integer.parseInt(tfid9.getText()));
+        Dashboard.registoSensorWind(n, n1, modelo, jTable6);
         refrashJTableSensorWind();
     }//GEN-LAST:event_jButton58MouseReleased
 
@@ -4047,6 +4058,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 if(i==100){
                     JBegin.setVisible(false);
                     JHome.setVisible(true);
+                    new RegisterSensor().setVisible(true);
                 }
                 }catch(InterruptedException e){
                     JOptionPane.showMessageDialog(null, e);

@@ -26,11 +26,13 @@ public class Smoke extends Sensor implements Serializable{
     public void setDetection(boolean detection) {
         this.detection = detection;
     }
-    
+
     @Override
     public String toString() {
         String su = super.toString();
-        return su+"de Fumo";
+        return su+"de Fumo{" + "Deteção=" + detection + '}';
     }
+    
+    
 
 }
