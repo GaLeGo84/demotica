@@ -32,6 +32,19 @@ public class NewMain {
      */
     public static void main(String[] args) throws IOException {
             
+        Home h = File.loadHome();
+        long timestamp= System.currentTimeMillis();
+        for(Map.Entry<Integer,Sensor> s:h.getDivisions().get(1).getSensors().entrySet())
+            if(s.getValue() instanceof Moviment){
+                System.out.println(s.getKey()) ;
+                    /*if(((Moviment)s).isDetection()==true){
+                        ((Moviment)s).setTime(timestamp);
+                        if(onLight() == true){
+                            for (Map.Entry<Integer, Light> l:lights.entrySet())
+                                l.getValue().setStatus(true);   
+                        }
+                    }*/
+            }
         
         
         /*Home h = File.loadHome();

@@ -253,17 +253,16 @@ public class Division implements Serializable{
             media=0;
         
         return media;
-    }
-    
+    }   
     
     //Ativar o Sensor de movimento para quando houver um movimento ligar a luz da divisão
     public void onMovimentSensor(int SNumber){
         long timestamp= System.currentTimeMillis();
         for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
-            if(s instanceof Moviment)
+            if(s.getValue() instanceof Moviment)
                 if(s.getKey()==SNumber){
-                    ((Moviment)s).setDetection(true);
-                    ((Moviment)s).setTime(timestamp);
+                    ((Moviment)s.getValue()).setDetection(true);
+                    ((Moviment)s.getValue()).setTime(timestamp);
                     if(onLight() == true){
                         for (Map.Entry<Integer, Light> l:lights.entrySet())
                             l.getValue().setStatus(true);   
@@ -274,9 +273,7 @@ public class Division implements Serializable{
                                 d.setStatus(false);
                                 d.setLock(false);
                             }
-                    
                 }
-         
     }
    
     
@@ -292,26 +289,26 @@ public class Division implements Serializable{
     public void offMovimentSensor(){
         int i=0;
         long timestamp= System.currentTimeMillis();
-        for (Sensor sm :sensors.values()){
-            if(sm instanceof Moviment){
-                if(((Moviment)sm).isDetection()==true){
-                    long limit=((Moviment)sm).getTime()+Integer.parseInt(((Moviment)sm).getInterval()+"000");
+        for (Map.Entry<Integer,Sensor> s :sensors.entrySet()){
+            if(s.getValue() instanceof Moviment){
+                if(((Moviment)s.getValue()).isDetection()==true){
+                    long limit=((Moviment)s.getValue()).getTime()+Integer.parseInt(((Moviment)s.getValue()).getInterval()+"000");
                     if(timestamp>limit){
-                        ((Moviment)sm).setDetection(false);
-                        ((Moviment)sm).setTime(timestamp);
+                        ((Moviment)s.getValue()).setDetection(false);
+                        ((Moviment)s.getValue()).setTime(timestamp);
                     }
                     i++;
                 }
             }   
         }
         if(i==0)
-                for (Map.Entry<Integer, Light> l:lights.entrySet())
+            for (Map.Entry<Integer, Light> l:lights.entrySet())
                     l.getValue().setStatus(false);
     }
+
     
     //mudar a intensidade da luz
     public void changeLightIntensity(Light l, int value){
-        float valor;
         for (Map.Entry<Integer, Light> li:lights.entrySet()){
             if(li.getValue().getIntensity()==l.getIntensity())
                 li.getValue().setIntensity(value);
@@ -320,14 +317,15 @@ public class Division implements Serializable{
     
     public void exceedTemperature(){        
         if(mediaTemperature()>climate.getMAXVALUE()){
-            for(Window w:windows.values()){
+            for(Map.Entry<Integer,Window> w:windows.entrySet()){
                 if(climate.isStatus()==false)
-                    if(w.isStatus()==false){
-                        w.setStatus(true);
+                    if(w.getValue().isStatus()==false){
+                        w.getValue().setStatus(true);
                     }
                 
                 if(climate.isStatus()==true){
-                    w.setStatus(false);
+                    w.getValue().setStatus(true);
+                    w.getValue().setLock(false);
                     climate.setAircon(true); 
                 } 
             }

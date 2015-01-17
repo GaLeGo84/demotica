@@ -343,6 +343,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         JConfiguration.setPreferredSize(new java.awt.Dimension(700, 410));
         JConfiguration.setRequestFocusEnabled(false);
         JConfiguration.setVerifyInputWhenFocusTarget(false);
+        JConfiguration.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                JConfigurationAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jTabbedPane1.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jTabbedPane1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -710,6 +719,16 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Janelas", jPanelWindow);
 
+        jPanelLight.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jPanelLightAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
         lblLuzes2.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         lblLuzes2.setText("0");
 
@@ -1045,7 +1064,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel29)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelDoorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel76)
@@ -1120,7 +1139,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(jButton59)
                             .addComponent(jButton60)))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Portas", jPanelDoors);
@@ -1156,6 +1175,16 @@ public class DashBoardExe extends javax.swing.JFrame {
         );
 
         jTabbedPane2.addTab("Sensores", j);
+
+        jSMoviment.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSMovimentAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jButton17.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton17.setText("Adicionar Sensor");
@@ -1269,7 +1298,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel54)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfid1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 61, Short.MAX_VALUE))
+                .addGap(0, 49, Short.MAX_VALUE))
         );
         jSMovimentLayout.setVerticalGroup(
             jSMovimentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1293,7 +1322,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jButton32)
                         .addGap(15, 15, 15)
                         .addComponent(jButton33)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Movimento", jSMoviment);
@@ -1399,7 +1428,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel69)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfid7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         jSNaturalLightLayout.setVerticalGroup(
             jSNaturalLightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1526,7 +1555,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel70)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfid8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jSTemperatureLayout.setVerticalGroup(
             jSTemperatureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1652,7 +1681,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(jLabel75)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfid9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         jSWindLayout.setVerticalGroup(
             jSWindLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1920,13 +1949,13 @@ public class DashBoardExe extends javax.swing.JFrame {
         jPanelSensorsLayout.setHorizontalGroup(
             jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSensorsLayout.createSequentialGroup()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanelSensorsLayout.setVerticalGroup(
             jPanelSensorsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSensorsLayout.createSequentialGroup()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3509,9 +3538,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         DefaultTableModel modelo1 = (DefaultTableModel) jTable3.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable3.getSelectedRow(), 0).toString());
-        ((Moviment)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);
-        Dashboard.registoSensorMoviment(n,n1,modelo,jTable3);
+        ((Moviment)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setDetection(true);  
         Dashboard.getHome().getDivisions().get(n).onMovimentSensor(n1);
+        Dashboard.registoSensorMoviment(n,n1,modelo,jTable3);
         refrashJTableSensorMoviment();
     }//GEN-LAST:event_jButton32MouseReleased
 
@@ -3719,9 +3748,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         int n1 = Integer.parseInt(modelo1.getValueAt(jTable5.getSelectedRow(), 0).toString());
         ((Temperature)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setValue(Integer.parseInt(tfid8.getText()));
         Dashboard.registoSensorTemperature(n,n1,modelo,jTable5);
-        refrashJTableSensorTemperature();
         Dashboard.getHome().getDivisions().get(n).exceedTemperature();
         Dashboard.getHome().getDivisions().get(n).lowerTemperature();
+        refrashJTableSensorTemperature();
     }//GEN-LAST:event_jButton53MouseReleased
 
     private void jPanelClimateAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelClimateAncestorAdded
@@ -3988,6 +4017,18 @@ public class DashBoardExe extends javax.swing.JFrame {
         tfid1.setText(n);
     }//GEN-LAST:event_jTable3MouseReleased
 
+    private void JConfigurationAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JConfigurationAncestorAdded
+        new Thread(new Timer2()).start();
+    }//GEN-LAST:event_JConfigurationAncestorAdded
+
+    private void jPanelLightAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelLightAncestorAdded
+        
+    }//GEN-LAST:event_jPanelLightAncestorAdded
+
+    private void jSMovimentAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSMovimentAncestorAdded
+        
+    }//GEN-LAST:event_jSMovimentAncestorAdded
+
     /**
      * @param args the command line arguments
      */
@@ -4030,16 +4071,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         
         try{
             while (true) {  
-                Date date = new Date(); 
-                DateFormat formato = new SimpleDateFormat("HH:mm:ss.SSS"); 
-                Dashboard.getHome().MovimentDoorExterior();
+                /*Dashboard.getHome().MovimentDoorExterior();
                 Dashboard.getHome().closeWindowsMoreIntensityWind();
                 Dashboard.acionarAlarmeAndCloseDoorsWindows();
-                Dashboard.acionarAlarmeGasSmoke();
-                for(Division div:Dashboard.getHome().getDivisions().values()){
-                    //div.offMovimentSensor();       
-                    div.exceedTemperature();                    
-                }
+                Dashboard.acionarAlarmeGasSmoke();*/
+                
 
             Thread.sleep(1000); 
             }
@@ -4067,6 +4103,25 @@ public class DashBoardExe extends javax.swing.JFrame {
         }
         
     }
+    
+    private class Timer2 implements Runnable{
+
+        @Override
+        public void run() {
+            try{
+                while (true) {  
+                    DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+                    int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());    
+                    Dashboard.getHome().getDivisions().get(n).offMovimentSensor();
+                    //Dashboard.getHome().getDivisions().get(n).exceedTemperature();
+
+                Thread.sleep(1000); 
+                }
+            }catch (InterruptedException e) {}
+            }
+        
+    }
+
     
     private void nFloors(){
         comboFloor.removeAllItems();
