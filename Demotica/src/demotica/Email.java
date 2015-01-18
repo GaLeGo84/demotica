@@ -18,7 +18,7 @@ public class Email {
 
     private static final String SMTP_HOST_NAME = "smtp.gmail.com";
     private static final String SMTP_PORT = "465";
-    private static final String emailFromAddress = "dthj@gmail.com";
+    private static final String EMAILFROMADDRESS = "dthj@gmail.com";
     private static final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 
     /**
@@ -33,7 +33,7 @@ public class Email {
         Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 
         new Email().sendSSLMessage(sendTo, emailSubjectTxt,
-                emailMsgTxt, emailFromAddress);
+                emailMsgTxt, EMAILFROMADDRESS);
         
     }
 

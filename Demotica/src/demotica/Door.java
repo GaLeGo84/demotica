@@ -13,18 +13,18 @@ import java.io.Serializable;
  */
 public class Door implements Serializable{
 
-    private int ID;
+    private int id;
     private boolean status;
     private boolean lock;
 
-    public Door(int ID) {
-        this.ID = ID;
+    public Door(int id) {
+        this.id = id;
         this.status = false;
         this.lock = true;
     }
 
     public int getId(){
-        return ID;
+        return id;
     }
 
     public boolean isStatus() {

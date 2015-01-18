@@ -12,27 +12,17 @@ import demotica.Division;
 import demotica.Door;
 import demotica.ExteriorDoorStandard;
 import demotica.ExteriorEntranceDoor;
-import demotica.File;
-import static demotica.File.loadRSensores;
 import demotica.Gas;
-import demotica.Home;
 import demotica.InteriorDoor;
 import demotica.Light;
 import demotica.Moviment;
 import demotica.NaturaLight;
 import demotica.Security;
-import demotica.Sensor;
 import demotica.Smoke;
 import demotica.Temperature;
 import demotica.Wind;
 import demotica.Window;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -1857,7 +1847,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Boolean.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -3180,6 +3170,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemLuzMouseReleased
 
     private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
+        tblDivisions.selectAll();
         jLabel24.setVisible(false);
         Dashboard.verifyIfExteriorEntranceDoor(jButton12,jLabel24);
         updateTlmDivisions();
@@ -4076,13 +4067,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         }
 
         });
-        
+
         try{
             while (true) {  
                 Dashboard.getHome().MovimentDoorExterior();
                 Dashboard.getHome().closeWindowsMoreIntensityWind();
                 Dashboard.acionarAlarmeAndCloseDoorsWindows();
                 Dashboard.acionarAlarmeGasSmoke();
+                
+                
                 
 
             Thread.sleep(1000); 
@@ -4103,6 +4096,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                     JBegin.setVisible(false);
                     JHome.setVisible(true);
                     new RegisterSensor().setVisible(true);
+                    new Thread(new Timer3()).start();
                 }
                 }catch(InterruptedException e){
                     JOptionPane.showMessageDialog(null, e);
@@ -4121,9 +4115,24 @@ public class DashBoardExe extends javax.swing.JFrame {
                     DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
                     int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());    
                     Dashboard.getHome().getDivisions().get(n).offMovimentSensor();
-                    //Dashboard.getHome().getDivisions().get(n).exceedTemperature();
+                    Dashboard.getHome().getDivisions().get(n).exceedTemperature();
 
                 Thread.sleep(1000); 
+                }
+            }catch (InterruptedException e) {}
+            }
+        
+    }
+    
+    private class Timer3 implements Runnable{
+
+        @Override
+        public void run() {
+            try{
+                while (true) {  
+                    Dashboard.saveData();
+
+                Thread.sleep(300000); 
                 }
             }catch (InterruptedException e) {}
             }

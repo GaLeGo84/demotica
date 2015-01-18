@@ -66,9 +66,4 @@ public class Climate implements Serializable{
         this.heating = heating;
     }
 
-    @Override
-    public String toString() {
-        return "Climate{" + "aircon=" + aircon + ", heating=" + heating + '}';
-    }
-
 }

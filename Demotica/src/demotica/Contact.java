@@ -1,8 +1,6 @@
 package demotica;
 
 import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

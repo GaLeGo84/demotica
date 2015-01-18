@@ -1,10 +1,6 @@
 package demotica;
 
 import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -41,8 +37,5 @@ public abstract class Alert implements Serializable{
     public void setDetection(boolean detection) {
         this.detection = detection;
     }
-
     
-    
-
 }

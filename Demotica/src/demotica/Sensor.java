@@ -11,22 +11,12 @@ import java.io.Serializable;
  *
  * @author Rodolfo Melo, Henrique Melo, Xico
  */
-public class Sensor implements Serializable{
+public abstract class Sensor implements Serializable{
 
-    private long timestamp;
     private boolean status;
 
     public Sensor() {
-        this.timestamp = System.currentTimeMillis();
         this.status = true;
-    }
-
-    public long getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
     }
     
     public boolean isStatus() {

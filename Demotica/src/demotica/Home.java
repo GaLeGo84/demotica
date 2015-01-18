@@ -5,7 +5,6 @@ import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.TreeMap;
 
 
@@ -237,9 +236,6 @@ public class Home implements Serializable{
                 }
      }
     
-    
-    
-    
     public void closeWindowsMoreIntensityWind(){
         for(Division div:divisions.values())
             for(Sensor s:div.getSensors().values())
@@ -252,18 +248,6 @@ public class Home implements Serializable{
         for(Division div:divisions.values())
             for(Map.Entry<Integer,Window> w:div.getWindows().entrySet())
                 w.getValue().setStatus(false);
-    }
-    
-    /*public void onAlertGasSmoke(){
-        for (Division div:divisions)
-            if(div.verifyOnSensorGas()==true || div.verifyOnSensorSmoke()==true)
-                
-                
-    }*/
-
-    @Override
-    public String toString() {
-        return "Home{" + "nFloors=" + nFloors + ", alerts=" + alerts + ", divisions=" + divisions + '}';
     }
     
 }

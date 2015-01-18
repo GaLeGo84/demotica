@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -16,12 +14,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author Rodolfo Melo, Henrique Melo, Xico
@@ -30,6 +22,7 @@ public class Dashboard implements Serializable{
  
     private static final long serialVersionUID = -6231719377239289088L;
     static Home home;    
+    static File file;
 
     public static Home getHome() {
         return home;
@@ -51,19 +44,18 @@ public class Dashboard implements Serializable{
             home.getDivisions().get(nDivisions).addLight(new Light());
             i++;
         }
-    }
-    
+    }    
 
     public static void setHome(Home home) {
         Dashboard.home = home;
     }
     
     public static void loadData(){
-        home = File.loadHome();
+        home = file.loadHome();
     }
     
     public static void saveData(){
-        File.saveHome(home);
+        file.saveHome(home);
     }
     
     public static void criarHome(int nFloors, int valueNL, int valueW){

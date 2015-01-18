@@ -32,11 +32,11 @@ public class NewMain {
      */
     public static void main(String[] args) throws IOException {
             
-        Home h = File.loadHome();
+        Dashboard.loadData();
         long timestamp= System.currentTimeMillis();
-        for(Map.Entry<Integer,Sensor> s:h.getDivisions().get(1).getSensors().entrySet())
+        /*for(Map.Entry<Integer,Sensor> s:h.getDivisions().get(1).getSensors().entrySet())
             if(s.getValue() instanceof Moviment){
-                System.out.println(s.getKey()) ;
+                System.out.println(s.getKey()) ;*/
                     /*if(((Moviment)s).isDetection()==true){
                         ((Moviment)s).setTime(timestamp);
                         if(onLight() == true){
@@ -44,7 +44,7 @@ public class NewMain {
                                 l.getValue().setStatus(true);   
                         }
                     }*/
-            }
+            //}
         
         
         /*Home h = File.loadHome();
