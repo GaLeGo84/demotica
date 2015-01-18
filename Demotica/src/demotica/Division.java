@@ -315,21 +315,33 @@ public class Division implements Serializable{
         }        
     }
     
+    //Se não execer o maximo pretendido, se tiver todas as portas abertas fecham e liga o arcondicionado
     public void exceedTemperature(){        
         if(mediaTemperature()>climate.getMAXVALUE()){
-            for(Map.Entry<Integer,Window> w:windows.entrySet()){
-                if(climate.isStatus()==false)
-                    if(w.getValue().isStatus()==false){
-                        w.getValue().setStatus(true);
-                    }
-                
-                if(climate.isStatus()==true){
-                    w.getValue().setStatus(true);
+            if(windows.size()==verifyAllWindows()){
+                for(Map.Entry<Integer,Window> w:windows.entrySet()){        
+                    w.getValue().setStatus(false);
                     w.getValue().setLock(false);
-                    climate.setAircon(true); 
-                } 
+                    climate.setAircon(true);
+                }
+            }else if(climate.isStatus()==true){
+                for(Map.Entry<Integer,Window> w:windows.entrySet()){    
+                    w.getValue().setStatus(true);
+                    w.getValue().setLock(false); 
+                    climate.setAircon(false);
+                }
             }
         }
+    }
+    
+    public int verifyAllWindows(){
+        int count=0;
+        for(Map.Entry<Integer,Window> w:windows.entrySet()){
+            if(w.getValue().isStatus()==true)
+                count++;
+        } 
+        
+        return count;
     }
     
     public void lowerTemperature(){
@@ -340,17 +352,12 @@ public class Division implements Serializable{
     
     //Fechar as janelas por causa do ar condicionado
     public void lockWithAirconWindows(){
-        for (Window w:windows.values())
-            if(w.isStatus()== true){
-                w.setStatus(false);
-                climate.setAircon(false);
-                climate.setHeating(true);
-                w.setLock(true);
-            }else{
-                climate.setAircon(false);
-                climate.setHeating(true);
-                w.setLock(true);
-            }
+        for (Window w:windows.values()){
+            w.setStatus(false);
+            climate.setAircon(false);
+            climate.setHeating(true);
+            w.setLock(true);
+        }
     }
     
     

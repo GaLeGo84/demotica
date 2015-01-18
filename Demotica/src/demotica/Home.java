@@ -142,40 +142,6 @@ public class Home implements Serializable{
        return aux;
    }
     
-    
-    
-     //Tentativa de abrir a janela
-    public boolean tryOpenwindows(){
-        for (Division div:divisions.values())
-            for(Window w:div.getWindows().values())
-                if(w.isStatus()==true) 
-                    return true;
-                
-        return false;
-    }
-    
-     //Tentativa de abrir a porta
-    public boolean tryOpenDoors(){
-        for (Division div:divisions.values())
-            for(Door doo:div.getDoors())
-                if(doo.isStatus()==true)
-                    return true;
-                
-        return false;
-    }
-    
-    //Tentativa de abrir a janela e a porta
-    public void alerTryOpenwindowsDoors(){
-        for (Division div:divisions.values())
-            for(ExteriorEntranceDoor doo:div.listExteriorEntranceDoor())
-                if(doo.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
-                    for(IntruderAlert lia:listIntruderAlert()){
-                        lia.setDetection(true);                            
-                    }       
-                }
-     }
-    
-    
     //INICIO Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
     public void MovimentDoorExterior(){        
         for(Division div:divisions.values())
@@ -237,6 +203,42 @@ public class Home implements Serializable{
                 }
     }
     //FIM Fechar todas as portas exteriores caso ñ detetar nenhum movimento durante um determinado periúdo de tempo
+    
+    
+    
+     //Tentativa de abrir a janela
+    public boolean tryOpenwindows(){
+        for (Division div:divisions.values())
+            for(Window w:div.getWindows().values())
+                if(w.isStatus()==true) 
+                    return true;
+                
+        return false;
+    }
+    
+     //Tentativa de abrir a porta
+    public boolean tryOpenDoors(){
+        for (Division div:divisions.values())
+            for(Door doo:div.getDoors())
+                if(doo.isStatus()==true)
+                    return true;
+                
+        return false;
+    }
+    
+    //Tentativa de abrir a janela e a porta
+    public void alerTryOpenwindowsDoors(){
+        for (Division div:divisions.values())
+            for(ExteriorEntranceDoor doo:div.listExteriorEntranceDoor())
+                if(doo.getSecurity().isStatus()==true && ((tryOpenwindows()==true) || tryOpenDoors()==true)){
+                    for(IntruderAlert lia:listIntruderAlert()){
+                        lia.setDetection(true);                            
+                    }       
+                }
+     }
+    
+    
+    
     
     public void closeWindowsMoreIntensityWind(){
         for(Division div:divisions.values())

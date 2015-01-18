@@ -108,7 +108,7 @@ public class Dashboard implements Serializable{
         for(Division div:home.getDivisions().values())
             for(Door d:div.getDoors())
                 if(d instanceof ExteriorDoor)
-                    if(d.isStatus()==true || d.isLock()==false)
+                    if(((ExteriorDoor)d).isStatus()==true || ((ExteriorDoor)d).isLock()==false)
                         status=true;
         
         return status;
@@ -143,11 +143,33 @@ public class Dashboard implements Serializable{
     
     public static void acionarAlarmeAndCloseDoorsWindows(){
         if(verifySecurity()==true)
-            for (Division div:home.getDivisions().values())
-                if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){
-                    ativeIntruderAlert();            
-                    JOptionPane.showMessageDialog(null, "Entrada de Intruso");
+            if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){
+                ativeIntruderAlert();            
+                sendEmailPolice();
+                JOptionPane.showMessageDialog(null, "Entrada de Intruso");
+            }
+    }
+    
+    public static void sendEmailPolice(){
+        for(Map.Entry<Integer,Contact> c:Dashboard.getHome().getContacts().entrySet())
+            if(c.getValue().getType()==0){
+                try{
+                    Email.sendMail("Hello Email", "Test", c.getValue().getEmail());
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
                 }
+            }    
+    }
+    
+    public static void sendEmailBombeiros(){
+        for(Map.Entry<Integer,Contact> c:Dashboard.getHome().getContacts().entrySet())
+            if(c.getValue().getType()==1){
+                try{
+                    Email.sendMail("Hello Email", "Test", c.getValue().getEmail());
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }    
     }
     
     public static boolean existOnSensorGas(){
@@ -180,10 +202,10 @@ public class Dashboard implements Serializable{
     }
     
     public static void acionarAlarmeGasSmoke(){
-        if(verifySecurity()==true)
             for (Division div:home.getDivisions().values())
                 if(existOnSensorGas()==true || existOnSensorSmoke()==true){
-                    ativeSoundAlert();            
+                    ativeSoundAlert();
+                    Dashboard.sendEmailBombeiros();
                     JOptionPane.showMessageDialog(null, "Alerta Sonoro");
                 }
     }
