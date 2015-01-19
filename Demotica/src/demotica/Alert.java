@@ -10,7 +10,6 @@ import java.io.Serializable;
  */
 public abstract class Alert implements Serializable{
     
-    private static final long serialVersionUID = 5455238796031916510L;
     private boolean status;
     private boolean detection;
 

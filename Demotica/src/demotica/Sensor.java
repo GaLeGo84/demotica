@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 
-public abstract class Sensor implements Serializable{
+public abstract class Sensor{
 
     private boolean status;
 

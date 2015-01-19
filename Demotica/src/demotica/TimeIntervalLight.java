@@ -1,6 +1,5 @@
 package demotica;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,7 +7,7 @@ import java.util.Date;
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 
-public class TimeIntervalLight implements Serializable{
+public class TimeIntervalLight{
     
     private Date begin;
     private Date end;

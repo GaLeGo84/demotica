@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 public class ExteriorEntranceDoor extends ExteriorDoor implements Serializable{
 
+    //Security - A componente de alarme
     private Security security;
     
     public ExteriorEntranceDoor(int num, Security security) {

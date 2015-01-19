@@ -8,11 +8,19 @@ import java.io.Serializable;
 
 public class ExteriorDoorStandard extends ExteriorDoor implements Serializable{
 
-    public ExteriorDoorStandard(int num) {
-        super(num);
+    /**
+     * 
+     * @param id - o id da porta
+     */
+    public ExteriorDoorStandard(int id) {
+        super(id);
 
     }
     
+    /**
+     * 
+     * @return uma String com "Porta do Exterior"
+     */
     @Override
     public String toString() {
         return super.toString() +"do Exterior";

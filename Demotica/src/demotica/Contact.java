@@ -5,9 +5,8 @@ import java.io.Serializable;
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
-public class Contact implements Serializable{
+public class Contact {
 
-    private static final long serialVersionUID = 5455238796031916510L;
     private int type;
     private String email;
 

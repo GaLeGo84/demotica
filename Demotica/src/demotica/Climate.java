@@ -2,13 +2,13 @@ package demotica;
 
 import java.io.Serializable;
 
+
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 
 public class Climate implements Serializable{
 
-    private static final long serialVersionUID = 5455238796031916510L;
     private static int MINVALUE=12;
     private static int MAXVALUE=25;
     private boolean aircon;
