@@ -347,6 +347,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTableTime.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableTime.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -563,7 +564,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblLuzes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
                                 .addComponent(jLabel14)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblJanelas)
@@ -694,6 +695,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -899,6 +901,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTableLight.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableLight.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1022,6 +1025,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton16.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton16.setText("Remover Porta");
+        jButton16.setEnabled(false);
         jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton16MouseReleased(evt);
@@ -1089,7 +1093,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable2.setColumnSelectionAllowed(true);
+        jTable2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable2.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1278,6 +1282,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable3.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable3.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1422,6 +1427,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable4.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1440,6 +1446,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton20.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton20.setText("Remover Sensor");
+        jButton20.setEnabled(false);
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton20MouseReleased(evt);
@@ -1463,6 +1470,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel69.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel69.setText("Valor:");
 
+        tfid7.setEnabled(false);
         tfid7.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tfid7KeyReleased(evt);
@@ -1471,6 +1479,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton52.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton52.setText("Atualizar Sensor");
+        jButton52.setEnabled(false);
         jButton52.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton52MouseReleased(evt);
@@ -1540,6 +1549,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton37.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton37.setText("Remover Sensor");
+        jButton37.setEnabled(false);
         jButton37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton37MouseReleased(evt);
@@ -1570,6 +1580,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable5.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable5.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1588,12 +1599,14 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton53.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton53.setText("Atualizar Sensor");
+        jButton53.setEnabled(false);
         jButton53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton53MouseReleased(evt);
             }
         });
 
+        tfid8.setEnabled(false);
         tfid8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tfid8KeyReleased(evt);
@@ -1667,6 +1680,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton41.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton41.setText("Remover Sensor");
+        jButton41.setEnabled(false);
         jButton41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton41MouseReleased(evt);
@@ -1697,6 +1711,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable6.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable6.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1715,6 +1730,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton58.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton58.setText("Atualizar Sensor");
+        jButton58.setEnabled(false);
         jButton58.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton58MouseReleased(evt);
@@ -1724,6 +1740,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel75.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel75.setText("Valor:");
 
+        tfid9.setEnabled(false);
         tfid9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tfid9KeyReleased(evt);
@@ -1793,6 +1810,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton45.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton45.setText("Remover Sensor");
+        jButton45.setEnabled(false);
         jButton45.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton45MouseReleased(evt);
@@ -1823,6 +1841,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable7.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable7.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1830,6 +1849,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                 jTable7AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jTable7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable7MouseReleased(evt);
             }
         });
         jScrollPane11.setViewportView(jTable7);
@@ -1912,6 +1936,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton49.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton49.setText("Remover Sensor");
+        jButton49.setEnabled(false);
         jButton49.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton49MouseReleased(evt);
@@ -1942,6 +1967,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable8.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable8.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -1949,6 +1975,11 @@ public class DashBoardExe extends javax.swing.JFrame {
                 jTable8AncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jTable8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable8MouseReleased(evt);
             }
         });
         jScrollPane12.setViewportView(jTable8);
@@ -2080,6 +2111,11 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         jButton25.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jButton25.setText("Desligar");
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton25MouseReleased(evt);
+            }
+        });
 
         jLabel44.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
         jLabel44.setText("Temperatura mínima:");
@@ -2315,6 +2351,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 "id", "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
             }
         ));
+        tblDivisions.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane6.setViewportView(tblDivisions);
         if (tblDivisions.getColumnModel().getColumnCount() > 0) {
             tblDivisions.getColumnModel().getColumn(0).setMinWidth(30);
@@ -2809,6 +2846,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 "id", "Nome", "Piso", "Nº de portas", "Porta p/ o exterior", "Porta de entrada", "Nº de janelas", "Nº de luzes"
             }
         ));
+        tblDivisions1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblDivisions1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 tblDivisions1MouseReleased(evt);
@@ -2891,7 +2929,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                                 .addGap(206, 206, 206)
                                 .addComponent(jLabel7)))
-                        .addGap(0, 248, Short.MAX_VALUE)))
+                        .addGap(0, 250, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         JCreateDivisionLayout.setVerticalGroup(
@@ -2926,7 +2964,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addComponent(removeB)
                         .addComponent(btnLimpar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton7)
                 .addContainerGap())
@@ -2974,6 +3012,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable9.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTable9.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -3170,10 +3209,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarDivisãoMouseReleased
 
     private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
-        tblDivisions.selectAll();
+        tblDivisions.getSelectedRow();
         jLabel24.setVisible(false);
         Dashboard.verifyIfExteriorEntranceDoor(jButton12,jLabel24);
-        updateTlmDivisions();
     }//GEN-LAST:event_JHomeAncestorAdded
 
     private void jButton13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseReleased
@@ -3224,46 +3262,54 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton27MouseReleased
 
     private void jButton22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseReleased
+    if(jButton22.isEnabled()==true){ 
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setHeating(false);
         Dashboard.getHome().getDivisions().get(n).getClimate().setAircon(true);
         jLabel43.setText("Desligado");
         jLabel41.setText("Ligado");
+    }
     }//GEN-LAST:event_jButton22MouseReleased
 
     private void jButton23MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseReleased
+    if(jButton23.isEnabled()==true){ 
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setAircon(false);
         jLabel41.setText("Desligado");
+    }
     }//GEN-LAST:event_jButton23MouseReleased
 
     private void jButton24MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MouseReleased
+    if(jButton24.isEnabled()==true){ 
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setAircon(false);
         Dashboard.getHome().getDivisions().get(n).getClimate().setHeating(true);
         jLabel41.setText("Desligado");
         jLabel43.setText("Ligado");
+    }
     }//GEN-LAST:event_jButton24MouseReleased
 
     private void jButton30MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton30MouseReleased
+    if(jButton30.isEnabled()==true){     
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).getClimate().setMINVALUE(Integer.parseInt(jTextField8.getText()));        
+        Dashboard.getHome().getDivisions().get(n).getClimate().setMINVALUE(Integer.parseInt(jTextField8.getText()));   
+    }
     }//GEN-LAST:event_jButton30MouseReleased
 
     private void jButton31MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton31MouseReleased
+    if(jButton31.isEnabled()==true){  
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setMAXVALUE(Integer.parseInt(jTextField9.getText()));  
+    }
     }//GEN-LAST:event_jButton31MouseReleased
 
     private void jPanelDoorsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelDoorsAncestorAdded
         jComboBox2.setVisible(false);
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
-        int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.allDoors(jComboBox4);
     }//GEN-LAST:event_jPanelDoorsAncestorAdded
 
@@ -3324,10 +3370,12 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7KeyReleased
 
     private void jButton19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseReleased
+    if(Integer.parseInt(jTextField5.getText())>=Dashboard.getHome().getnFloors()){
         Dashboard.getHome().setnFloors(Integer.parseInt(jTextField5.getText()));
         Dashboard.getHome().setValueNL(Integer.parseInt(jTextField6.getText()));
         Dashboard.getHome().setValueW(Integer.parseInt(jTextField7.getText()));
         JOptionPane.showMessageDialog(null,"Atualização feita com Sucesso");
+    }else{JOptionPane.showMessageDialog(null, "Não pode diminuir o valor de andares que tinha antriormente");}
     }//GEN-LAST:event_jButton19MouseReleased
 
     private void jButton5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseReleased
@@ -3339,6 +3387,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         load.setVisible(true);
         bar.setVisible(true);
         Dashboard.loadData();
+        updateTlmDivisions();
+        jButton2.setEnabled(false);
         new Thread(new Timer()).start();
     }//GEN-LAST:event_jButton1MouseReleased
 
@@ -3350,6 +3400,9 @@ public class DashBoardExe extends javax.swing.JFrame {
                 Dashboard.getHome().addDivision(new Division(tfName.getText(),floor,new Climate()));
                 Dashboard.countNumberWindows(Integer.parseInt(tfWindow.getText()));
                 Dashboard.countNumberLights(Integer.parseInt(tfLights.getText()));
+                btnLimpar.setEnabled(true);
+                updateB.setEnabled(false);
+                removeB.setEnabled(false);
                 updateTlmDivisions1();
                 JOptionPane.showMessageDialog(this, "Adicionou com exito");
             }else{
@@ -3362,11 +3415,13 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_addBMouseReleased
 
     private void updateBMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateBMouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
-        int n =Integer.parseInt(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().getDivisions().get(n).setName(tfName.getText());
-        Dashboard.getHome().getDivisions().get(n).setFloor(comboFloor.getSelectedIndex());
-        updateTlmDivisions1();
+        if(updateB.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
+            int n =Integer.parseInt(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).setName(tfName.getText());
+            Dashboard.getHome().getDivisions().get(n).setFloor(comboFloor.getSelectedIndex());
+            updateTlmDivisions1();
+        }
     }//GEN-LAST:event_updateBMouseReleased
 
     private void updateBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBActionPerformed
@@ -3395,6 +3450,9 @@ public class DashBoardExe extends javax.swing.JFrame {
         tfWindow.enable(false);
         tfLights.enable(false);
         addB.setEnabled(false);
+        updateB.setEnabled(true);
+        removeB.setEnabled(true);
+        btnLimpar.setEnabled(true);
     }//GEN-LAST:event_tblDivisions1MouseReleased
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -3403,13 +3461,17 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void btnLimparMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimparMouseReleased
-        tfWindow.enable(true);
-        tfLights.enable(true);
-        tfName.setText(null);
-        tfWindow.setText(null);
-        tfLights.setText(null);
-        addB.setEnabled(true);
-        //btnLimpar.
+        if(btnLimpar.isEnabled()==true){
+            tfWindow.enable(true);
+            tfLights.enable(true);
+            tfName.setText(null);
+            tfWindow.setText(null);
+            tfLights.setText(null);
+            addB.setEnabled(true);
+            removeB.setEnabled(false);
+            btnLimpar.setEnabled(false);
+            updateB.setEnabled(false);
+        }
     }//GEN-LAST:event_btnLimparMouseReleased
 
     private void JCreateDivisionAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JCreateDivisionAncestorAdded
@@ -3426,10 +3488,12 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_tfLightsKeyReleased
 
     private void removeBMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeBMouseReleased
-        DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
-        int n = Integer.parseInt(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
-        Dashboard.getHome().remDivision(n);
-        updateTlmDivisions1();
+        if(removeB.isEnabled()==true){
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions1.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions1.getSelectedRow(), 0).toString());
+            Dashboard.getHome().remDivision(n);
+            updateTlmDivisions1();
+        }
     }//GEN-LAST:event_removeBMouseReleased
 
     private void lblLuzesAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lblLuzesAncestorAdded
@@ -3466,15 +3530,16 @@ public class DashBoardExe extends javax.swing.JFrame {
                     Dashboard.getHome().getDivisions().get(n).addDoor(new ExteriorEntranceDoor(Integer.parseInt(tfDoors1.getText()),new Security()));
         }
         jLabel29.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getDoors().size()));
+        Dashboard.allDoors(jComboBox4);
         refrashJTableDoor();
     }//GEN-LAST:event_jButton15MouseReleased
 
     private void jButton16MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseReleased
+    if(jButton16.isEnabled()==true){    
         refrashJTableDoor();
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable2.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
-        int n1 = Integer.parseInt(modelo1.getValueAt(jTable2.getSelectedRow(), 0).toString());
         int a =Integer.parseInt(tfDoors1.getText());
         for (Map.Entry<Integer, Division> d : Dashboard.getHome().getDivisions().entrySet()){
             for(int j=0;j<d.getValue().getDoors().size();j++)
@@ -3483,11 +3548,13 @@ public class DashBoardExe extends javax.swing.JFrame {
         }
         jLabel29.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getDoors().size()));
         refrashJTableDoor();
+    }
     }//GEN-LAST:event_jButton16MouseReleased
 
     private void jTable2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseReleased
         DefaultTableModel modelo1 = (DefaultTableModel) jTable2.getModel();
         tfDoors1.setText(modelo1.getValueAt(jTable2.getSelectedRow(), 0).toString());
+        jButton16.setEnabled(true);
     }//GEN-LAST:event_jTable2MouseReleased
 
     private void jButton28MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton28MouseReleased
@@ -3576,9 +3643,12 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseReleased
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
         tfid7.setText(modelo1.getValueAt(jTable4.getSelectedRow(), 2).toString());
+        jButton52.setEnabled(true);
+        jButton20.setEnabled(true);
     }//GEN-LAST:event_jTable4MouseReleased
 
     private void jButton20MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseReleased
+    if(jButton20.isEnabled()==true){    
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3586,6 +3656,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel56.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorNaturaLight()));
         refrashJTableSensorNaturaLight();
+    }
     }//GEN-LAST:event_jButton20MouseReleased
 
     private void jButton21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseReleased
@@ -3605,6 +3676,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton36MouseReleased
 
     private void jButton37MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton37MouseReleased
+    if(jButton37.isEnabled()==true){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3612,6 +3684,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel58.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorTemperature()));
         refrashJTableSensorTemperature();
+    }
     }//GEN-LAST:event_jButton37MouseReleased
 
     private void jTable5AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable5AncestorAdded
@@ -3621,6 +3694,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseReleased
        DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
        tfid8.setText(modelo1.getValueAt(jTable5.getSelectedRow(), 2).toString());
+       jButton37.setEnabled(true);
+       jButton53.setEnabled(true);
+       tfid8.setEnabled(true);
     }//GEN-LAST:event_jTable5MouseReleased
 
     private void jButton40MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton40MouseReleased
@@ -3632,6 +3708,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton40MouseReleased
 
     private void jButton41MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton41MouseReleased
+    if(jButton41.isEnabled()==true){    
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable6.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3639,6 +3716,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel61.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorWind()));
         refrashJTableSensorWind();
+    }
     }//GEN-LAST:event_jButton41MouseReleased
 
     private void jTable6AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable6AncestorAdded
@@ -3648,6 +3726,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable6MouseReleased
        DefaultTableModel modelo1 = (DefaultTableModel) jTable6.getModel();
        tfid9.setText(modelo1.getValueAt(jTable6.getSelectedRow(), 2).toString());
+       jButton41.setEnabled(true);
+       jButton58.setEnabled(true);
+       tfid9.setEnabled(true);
     }//GEN-LAST:event_jTable6MouseReleased
 
     private void jButton44MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton44MouseReleased
@@ -3659,6 +3740,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton44MouseReleased
 
     private void jButton45MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton45MouseReleased
+    if(jButton45.isEnabled()==true){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable7.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3666,6 +3748,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel64.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorGas()));
         refrashJTableSensorGas();
+    }
     }//GEN-LAST:event_jButton45MouseReleased
 
     private void jTable7AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable7AncestorAdded
@@ -3701,6 +3784,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton48MouseReleased
 
     private void jButton49MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton49MouseReleased
+    if(jButton49.isEnabled()==true){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable8.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3708,6 +3792,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remSensor(n1);
         jLabel67.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorSmoke()));
         refrashJTableSensorSmoke();
+    }
     }//GEN-LAST:event_jButton49MouseReleased
 
     private void jTable8AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable8AncestorAdded
@@ -3735,6 +3820,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton51MouseReleased
 
     private void jButton52MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton52MouseReleased
+    if(jButton52.isEnabled()==true){ 
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3742,9 +3828,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         ((NaturaLight)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setValue(Integer.parseInt(tfid7.getText()));
         Dashboard.registoSensorNaturaLight(n,n1,modelo,jTable4);
         refrashJTableSensorNaturaLight();
+    }
     }//GEN-LAST:event_jButton52MouseReleased
 
     private void jButton53MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton53MouseReleased
+    if(jButton53.isEnabled()==true){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable5.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3754,6 +3842,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).exceedTemperature();
         Dashboard.getHome().getDivisions().get(n).lowerTemperature();
         refrashJTableSensorTemperature();
+    }
     }//GEN-LAST:event_jButton53MouseReleased
 
     private void jPanelClimateAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelClimateAncestorAdded
@@ -3780,6 +3869,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelClimateAncestorAdded
 
     private void jButton54MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton54MouseReleased
+    if(jButton54.isEnabled()==true){    
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setStatus(true);
@@ -3798,9 +3888,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton31.setEnabled(true);
         jButton54.setEnabled(false);
         jButton55.setEnabled(true);
+    }
     }//GEN-LAST:event_jButton54MouseReleased
 
     private void jButton55MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton55MouseReleased
+    if(jButton55.isEnabled()==true){  
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
         Dashboard.getHome().getDivisions().get(n).getClimate().setStatus(false);
@@ -3819,6 +3911,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton31.setEnabled(false);
         jButton55.setEnabled(false);
         jButton54.setEnabled(true);
+    }
     }//GEN-LAST:event_jButton55MouseReleased
 
     private void jButton56MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton56MouseReleased
@@ -3845,6 +3938,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton57MouseReleased
 
     private void jButton58MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton58MouseReleased
+    if(jButton58.isEnabled()==true){
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTable6.getModel();
         int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3852,6 +3946,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         ((Wind)Dashboard.getHome().getDivisions().get(n).getSensors().get(n1)).setIntensity(Integer.parseInt(tfid9.getText()));
         Dashboard.registoSensorWind(n, n1, modelo, jTable6);
         refrashJTableSensorWind();
+    }
     }//GEN-LAST:event_jButton58MouseReleased
 
     private void jButton12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseReleased
@@ -3916,8 +4011,10 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarDivisão1MouseReleased
 
     private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+    if(jButton2.isEnabled()==true){
         JBegin.setVisible(false);
         JCreateHome.setVisible(true);
+    }
     }//GEN-LAST:event_jButton2MouseReleased
 
     private void jButton11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseReleased
@@ -4074,6 +4171,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSimulMouseClicked
 
     private void btnRemLuzMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemLuzMouseReleased
+    if(btnRemLuz.isEnabled()==true){    
         DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
         DefaultTableModel modelo1 = (DefaultTableModel) jTableLight.getModel();
         int n= Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -4081,6 +4179,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Dashboard.getHome().getDivisions().get(n).remLight(n1);
         lblLuzes2.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).getLights().size()));
         refrashJTableLight();
+    }
     }//GEN-LAST:event_btnRemLuzMouseReleased
 
     private void slIntensidadeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_slIntensidadeMouseReleased
@@ -4149,6 +4248,23 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void Simular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Simular3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Simular3ActionPerformed
+
+    private void jButton25MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MouseReleased
+        if(jButton25.isEnabled()==true){ 
+            DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
+            int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
+            Dashboard.getHome().getDivisions().get(n).getClimate().setHeating(false);
+            jLabel43.setText("Desligado");
+        }
+    }//GEN-LAST:event_jButton25MouseReleased
+
+    private void jTable7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable7MouseReleased
+        jButton45.setEnabled(true);
+    }//GEN-LAST:event_jTable7MouseReleased
+
+    private void jTable8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable8MouseReleased
+        jButton49.setEnabled(true);
+    }//GEN-LAST:event_jTable8MouseReleased
 
     /**
      * @param args the command line arguments

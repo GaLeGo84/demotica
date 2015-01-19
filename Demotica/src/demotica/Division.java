@@ -115,16 +115,6 @@ public class Division implements Serializable{
     }
     
     public void addTimeIntervalLight(TimeIntervalLight til){
-        int n=1;
-        while(n<=timeintervallight.size()){
-            if(timeintervallight.containsKey(n)==false){
-                timeintervallight.put(n, til);
-                break;
-            }            
-        n++;
-        }
-        
-        if(timeintervallight.size()<n)
             timeintervallight.put(timeintervallight.size()+1,til);          
     }
     
@@ -145,7 +135,7 @@ public class Division implements Serializable{
     }
     
     public void remTimeIntervalLight(int key){
-        sensors.remove(key);
+        timeintervallight.remove(key);
     }
     
     public void addDoor(Door dor){   
