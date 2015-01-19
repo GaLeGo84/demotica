@@ -19,7 +19,6 @@ public class Division implements Serializable{
     private Map<Integer,Sensor> sensors;
     private Map<Integer,Window> windows;
     private List<Door> doors;
-    private Map<Integer,TimeIntervalLight> timeintervallight;
 
     public Division(String name, int floor, Climate climate){
         this.floor = floor;
@@ -29,7 +28,6 @@ public class Division implements Serializable{
         sensors = new TreeMap<Integer,Sensor>();
         windows = new TreeMap<Integer,Window>();
         doors = new LinkedList<Door>();
-        timeintervallight = new TreeMap<Integer,TimeIntervalLight>();
     }
 
     public int getFloor() {
@@ -50,10 +48,6 @@ public class Division implements Serializable{
     
     public String getName() {
         return name;
-    }
-
-    public Map<Integer, TimeIntervalLight> getTimeintervallight() {
-        return timeintervallight;
     }
 
     public void setFloor(int floor) {
@@ -114,10 +108,6 @@ public class Division implements Serializable{
             windows.put(windows.size()+1,w);          
     }
     
-    public void addTimeIntervalLight(TimeIntervalLight til){
-            timeintervallight.put(timeintervallight.size()+1,til);          
-    }
-    
     public void remLight(int key){            
         lights.remove(key);
     }
@@ -132,10 +122,6 @@ public class Division implements Serializable{
     
     public void remSensor(int key){
         sensors.remove(key);
-    }
-    
-    public void remTimeIntervalLight(int key){
-        timeintervallight.remove(key);
     }
     
     public void addDoor(Door dor){   
