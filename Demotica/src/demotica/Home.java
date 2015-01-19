@@ -41,7 +41,8 @@ public class Home implements Serializable{
 
     public Map<Integer,Division> getDivisions() {
         return divisions;
-    }
+    }   
+    
 
     public int getValueNL() {
         return valueNL;
