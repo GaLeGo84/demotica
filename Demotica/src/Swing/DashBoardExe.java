@@ -4144,7 +4144,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Map<Integer,Division> a = Dashboard.getHome().getDivisions();
         modelo.getDataVector().clear();
         for(Division div:a.values())
-            modelo.addRow(new Object[]{Dashboard.getHome().getIntMap(div.getName()),div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExteriorStandard(), div.nDoorsExterior(),
+            modelo.addRow(new Object[]{Dashboard.getHome().getIntMap(div.getName()),div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExteriorStandard(), div.nDoorsEntranceExterior(),
             div.nWindows(), div.nLights()});
     }
         
@@ -4153,7 +4153,7 @@ public class DashBoardExe extends javax.swing.JFrame {
         Map<Integer,Division> a = Dashboard.getHome().getDivisions();
         modelo.getDataVector().clear();
         for(Division div:a.values())
-            modelo.addRow(new Object[]{Dashboard.getHome().getIntMap(div.getName()),div.getName(),div.getFloor(),div.nDoors(), div.nDoorsExterior(), div.nDoorsExteriorStandard(),
+            modelo.addRow(new Object[]{Dashboard.getHome().getIntMap(div.getName()),div.getName(),div.getFloor(),div.nDoors(), div.nDoorsEntranceExterior(), div.nDoorsExteriorStandard(),
             div.nWindows(), div.nLights()});
     }
     

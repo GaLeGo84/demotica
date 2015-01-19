@@ -209,7 +209,7 @@ public class Division implements Serializable{
         return getLights().size();
     }
     
-    public int nDoorsExterior(){
+    public int nDoorsEntranceExterior(){
         return listExteriorEntranceDoor().size();
     }
     
