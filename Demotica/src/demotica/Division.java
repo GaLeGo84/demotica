@@ -130,6 +130,10 @@ public class Division implements Serializable{
         doors.add(dor); 
     }
     
+    public int nSensors(){
+        return sensors.size();
+    }
+    
     
     
     //Lista de sensores de Temperatura
@@ -213,6 +217,60 @@ public class Division implements Serializable{
     
     public int nDoorsExteriorStandard(){
         return listExteriorStandardDoor().size();
+    }
+    
+    public int nSensorMoviment(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof Moviment)
+                n++;
+        
+        return n;
+    }
+    
+    public int nSensorNaturaLight(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof NaturaLight)
+                n++;
+        
+        return n;
+    }
+    
+    public int nSensorTemperature(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof Temperature)
+                n++;
+        
+        return n;
+    }
+    
+    public int nSensorWind(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof Wind)
+                n++;
+        
+        return n;
+    }
+    
+    public int nSensorGas(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof Gas)
+                n++;
+        
+        return n;
+    }
+    
+    public int nSensorSmoke(){
+        int n=0;
+        for(Sensor s:sensors.values())
+            if(s instanceof Smoke)
+                n++;
+        
+        return n;
     }
     
     //média da luz natural da sala

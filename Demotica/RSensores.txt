@@ -1,2 +1,4 @@
 ﻿21:09:20 - Sensor Luz Natural{valor=2};
 21:09:33 - Sensor Movimento{time=1421618973113, interval=60, detection=true};
+12:23:05 - Sensor Movimento{time=1421673785547, interval=10, detection=true};
+12:23:07 - Sensor Movimento{time=1421673785547, interval=10, detection=false};

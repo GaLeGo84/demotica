@@ -1,5 +1,6 @@
 package demotica;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,10 +12,12 @@ public class TimeIntervalLight{
     
     private Date begin;
     private Date end;
+    private boolean status;
 
     public TimeIntervalLight(Date begin, Date end) {
-        SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd");
-        //this.times = ft.get2DigitYearStart();
+        /*Date date = new Date(); 
+        DateFormat formato = new SimpleDateFormat("HH:mm:ss");
+        formato.format(date);*/
         this.begin = begin;
         this.end = end;
     }
