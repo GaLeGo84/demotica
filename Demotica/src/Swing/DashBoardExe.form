@@ -198,6 +198,9 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane14" min="-2" pref="200" max="-2" attributes="0"/>
                   <EmptySpace pref="52" max="32767" attributes="0"/>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
               </Group>
           </Group>
