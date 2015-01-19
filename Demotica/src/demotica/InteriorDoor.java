@@ -1,3 +1,6 @@
+/**
+ * É uma SubClasse da Classe Door que indica que é uma porta interior da casa
+ */
 package demotica;
 
 import java.io.Serializable;
@@ -8,12 +11,20 @@ import java.io.Serializable;
 
 public class InteriorDoor extends Door implements Serializable{
 
-    public InteriorDoor(int num) {
-        super(num);
+    /**
+     * 
+     * @param id - Identificador da porta 
+     */
+    public InteriorDoor(int id) {
+        super(id);
     }
 
+    /**
+     * 
+     * @return uma String com "Porta Interior"
+     */
     @Override
-    public String toString() {
-        return "Interior";
+    public String toString() {        
+        return super.toString()+"Interior";
     }
 }

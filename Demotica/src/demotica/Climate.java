@@ -1,3 +1,6 @@
+/**
+ * Classe referente ao Sistema de Climatização da divisão
+ */
 package demotica;
 
 import java.io.Serializable;

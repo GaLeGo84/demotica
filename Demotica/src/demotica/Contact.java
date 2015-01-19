@@ -1,6 +1,7 @@
+/**
+ * Classe Referente aos Contactos de email
+ */
 package demotica;
-
-import java.io.Serializable;
 
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
@@ -27,7 +28,6 @@ public class Contact {
     public String getEmail() {
         return email;
     }
-
 
     /**
      * 

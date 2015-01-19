@@ -1,6 +1,8 @@
-package demotica;
+/**
+ * SubClasse da SuperClasse Alert que identifica um Alerta de intruso
+ */
 
-import java.io.Serializable;
+package demotica;
 
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
@@ -8,7 +10,9 @@ import java.io.Serializable;
 
 public class IntruderAlert extends Alert{
 
-    public IntruderAlert() {
-    }
+    /**
+     * Identifica um Alerta de intruso
+     */
+    public IntruderAlert(){}
 
 }

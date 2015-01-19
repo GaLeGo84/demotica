@@ -1,3 +1,6 @@
+/**
+ * SubClasse da Classe ExteriorDoor que define que é uma porta exterior
+ */
 package demotica;
 
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-/*
+/**
  * Classe referente aos Alertas
  */
 package demotica;

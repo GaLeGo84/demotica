@@ -1,9 +1,10 @@
-package demotica;
-
 /**
  * Classe responsavel pelo envio de mensagens de email
  * Aplicaçao da API mail.jar
  */
+
+package demotica;
+
 import java.security.Security;
 import java.util.Properties;
 import javax.mail.Message;

@@ -1,3 +1,6 @@
+/**
+ * Classe que guarda e carrega os dados da casa e lista os sensores
+ */
 package demotica;
 
 import java.io.BufferedReader;

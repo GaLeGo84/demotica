@@ -1,3 +1,6 @@
+/**
+ * Classe referente às portas da divisão
+ */
 package demotica;
 
 import java.io.Serializable;
@@ -71,6 +74,5 @@ public class Door implements Serializable{
     public String toString() {
         return "Porta ";
     }
-
 
 }

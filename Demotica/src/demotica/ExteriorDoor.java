@@ -1,3 +1,6 @@
+/**
+ * SubClasse da Classes Door
+ */
 package demotica;
 
 import java.io.Serializable;

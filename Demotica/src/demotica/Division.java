@@ -447,9 +447,7 @@ public class Division implements Serializable{
     }
     
     
-    public void onComponentSegurança(){
-        //home.onAlertMoviment();
-        
+    public void onComponentSegurança(){      
         for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
         
@@ -489,7 +487,6 @@ public class Division implements Serializable{
     }
     
         public boolean onMovimentSensorAlarm(){
-            long timestamp= System.currentTimeMillis();
             for (Sensor sm :sensors.values()){
                 if(sm instanceof Moviment)
                     if(((Moviment)sm).isDetection()==true)
