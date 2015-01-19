@@ -1,11 +1,13 @@
 package demotica;
 
+import java.io.Serializable;
+
 
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 
-public class Door {
+public class Door implements Serializable{
 
     private int id;
     private boolean status;
