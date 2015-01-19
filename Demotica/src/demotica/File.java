@@ -18,18 +18,26 @@ import javax.swing.JOptionPane;
 
 public class File{
     
+    /**
+     * 
+     * @return o Object home
+     */
     public static Home loadHome() {       
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("home2.dat"));
-            Home cAluno = (Home) ois.readObject();
+            Home home = (Home) ois.readObject();
             ois.close();
-            return cAluno;
+            return home;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
         return null;
     }
     
+    /**
+     * 
+     * @param home - grava o object home
+     */
     public static void saveHome(Object home){
         try{
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("home2.dat"));
@@ -41,6 +49,10 @@ public class File{
         }
     }
     
+    /**
+     * 
+     * @return um array de sensores
+     */
     public static String[] loadRSensores() {
         int i = 0;
         String[] aux = new String[loadRSensores2()];
@@ -67,6 +79,10 @@ public class File{
         }
     }
     
+    /**
+     * 
+     * @return quantas linhas escritas tem um ficheiro de texto
+     */
     public static int loadRSensores2() {
         int i = 0;
         try {
@@ -91,6 +107,10 @@ public class File{
         }
     }
 
+    /**
+     * 
+     * @param ag grava todas as alterações de cada sensor
+     */
     public static void saveRSensores(String[] ag){
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter("RSensores.txt",true));
