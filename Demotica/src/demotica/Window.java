@@ -2,6 +2,10 @@ package demotica;
 
 import java.io.Serializable;
 
+/**
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
+ */
+
 public class Window implements Serializable{
 
     private boolean status;

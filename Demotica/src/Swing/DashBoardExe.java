@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Swing;
 
 import demotica.Climate;
@@ -27,9 +22,9 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
- * @author HenrikM
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
+
 public class DashBoardExe extends javax.swing.JFrame {
 
     /**

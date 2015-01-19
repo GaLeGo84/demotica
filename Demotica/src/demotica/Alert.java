@@ -1,15 +1,12 @@
+/*
+ * Classe referente aos Alertas
+ */
 package demotica;
 
 import java.io.Serializable;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
- *
- * @author Rodolfo Melo, Henrique Melo, Xico
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 public abstract class Alert implements Serializable{
     
@@ -17,23 +14,44 @@ public abstract class Alert implements Serializable{
     private boolean status;
     private boolean detection;
 
+    
+    /**
+     *  status - Identifica o estado do alerta
+     *  detection - Identifica a deteção
+     */
     public Alert() {
         this.status = true;
         this.detection = false;
     }
 
+    /**
+     * 
+     * @return o estado do alerta
+     */
     public boolean isStatus() {
         return status;
     }
 
+    /**
+     * 
+     * @param status - Muda de estado
+     */
     public void setStatus(boolean status) {
         this.status = status;
     }
 
+    /**
+     * 
+     * @return a deteção
+     */
     public boolean isDetection() {
         return detection;
     }
 
+    /**
+     * 
+     * @param detection - substituir a deteção
+     */
     public void setDetection(boolean detection) {
         this.detection = detection;
     }

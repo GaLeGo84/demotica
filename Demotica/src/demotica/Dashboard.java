@@ -15,8 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
- * @author Rodolfo Melo, Henrique Melo, Xico
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 public class Dashboard implements Serializable{
  

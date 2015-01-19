@@ -3,9 +3,9 @@ package demotica;
 import java.io.Serializable;
 
 /**
- *
- * @author Home
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
+
 public class ExteriorDoor extends Door implements Serializable{
 
     public ExteriorDoor(int num) {

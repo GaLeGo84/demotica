@@ -3,9 +3,9 @@ package demotica;
 import java.io.Serializable;
 
 /**
- *
- * @author Rodolfo Melo, Henrique Melo, Xico
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
+
 public class SoundAlert extends Alert implements Serializable{
 
     public SoundAlert() {

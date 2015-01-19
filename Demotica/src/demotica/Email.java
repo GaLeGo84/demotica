@@ -54,7 +54,7 @@ public class Email {
                 new javax.mail.Authenticator() {
 
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("univent.uac", "univent1112");
+                        return new PasswordAuthentication("univent.uac", "uac14/15");
                     }
                 });
 

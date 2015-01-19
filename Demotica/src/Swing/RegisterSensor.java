@@ -1,20 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Swing;
 
 import demotica.Dashboard;
-import demotica.File;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import javax.swing.JTextArea;
 
 /**
- *
- * @author Rodolfo
+ * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
 public class RegisterSensor extends javax.swing.JFrame {
 
