@@ -202,15 +202,15 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton55 = new javax.swing.JButton();
         JHome = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        btnDivisions = new javax.swing.JButton();
+        btnClose = new javax.swing.JButton();
+        btnConfigurate = new javax.swing.JButton();
+        btnContact = new javax.swing.JButton();
+        btnConfigurateH = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         tblDivisions = new javax.swing.JTable();
-        jButton12 = new javax.swing.JButton();
-        jLabel24 = new javax.swing.JLabel();
+        btnAlarm = new javax.swing.JButton();
+        lblOff = new javax.swing.JLabel();
         JCreateHome = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         carregar1 = new javax.swing.JLabel();
@@ -224,13 +224,13 @@ public class DashBoardExe extends javax.swing.JFrame {
         carregar3 = new javax.swing.JLabel();
         carregar9 = new javax.swing.JLabel();
         JBegin = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblnteligente = new javax.swing.JLabel();
+        lblHabitação = new javax.swing.JLabel();
         load = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblApp = new javax.swing.JLabel();
         bar = new javax.swing.JProgressBar();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnCreateH = new javax.swing.JButton();
+        btnLoadH = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         JEditHome = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
@@ -243,8 +243,8 @@ public class DashBoardExe extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         btnBack1 = new javax.swing.JButton();
         JCreateDivision = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblDivision = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
         tfName = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         tfLights = new javax.swing.JTextField();
@@ -260,11 +260,11 @@ public class DashBoardExe extends javax.swing.JFrame {
         tfWindow = new javax.swing.JTextField();
         btnLimpar = new javax.swing.JButton();
         jContact = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
+        lblContact1 = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
         tfName1 = new javax.swing.JTextField();
-        comboFloor1 = new javax.swing.JComboBox();
-        jLabel79 = new javax.swing.JLabel();
+        cfContact = new javax.swing.JComboBox();
+        cbContact3 = new javax.swing.JLabel();
         jScrollPane13 = new javax.swing.JScrollPane();
         jTable9 = new javax.swing.JTable();
         btnVoltarDivisão1 = new javax.swing.JButton();
@@ -2155,43 +2155,43 @@ public class DashBoardExe extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Casa");
 
-        jButton5.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton5.setText("Adicionar Divisões");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnDivisions.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnDivisions.setText("Adicionar Divisões");
+        btnDivisions.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton5MouseReleased(evt);
+                btnDivisionsMouseReleased(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton6.setText("Sair");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnClose.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnClose.setText("Sair");
+        btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton6MouseReleased(evt);
+                btnCloseMouseReleased(evt);
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton9.setText("Configurar Divisão");
-        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfigurate.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnConfigurate.setText("Configurar Divisão");
+        btnConfigurate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton9MouseReleased(evt);
+                btnConfigurateMouseReleased(evt);
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton10.setText("Contatos");
-        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnContact.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnContact.setText("Contatos");
+        btnContact.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton10MouseReleased(evt);
+                btnContactMouseReleased(evt);
             }
         });
 
-        jButton11.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton11.setText("Configurar Casa");
-        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnConfigurateH.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnConfigurateH.setText("Configurar Casa");
+        btnConfigurateH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton11MouseReleased(evt);
+                btnConfigurateHMouseReleased(evt);
             }
         });
 
@@ -2232,18 +2232,18 @@ public class DashBoardExe extends javax.swing.JFrame {
             tblDivisions.getColumnModel().getColumn(7).setMaxWidth(85);
         }
 
-        jButton12.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
-        jButton12.setText("Alarme");
-        jButton12.setAutoscrolls(true);
-        jButton12.setEnabled(false);
-        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnAlarm.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        btnAlarm.setText("Alarme");
+        btnAlarm.setAutoscrolls(true);
+        btnAlarm.setEnabled(false);
+        btnAlarm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton12MouseReleased(evt);
+                btnAlarmMouseReleased(evt);
             }
         });
 
-        jLabel24.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
-        jLabel24.setText("Desligado");
+        lblOff.setFont(new java.awt.Font("Maiandra GD", 0, 18)); // NOI18N
+        lblOff.setText("Desligado");
 
         javax.swing.GroupLayout JHomeLayout = new javax.swing.GroupLayout(JHome);
         JHome.setLayout(JHomeLayout);
@@ -2257,24 +2257,24 @@ public class DashBoardExe extends javax.swing.JFrame {
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(JHomeLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton11)
+                                .addComponent(btnConfigurateH)
                                 .addGap(61, 61, 61)
-                                .addComponent(jButton5)
+                                .addComponent(btnDivisions)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JHomeLayout.createSequentialGroup()
                         .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(JHomeLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton10))
+                                .addComponent(btnContact))
                             .addGroup(JHomeLayout.createSequentialGroup()
-                                .addComponent(jButton12)
+                                .addComponent(btnAlarm)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24)
+                                .addComponent(lblOff)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton9)
+                                .addComponent(btnConfigurate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6)))
+                                .addComponent(btnClose)))
                         .addGap(22, 22, 22))))
             .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JHomeLayout.createSequentialGroup()
@@ -2289,15 +2289,15 @@ public class DashBoardExe extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnConfigurateH, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDivisions, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnContact, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(238, 238, 238)
                 .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConfigurate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAlarm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(JHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JHomeLayout.createSequentialGroup()
@@ -2450,17 +2450,17 @@ public class DashBoardExe extends javax.swing.JFrame {
         JBegin.setVerifyInputWhenFocusTarget(false);
         JBegin.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel1.setText("Inteligente");
-        JBegin.add(jLabel1);
-        jLabel1.setBounds(240, 140, 280, 70);
+        lblnteligente.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        lblnteligente.setForeground(new java.awt.Color(0, 0, 102));
+        lblnteligente.setText("Inteligente");
+        JBegin.add(lblnteligente);
+        lblnteligente.setBounds(240, 140, 280, 70);
 
-        jLabel2.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Habitação");
-        JBegin.add(jLabel2);
-        jLabel2.setBounds(160, 60, 250, 70);
+        lblHabitação.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        lblHabitação.setForeground(new java.awt.Color(0, 0, 102));
+        lblHabitação.setText("Habitação");
+        JBegin.add(lblHabitação);
+        lblHabitação.setBounds(160, 60, 250, 70);
 
         load.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
         load.setForeground(new java.awt.Color(255, 153, 0));
@@ -2468,36 +2468,36 @@ public class DashBoardExe extends javax.swing.JFrame {
         JBegin.add(load);
         load.setBounds(320, 270, 60, 18);
 
-        jLabel5.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel5.setText("app@masters: Rodolfo Melo; Henrique Melo; Francisco Simas;  ");
-        JBegin.add(jLabel5);
-        jLabel5.setBounds(330, 360, 350, 13);
+        lblApp.setFont(new java.awt.Font("Maiandra GD", 1, 10)); // NOI18N
+        lblApp.setForeground(new java.awt.Color(0, 0, 102));
+        lblApp.setText("app@masters: Rodolfo Melo; Henrique Melo; Francisco Simas;  ");
+        JBegin.add(lblApp);
+        lblApp.setBounds(330, 360, 350, 13);
 
         bar.setStringPainted(true);
         JBegin.add(bar);
         bar.setBounds(190, 290, 310, 20);
 
-        jButton2.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
-        jButton2.setText("Criar Habitação");
-        jButton2.setToolTipText("");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCreateH.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        btnCreateH.setText("Criar Habitação");
+        btnCreateH.setToolTipText("");
+        btnCreateH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton2MouseReleased(evt);
+                btnCreateHMouseReleased(evt);
             }
         });
-        JBegin.add(jButton2);
-        jButton2.setBounds(190, 320, 140, 30);
+        JBegin.add(btnCreateH);
+        btnCreateH.setBounds(190, 320, 140, 30);
 
-        jButton1.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
-        jButton1.setText("Carregar Habitação");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnLoadH.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        btnLoadH.setText("Carregar Habitação");
+        btnLoadH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton1MouseReleased(evt);
+                btnLoadHMouseReleased(evt);
             }
         });
-        JBegin.add(jButton1);
-        jButton1.setBounds(340, 320, 160, 30);
+        JBegin.add(btnLoadH);
+        btnLoadH.setBounds(340, 320, 160, 30);
         JBegin.add(jLabel3);
         jLabel3.setBounds(0, 0, 700, 400);
 
@@ -2635,12 +2635,12 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel7.setText("DIVISÕES");
+        lblDivision.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        lblDivision.setForeground(new java.awt.Color(0, 0, 102));
+        lblDivision.setText("DIVISÕES");
 
-        jLabel8.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel8.setText("Nome:");
+        lblName.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        lblName.setText("Nome:");
 
         jLabel11.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
         jLabel11.setText("Nº de luzes:");
@@ -2762,7 +2762,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addGap(10, 10, 10)
                                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
-                                        .addComponent(jLabel8)
+                                        .addComponent(lblName)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2780,7 +2780,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                                 .addComponent(comboFloor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                                 .addGap(206, 206, 206)
-                                .addComponent(jLabel7)))
+                                .addComponent(lblDivision)))
                         .addGap(0, 248, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -2788,7 +2788,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JCreateDivisionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(lblDivision)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
@@ -2798,7 +2798,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addGap(55, 55, 55))
                     .addGroup(JCreateDivisionLayout.createSequentialGroup()
                         .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(lblName)
                             .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(JCreateDivisionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2824,20 +2824,20 @@ public class DashBoardExe extends javax.swing.JFrame {
         jContact.setVisible(false);  jContact.setEnabled(false);
         jContact.setPreferredSize(new java.awt.Dimension(700, 410));
 
-        jLabel25.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel25.setText("Contatos");
+        lblContact1.setFont(new java.awt.Font("Maiandra GD", 1, 48)); // NOI18N
+        lblContact1.setForeground(new java.awt.Color(0, 0, 102));
+        lblContact1.setText("Contatos");
 
-        jLabel78.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel78.setText("Email");
+        lblEmail.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        lblEmail.setText("Email");
 
-        comboFloor1.setEditable(true);
-        comboFloor1.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        comboFloor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Policia", "Bombeiros", "Outros" }));
-        comboFloor1.setToolTipText("");
+        cfContact.setEditable(true);
+        cfContact.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        cfContact.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Policia", "Bombeiros", "Outros" }));
+        cfContact.setToolTipText("");
 
-        jLabel79.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
-        jLabel79.setText("Contact");
+        cbContact3.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        cbContact3.setText("Contact");
 
         jTable9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable9.setModel(new javax.swing.table.DefaultTableModel(
@@ -2927,34 +2927,34 @@ public class DashBoardExe extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jContactLayout.createSequentialGroup()
-                                .addComponent(jLabel78)
+                                .addComponent(lblEmail)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel79)
+                                .addComponent(cbContact3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(comboFloor1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cfContact, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jContactLayout.createSequentialGroup()
                                 .addComponent(addB1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(removeB1))))
                     .addGroup(jContactLayout.createSequentialGroup()
                         .addGap(233, 233, 233)
-                        .addComponent(jLabel25)))
+                        .addComponent(lblContact1)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jContactLayout.setVerticalGroup(
             jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jContactLayout.createSequentialGroup()
                 .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jLabel25)
+                .addComponent(lblContact1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel79)
-                        .addComponent(comboFloor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbContact3)
+                        .addComponent(cfContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel78)
+                        .addComponent(lblEmail)
                         .addComponent(tfName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jContactLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3058,8 +3058,8 @@ public class DashBoardExe extends javax.swing.JFrame {
 
     private void JHomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JHomeAncestorAdded
         tblDivisions.getSelectedRow();
-        jLabel24.setVisible(false);
-        Dashboard.verifyIfExteriorEntranceDoor(jButton12,jLabel24);
+        lblOff.setVisible(false);
+        Dashboard.verifyIfExteriorEntranceDoor(btnAlarm,lblOff);
     }//GEN-LAST:event_JHomeAncestorAdded
 
     private void jButton13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseReleased
@@ -3228,19 +3228,19 @@ public class DashBoardExe extends javax.swing.JFrame {
     }else{JOptionPane.showMessageDialog(null, "Não pode diminuir o valor de andares que tinha antriormente");}
     }//GEN-LAST:event_jButton19MouseReleased
 
-    private void jButton5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseReleased
+    private void btnDivisionsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDivisionsMouseReleased
         JHome.setVisible(false);
         JCreateDivision.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseReleased
+    }//GEN-LAST:event_btnDivisionsMouseReleased
 
-    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+    private void btnLoadHMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoadHMouseReleased
         load.setVisible(true);
         bar.setVisible(true);
         Dashboard.loadData();
         updateTlmDivisions();
-        jButton2.setEnabled(false);
+        btnCreateH.setEnabled(false);
         new Thread(new Timer()).start();
-    }//GEN-LAST:event_jButton1MouseReleased
+    }//GEN-LAST:event_btnLoadHMouseReleased
 
     private void addBMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBMouseReleased
         if(addB.isEnabled()==true)
@@ -3806,15 +3806,15 @@ public class DashBoardExe extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_jButton58MouseReleased
 
-    private void jButton12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseReleased
-        if(jButton12.isEnabled()==true){
-            if(jLabel24.getText().equals("Desligado")){
+    private void btnAlarmMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAlarmMouseReleased
+        if(btnAlarm.isEnabled()==true){
+            if(lblOff.getText().equals("Desligado")){
                 int n = JOptionPane.showConfirmDialog(null,
                 "Queres Ligar o Alarme?",
                 "Alarme",
                 JOptionPane.YES_NO_OPTION);
                 if(n==0){
-                    jLabel24.setText("Ligado");
+                    lblOff.setText("Ligado");
                     jButton28.setEnabled(false); jButton29.setEnabled(false);
                     jButton59.setEnabled(false); jButton60.setEnabled(false);
                     jComboBox2.setEnabled(false); jComboBox3.setEnabled(false);
@@ -3838,7 +3838,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 "Alarme",
                 JOptionPane.YES_NO_OPTION);
                 if(n==0){
-                    jLabel24.setText("Desligado");
+                    lblOff.setText("Desligado");
                     jButton28.setEnabled(true); jButton29.setEnabled(true);
                     jButton59.setEnabled(true); jButton60.setEnabled(true);
                     jComboBox2.setEnabled(true); jComboBox3.setEnabled(true);
@@ -3856,7 +3856,7 @@ public class DashBoardExe extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_jButton12MouseReleased
+    }//GEN-LAST:event_btnAlarmMouseReleased
 
     private void jButton59MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton59MouseReleased
     if(jButton59.isEnabled()==true){
@@ -3901,13 +3901,13 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable9AncestorAdded
 
     private void addB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addB1MouseReleased
-        Dashboard.getHome().addContact(new Contact(comboFloor1.getSelectedIndex(),tfName1.getText()));
+        Dashboard.getHome().addContact(new Contact(cfContact.getSelectedIndex(),tfName1.getText()));
         
         updateContacts();      
     }//GEN-LAST:event_addB1MouseReleased
 
     private void removeB1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeB1MouseReleased
-        int floor = comboFloor1.getSelectedIndex();
+        int floor = cfContact.getSelectedIndex();
         DefaultTableModel modelo = (DefaultTableModel) jTable9.getModel();     
         int n = Integer.parseInt(modelo.getValueAt(jTable9.getSelectedRow(), 0).toString());      
         Dashboard.getHome().remContact(n);
@@ -3919,24 +3919,24 @@ public class DashBoardExe extends javax.swing.JFrame {
         JHome.setVisible(true);
     }//GEN-LAST:event_btnVoltarDivisão1MouseReleased
 
-    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
-    if(jButton2.isEnabled()==true){
+    private void btnCreateHMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreateHMouseReleased
+    if(btnCreateH.isEnabled()==true){
         JBegin.setVisible(false);
         JCreateHome.setVisible(true);
     }
-    }//GEN-LAST:event_jButton2MouseReleased
+    }//GEN-LAST:event_btnCreateHMouseReleased
 
-    private void jButton11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseReleased
+    private void btnConfigurateHMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfigurateHMouseReleased
         JHome.setVisible(false);
         JEditHome.setVisible(true);
-    }//GEN-LAST:event_jButton11MouseReleased
+    }//GEN-LAST:event_btnConfigurateHMouseReleased
 
-    private void jButton10MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseReleased
+    private void btnContactMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContactMouseReleased
         JHome.setVisible(false);
         jContact.setVisible(true);
-    }//GEN-LAST:event_jButton10MouseReleased
+    }//GEN-LAST:event_btnContactMouseReleased
 
-    private void jButton9MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseReleased
+    private void btnConfigurateMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfigurateMouseReleased
        JHome.setVisible(false);
        JConfiguration.setVisible(true);
        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
@@ -3959,9 +3959,9 @@ public class DashBoardExe extends javax.swing.JFrame {
        jLabel61.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorWind()));
        jLabel64.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorGas()));
        jLabel67.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorSmoke()));
-    }//GEN-LAST:event_jButton9MouseReleased
+    }//GEN-LAST:event_btnConfigurateMouseReleased
 
-    private void jButton6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseReleased
+    private void btnCloseMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseReleased
         int n = JOptionPane.showConfirmDialog(JHome,
         "Tens a certeza que queres sair?",
         "Sair",
@@ -3970,7 +3970,7 @@ public class DashBoardExe extends javax.swing.JFrame {
             Dashboard.saveData();
             System.exit(0);
         }
-    }//GEN-LAST:event_jButton6MouseReleased
+    }//GEN-LAST:event_btnCloseMouseReleased
 
     private void btnBack1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBack1MouseReleased
         JEditHome.setVisible(false);
@@ -4366,8 +4366,16 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton addB1;
     private javax.swing.JProgressBar bar;
     private javax.swing.JButton btnAdLuz;
+    private javax.swing.JButton btnAlarm;
     private javax.swing.JButton btnBack1;
+    private javax.swing.JButton btnClose;
+    private javax.swing.JButton btnConfigurate;
+    private javax.swing.JButton btnConfigurateH;
+    private javax.swing.JButton btnContact;
+    private javax.swing.JButton btnCreateH;
+    private javax.swing.JButton btnDivisions;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnLoadH;
     private javax.swing.JButton btnRemLuz;
     private javax.swing.JButton btnVoltarDivisão;
     private javax.swing.JButton btnVoltarDivisão1;
@@ -4380,12 +4388,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel carregar6;
     private javax.swing.JLabel carregar7;
     private javax.swing.JLabel carregar9;
+    private javax.swing.JLabel cbContact3;
+    private javax.swing.JComboBox cfContact;
     private javax.swing.JComboBox comboFloor;
-    private javax.swing.JComboBox comboFloor1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
@@ -4393,7 +4398,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -4420,7 +4424,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton49;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton50;
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
@@ -4431,19 +4434,16 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JButton jButton57;
     private javax.swing.JButton jButton58;
     private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton60;
     private javax.swing.JButton jButton61;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
     private javax.swing.JPanel jContact;
     private javax.swing.JButton jDesligarLight;
     private javax.swing.JDialog jDialog1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -4451,11 +4451,8 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -4480,7 +4477,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -4497,7 +4493,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -4506,9 +4501,6 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton jLigarLight;
@@ -4556,15 +4548,23 @@ public class DashBoardExe extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lblApp;
+    private javax.swing.JLabel lblContact1;
+    private javax.swing.JLabel lblDivision;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblHabitação;
     private javax.swing.JLabel lblJanelas;
     private javax.swing.JLabel lblLuzes;
     private javax.swing.JLabel lblLuzes2;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblOff;
     private javax.swing.JLabel lblPortas1;
     private javax.swing.JLabel lblPortas2;
     private javax.swing.JLabel lblPortas3;
     private javax.swing.JLabel lblSensors;
     private javax.swing.JLabel lblTempMax;
     private javax.swing.JLabel lblTempMin;
+    private javax.swing.JLabel lblnteligente;
     private javax.swing.JLabel load;
     private javax.swing.JButton removeB;
     private javax.swing.JButton removeB1;

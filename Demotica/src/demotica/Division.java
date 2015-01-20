@@ -1,3 +1,6 @@
+/**
+ * Classe que identifica cada divisão da casa
+ */
 package demotica;
 
 import java.io.Serializable;
@@ -20,6 +23,12 @@ public class Division implements Serializable{
     private Map<Integer,Window> windows;
     private List<Door> doors;
 
+    /**
+     * 
+     * @param name - identifica o nome da divisão
+     * @param floor - identifica qual o andar dentro da casa
+     * @param climate - identifica o sistema de climatização
+     */
     public Division(String name, int floor, Climate climate){
         this.floor = floor;
         this.name = name;
@@ -30,30 +39,58 @@ public class Division implements Serializable{
         doors = new LinkedList<Door>();
     }
 
+    /**
+     * 
+     * @return o andar da divisão
+     */
     public int getFloor() {
         return floor;
     }
 
+    /**
+     * 
+     * @return os dados do sistema de climatização
+     */
     public Climate getClimate() {
         return climate;
     }
     
+    /**
+     * 
+     * @return o Map das Luzes 
+     */
     public Map<Integer,Light> getLights() {
         return lights;
     }
 
+    /**
+     * 
+     * @return o Map dos sensores 
+     */
     public Map<Integer,Sensor> getSensors() {
         return sensors;
     }
     
+    /**
+     * 
+     * @return o nome da divisão 
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * 
+     * @param floor substitui por outro andar 
+     */
     public void setFloor(int floor) {
         this.floor = floor;
     }
 
+    /**
+     * 
+     * @param name substitui o nome da divisão
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -62,10 +99,19 @@ public class Division implements Serializable{
         return windows;
     }
 
+    /**
+     * 
+     * @return uma lista de portas
+     */
     public List<Door> getDoors() {
         return doors;
     }
     
+    /**
+     * Adiciona o sensor ao Map do Sensor
+     * 
+     * @param sen - identifica o sensor
+     */
     public void addSensor(Sensor sen){
         int n=1;
         while(n<=sensors.size()){
@@ -79,7 +125,12 @@ public class Division implements Serializable{
         if(sensors.size()<n)
             sensors.put(sensors.size()+1,sen);
     }
-      
+    
+    /**
+     * Adiciona as luzes ao Map da Luz
+     * 
+     * @param l - identifica as luzes
+     */
     public void addLight(Light l){
         int n=1;
         while(n<=lights.size()){
@@ -94,6 +145,11 @@ public class Division implements Serializable{
             lights.put(lights.size()+1,l);
     }
     
+    /**
+     * Adiciona a Janela ao Map da Janela
+     * 
+     * @param w - identifica a janela
+     */
     public void addWindow(Window w){
         int n=1;
         while(n<=windows.size()){
@@ -108,55 +164,97 @@ public class Division implements Serializable{
             windows.put(windows.size()+1,w);          
     }
     
+    /**
+     * Remove a Luz do Map da Luz
+     * 
+     * @param key - identifica a chave da Luz
+     */
     public void remLight(int key){            
         lights.remove(key);
     }
     
+    /**
+     * Remove a Luz do Map da Janela
+     * 
+     * @param key - identifica a chave da Janela
+     */
     public void remWindow(int key){          
         windows.remove(key);
     }
     
+    /**
+     * Remove a Luz da Lista da Porta
+     * 
+     * @param key - identifica o id da porta
+     */
     public void remDoor(Door id){
          doors.remove(id);
     }
     
+    /**
+     * Remove a Luz do Map do Sensor
+     * 
+     * @param key - identifica a chave da Sensor
+     */
     public void remSensor(int key){
         sensors.remove(key);
     }
     
+    /**
+     * Adiciona a Porta à Lista
+     * 
+     * @param dor identifica o objeto porta
+     */
     public void addDoor(Door dor){   
         doors.add(dor); 
     }
     
+    /**
+     * 
+     * @return o numero de sensores que tem o map dos sensores
+     */
     public int nSensors(){
         return sensors.size();
     }
     
-    
-    
-    //Lista de sensores de Temperatura
+    /**
+     * Lista de sensores de Temperatura
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorTemperature(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof Temperature)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Temperature)s.getValue()).getValue()});
    }
     
-    //DefaultTableModel de sensores de movimento
+    /**
+     * Lista de sensores de movimento
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorMoviment(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof Moviment)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Moviment)s.getValue()).getInterval(),((Moviment)s.getValue()).isDetection()});
    }
     
-    //Lista de sensores de NaturaLight
+    /**
+     * Lista de sensores de Luz Natural
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorNaturaLight(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof NaturaLight)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((NaturaLight)s.getValue()).getValue()});
    }
 
-    
-    //Lista de portas exteriores de Entrada
+    /**
+     * Lista de Porta de Entrada
+     * 
+     * @return uma lista de Porta de Entrada
+     */
     public LinkedList<ExteriorEntranceDoor> listExteriorEntranceDoor(){
        LinkedList<ExteriorEntranceDoor> aux=new LinkedList<>();
        for (Door doo:doors){
@@ -166,7 +264,11 @@ public class Division implements Serializable{
        return aux;
    }
     
-     //Lista de portas exteriores de Standard
+    /**
+     * Lista de Portas Exteriores de Standard
+     * 
+     * @return uma lista de portas exteriores de Standard
+     */
     public LinkedList<ExteriorDoorStandard> listExteriorStandardDoor(){
        LinkedList<ExteriorDoorStandard> aux=new LinkedList<>();
        for (Door doo:doors){
@@ -176,47 +278,83 @@ public class Division implements Serializable{
        return aux;
    }
     
-    //Lista de sensores de vento
+    /**
+     * Lista de sensores de Vento
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorWind(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof Wind)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Wind)s.getValue()).getIntensity()});
    }
     
-    //Lista de sensores de gas
+    /**
+     * Lista de sensores de gas
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorGas(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof Gas)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Gas)s.getValue()).isDetection()});
    }
     
-    //Lista de sensores de Smoke
+    /**
+     * Lista de sensores de Smoke
+     * 
+     * @param Obj identifica  objecto DefaultTableModel
+     */
     public void listSensorSmoke(DefaultTableModel Obj){
        for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
            if(s.getValue() instanceof Smoke)
                Obj.addRow(new Object[]{s.getKey(),s.getValue().isStatus(),((Smoke)s.getValue()).isDetection()});
    }
     
+    /**
+     * 
+     * @return  total de portas
+     */
     public int nDoors(){
         return getDoors().size();
     }
     
+    /**
+     * 
+     * @return total de janela 
+     */
     public int nWindows(){
         return getWindows().size();
     }
     
+    /**
+     * 
+     * @return total de Luzes
+     */
     public int nLights(){
         return getLights().size();
     }
     
+    /**
+     * 
+     * @return total de Portas de entrada
+     */
     public int nDoorsEntranceExterior(){
         return listExteriorEntranceDoor().size();
     }
     
+    /**
+     * 
+     * @return total de portas Exteriores Standard
+     */
     public int nDoorsExteriorStandard(){
         return listExteriorStandardDoor().size();
     }
     
+    /**
+     * 
+     * @return total de sensores de movimento
+     */
     public int nSensorMoviment(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -226,6 +364,10 @@ public class Division implements Serializable{
         return n;
     }
     
+    /**
+     * 
+     * @return total de sensores de Luz Natural
+     */
     public int nSensorNaturaLight(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -235,6 +377,10 @@ public class Division implements Serializable{
         return n;
     }
     
+    /**
+     * 
+     * @return total de sensores de Temperatura
+     */
     public int nSensorTemperature(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -244,6 +390,10 @@ public class Division implements Serializable{
         return n;
     }
     
+    /**
+     * 
+     * @return total de sensores de Vento
+     */
     public int nSensorWind(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -253,6 +403,10 @@ public class Division implements Serializable{
         return n;
     }
     
+    /**
+     * 
+     * @return total de sensores de Gás
+     */
     public int nSensorGas(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -262,6 +416,10 @@ public class Division implements Serializable{
         return n;
     }
     
+    /**
+     * 
+     * @return total de sensores de Fumo
+     */
     public int nSensorSmoke(){
         int n=0;
         for(Sensor s:sensors.values())
@@ -271,7 +429,10 @@ public class Division implements Serializable{
         return n;
     }
     
-    //média da luz natural da sala
+    /**
+     * 
+     * @return média da luz natural da Divisão
+     */
     public float mediaNaturaLight(){
         int media=0, soma=0, cont=0;
         for (Sensor snl :sensors.values()){
@@ -284,7 +445,10 @@ public class Division implements Serializable{
         return media= soma/cont;
     }
     
-    //temperatura média
+    /**
+     * 
+     * @return média da Temperatura da Divisão
+     */
     public double mediaTemperature(){
         int soma=0, cont=0;
         double media=0;
