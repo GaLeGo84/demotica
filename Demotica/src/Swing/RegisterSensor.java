@@ -144,7 +144,7 @@ public class RegisterSensor extends javax.swing.JFrame {
         public void run() {
             try{
             while (true) {  
-                Dashboard.load(jTextArea1);
+                Dashboard.loadRegisterSensor(jTextArea1);
 
             Thread.sleep(1000); 
             }
