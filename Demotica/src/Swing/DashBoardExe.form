@@ -2968,6 +2968,7 @@
               <Font name="Maiandra GD" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Configurar Divis&#xe3;o"/>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnConfigurateMouseReleased"/>
@@ -3067,6 +3068,9 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblDivisionsMouseReleased"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="DashBoardExe_tblDivisions1"/>
               </AuxValues>

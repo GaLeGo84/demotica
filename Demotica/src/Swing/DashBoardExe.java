@@ -2173,6 +2173,7 @@ public class DashBoardExe extends javax.swing.JFrame {
 
         btnConfigurate.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
         btnConfigurate.setText("Configurar Divisão");
+        btnConfigurate.setEnabled(false);
         btnConfigurate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btnConfigurateMouseReleased(evt);
@@ -2204,6 +2205,11 @@ public class DashBoardExe extends javax.swing.JFrame {
             }
         ));
         tblDivisions.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tblDivisions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                tblDivisionsMouseReleased(evt);
+            }
+        });
         jScrollPane6.setViewportView(tblDivisions);
         if (tblDivisions.getColumnModel().getColumnCount() > 0) {
             tblDivisions.getColumnModel().getColumn(0).setMinWidth(30);
@@ -3937,7 +3943,8 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_btnContactMouseReleased
 
     private void btnConfigurateMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfigurateMouseReleased
-       JHome.setVisible(false);
+    if(btnConfigurate.isEnabled()==true){
+        JHome.setVisible(false);
        JConfiguration.setVisible(true);
        DefaultTableModel modelo = (DefaultTableModel) tblDivisions.getModel();
        int n = Integer.parseInt(modelo.getValueAt(tblDivisions.getSelectedRow(), 0).toString());
@@ -3959,6 +3966,7 @@ public class DashBoardExe extends javax.swing.JFrame {
        jLabel61.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorWind()));
        jLabel64.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorGas()));
        jLabel67.setText(String.valueOf(Dashboard.getHome().getDivisions().get(n).nSensorSmoke()));
+    }
     }//GEN-LAST:event_btnConfigurateMouseReleased
 
     private void btnCloseMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseReleased
@@ -4116,6 +4124,10 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable8MouseReleased
         jButton49.setEnabled(true);
     }//GEN-LAST:event_jTable8MouseReleased
+
+    private void tblDivisionsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDivisionsMouseReleased
+        btnConfigurate.setEnabled(true);
+    }//GEN-LAST:event_tblDivisionsMouseReleased
 
     /**
      * @param args the command line arguments
