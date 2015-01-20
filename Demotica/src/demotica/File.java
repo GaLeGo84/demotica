@@ -27,7 +27,7 @@ public class File{
      */
     public static Home loadHome() {       
         try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("home2.dat"));
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("home.dat"));
             Home home = (Home) ois.readObject();
             ois.close();
             return home;
@@ -43,7 +43,7 @@ public class File{
      */
     public static void saveHome(Object home){
         try{
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("home2.dat"));
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("home.dat"));
             oos.writeObject(home);
             oos.close();
         }

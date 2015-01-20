@@ -24,6 +24,7 @@ public class Division implements Serializable{
     private List<Door> doors;
 
     /**
+     * Criação da Divisão
      * 
      * @param name - identifica o nome da divisão
      * @param floor - identifica qual o andar dentro da casa
