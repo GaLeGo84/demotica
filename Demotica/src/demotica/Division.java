@@ -494,12 +494,5 @@ public class Division implements Serializable{
 
             return false;
         }
-    
-    public void allDivision(){
-        System.out.println("Sensores: "+getSensors()+"\n"
-                + "Climate: "+getClimate()+"\n"
-                + "Lights: "+getLights()+"\n"
-                + "Doors: "+getDoors()+"\n"
-                + "Windows: "+getWindows());
-    }
+
 }
