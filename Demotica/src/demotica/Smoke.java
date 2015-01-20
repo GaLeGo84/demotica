@@ -38,7 +38,7 @@ public class Smoke extends Sensor implements Serializable{
 
     /**
      * 
-     * @return uma String "Sensor de Fumo{Deteção= <valor>}"
+     * @return uma String "Sensor de Fumo{Deteção= "valor"}"
      */
     @Override
     public String toString() {

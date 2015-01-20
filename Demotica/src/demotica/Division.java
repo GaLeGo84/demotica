@@ -185,7 +185,7 @@ public class Division implements Serializable{
     /**
      * Remove a Luz da Lista da Porta
      * 
-     * @param key - identifica o id da porta
+     * @param id Remove a Luz da Lista da Porta
      */
     public void remDoor(Door id){
          doors.remove(id);
@@ -466,7 +466,11 @@ public class Division implements Serializable{
         return media;
     }   
     
-    //Ativar o Sensor de movimento para quando houver um movimento ligar a luz da divisão
+    /**
+     * Ativar o Sensor de movimento, quando houver um movimento liga as luzes da divisão
+     * 
+     * @param SNumber identifica a key do sensor do Map
+     */
     public void onMovimentSensor(int SNumber){
         long timestamp= System.currentTimeMillis();
         for(Map.Entry<Integer,Sensor> s:getSensors().entrySet())
@@ -487,8 +491,11 @@ public class Division implements Serializable{
                 }
     }
    
-    
-    //Ligar as luzes da divisão quando a média da luz natural for menor do ke o valor minimo
+    /**
+     * Ligar as luzes da divisão quando a média da luz natural for menor do ke o valor minimo
+     * 
+     * @return true ou false
+     */
     public boolean onLight(){
         if(mediaNaturaLight()<Dashboard.getHome().getValueNL())
             return true;
@@ -496,7 +503,9 @@ public class Division implements Serializable{
             return false;            
     }
     
-    //Desligar as luzes sem que haja movimento
+    /**
+     * Desligar as luzes sem que haja movimento
+     */
     public void offMovimentSensor(){
         int i=0;
         long timestamp= System.currentTimeMillis();
@@ -517,8 +526,12 @@ public class Division implements Serializable{
                     l.getValue().setStatus(false);
     }
 
-    
-    //mudar a intensidade da luz
+    /**
+     * Método que muda a itensidade da luz numa luz
+     * 
+     * @param l - identifica o objeto da Luz
+     * @param value - identifica a intensidade da luz
+     */
     public void changeLightIntensity(Light l, int value){
         for (Map.Entry<Integer, Light> li:lights.entrySet()){
             if(li.getValue().getIntensity()==l.getIntensity())
@@ -526,7 +539,9 @@ public class Division implements Serializable{
         }        
     }
     
-    //Se não execer o maximo pretendido, se tiver todas as portas abertas fecham e liga o arcondicionado
+    /**
+     * Se não execer o maximo pretendido, se tiver todas as portas abertas fecham e liga o arcondicionado
+     */
     public void exceedTemperature(){        
         if(mediaTemperature()>climate.getMAXVALUE()){
             if(windows.size()==verifyAllWindows()){
@@ -545,6 +560,11 @@ public class Division implements Serializable{
         }
     }
     
+    /**
+     * Verifica quantas janelas estão abertas
+     * 
+     * @return total de janelas aberta
+     */
     public int verifyAllWindows(){
         int count=0;
         for(Map.Entry<Integer,Window> w:windows.entrySet()){
@@ -555,13 +575,19 @@ public class Division implements Serializable{
         return count;
     }
     
+    /**
+     * Verifica se a temperatura atual é menor que a temperatura minima estabelecida
+     * e fecha e tranca todas as janelas e liga o ar condicionado
+     */
     public void lowerTemperature(){
          if(mediaTemperature()<climate.getMINVALUE()){
             lockWithAirconWindows();
          }
     }
     
-    //Fechar as janelas por causa do ar condicionado
+    /**
+     * Fecha e tranca todas as janelas por causa do ar condicionado
+     */
     public void lockWithAirconWindows(){
         for (Window w:windows.values()){
             w.setStatus(false);
@@ -571,8 +597,9 @@ public class Division implements Serializable{
         }
     }
     
-    
-    //Abrir as janelas
+    /**
+     *  Abre todas as Janelas
+     */
     public void openWindows(){
         for (Window w:windows.values())
             if(w.isStatus()== false)
@@ -580,6 +607,9 @@ public class Division implements Serializable{
     }
     
     //Fechar as portas
+    /**
+     *  Fecha e tranca totdas as portas
+     */
     public void lockDoors(){
         for (Door doo:doors){
             doo.setStatus(false);
@@ -587,7 +617,7 @@ public class Division implements Serializable{
         }
     }
     
-    //Ferchar todas as Janelas
+    //Fercha e tranca todas as Janelas
     public void lockWindows(){
         for (Window w:windows.values()){
             w.setStatus(false);
@@ -595,7 +625,9 @@ public class Division implements Serializable{
        }
     }
     
-        //Fechar as portas
+    /**
+     * Fechar todas as portas exteriores
+     */
     public void lockDoorsExterior(){
             for(Door d:doors)
             if(d instanceof ExteriorDoor)
@@ -603,14 +635,20 @@ public class Division implements Serializable{
                     d.setStatus(false);
     }
     
-    //Abrir as portas
+    /**
+     * Abrir todas as portas
+     */
     public void openDoors(){
         for (Door doo:doors)
             if(doo.isStatus()==false)
                 doo.setStatus(true);
     }
     
-    
+    /**
+     * Método que liga a componente de segurança e que fechar e tranca todas
+     * as janelas e portas, fecha os sensores de temperatura, Luz Natural e
+     * de Vento
+     */
     public void onComponentSegurança(){      
         for(ExteriorEntranceDoor doo:listExteriorEntranceDoor())
             doo.activeSecurity();
@@ -631,6 +669,11 @@ public class Division implements Serializable{
 
     }
     
+    /**
+     * Verifica se for detetado uma fuga de gas dentro de casa
+     * 
+     * @return o estado do sensor de Gás
+     */
     public boolean verifyOnSensorGas(){
         for (Sensor s : sensors.values())
           if(s instanceof Gas)
@@ -640,6 +683,11 @@ public class Division implements Serializable{
         return false;                
     }
     
+     /**
+     * Verifica se for detetado fumo dentro de casa
+     * 
+     * @return o estado do sensor de Fumo
+     */
     public boolean verifyOnSensorSmoke(){
         for (Sensor s : sensors.values())
            if(s instanceof Smoke)
@@ -649,14 +697,19 @@ public class Division implements Serializable{
         return false;                
     }
     
-        public boolean onMovimentSensorAlarm(){
-            for (Sensor sm :sensors.values()){
-                if(sm instanceof Moviment)
-                    if(((Moviment)sm).isDetection()==true)
-                        return true;                    
-            }
-
-            return false;
+    /**
+     * Estado do Sensor de Movimento
+     * 
+     * @return o estado do sensor de movimento
+     */
+     public boolean onMovimentSensorAlarm(){
+        for (Sensor sm :sensors.values()){
+            if(sm instanceof Moviment)
+                if(((Moviment)sm).isDetection()==true)
+                    return true;                    
         }
+
+        return false;
+    }
 
 }

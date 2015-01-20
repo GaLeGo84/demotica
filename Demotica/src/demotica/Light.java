@@ -57,7 +57,7 @@ public class Light implements Serializable{
     
     /**
      * 
-     * @return uma String com "Light{Intensidade= <valor>, Estado= <valor>}"
+     * @return uma String com "Light{Intensidade= "valor", Estado= "valor"}"
      */
     @Override
     public String toString() {

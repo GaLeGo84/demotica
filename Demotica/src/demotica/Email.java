@@ -27,7 +27,7 @@ public class Email {
      * @param emailMsgTxt corpo da mensagem
      * @param emailSubjectTxt assunto da mensagem
      * @param sendTo email do destinatário
-     * @throws Exception 
+     * @throws Exception é uma exeção
      */
     public static void sendMail(String emailMsgTxt, String emailSubjectTxt, String sendTo) throws Exception {
 

@@ -38,7 +38,7 @@ public class NaturaLight extends Sensor implements Serializable{
 
     /**
      * 
-     * @return uma String "Luz Natural{Valor= <valor>}" 
+     * @return uma String "Luz Natural{Valor= "valor"}" 
      */
     @Override
     public String toString() {

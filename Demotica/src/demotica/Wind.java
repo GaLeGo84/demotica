@@ -38,7 +38,7 @@ public class Wind extends Sensor implements Serializable{
 
     /**
      * 
-     * @return uma String "Vento{Intensidade= <value> }"
+     * @return uma String "Vento{Intensidade= "valor"}"
      */
     @Override
     public String toString() {

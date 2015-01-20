@@ -38,7 +38,7 @@ public class Gas extends Sensor implements Serializable{
 
     /**
      * 
-     * @return uma String com Gás{Deteção= <Valor> }
+     * @return uma String com Gás{Deteção= "Valor" }
      */
     @Override
     public String toString() {

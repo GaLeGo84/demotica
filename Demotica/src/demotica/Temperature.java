@@ -38,7 +38,7 @@ public class Temperature extends Sensor implements Serializable{
 
     /**
      * 
-     * @return uma String "Sensor Temperatura{Valor= <value> }"
+     * @return uma String "Sensor Temperatura{Valor= "valor" }"
      */
     @Override
     public String toString() {
