@@ -1,3 +1,6 @@
+/**
+ * Classe que interaje com o utilizador
+ */
 package demotica;
 
 import java.io.Serializable;
@@ -23,10 +26,18 @@ public class Dashboard implements Serializable{
     static Home home;    
     static File file;
 
+    /**
+     * 
+     * @return o objeto Home
+     */
     public static Home getHome() {
         return home;
     }
     
+    /**
+     * 
+     * @param n - identifica o numero de vezes que vai criar uma janela
+     */
     public static void countNumberWindows(int n){
         int nDivisions = home.getDivisions().size();
         int i=0;
@@ -36,6 +47,10 @@ public class Dashboard implements Serializable{
         }
     }
     
+     /**
+     * 
+     * @param n - identifica o numero de vezes que vai criar uma Lus
+     */
     public static void countNumberLights(int n){
         int nDivisions = home.getDivisions().size();
         int i=0;
@@ -43,24 +58,39 @@ public class Dashboard implements Serializable{
             home.getDivisions().get(nDivisions).addLight(new Light());
             i++;
         }
-    }    
-
-    public static void setHome(Home home) {
-        Dashboard.home = home;
     }
     
+    /**
+     * Carrega os dados do Object Home
+     */
     public static void loadData(){
         home = file.loadHome();
     }
     
+    /**
+     * Guarda os dados do Objeto Home e os seus subordinados
+     */
     public static void saveData(){
         file.saveHome(home);
     }
     
+    /**
+     * Cria uma casa
+     * 
+     * @param nFloors - identifica no n de andares
+     * @param valueNL - identifica o valor da Luz Natural
+     * @param valueW - identifica o valor da itensidade do vento
+     */
     public static void criarHome(int nFloors, int valueNL, int valueW){
         home = new Home(nFloors, valueNL, valueW);
     }
     
+    /**
+     * Verifica se existe uma porta de entrada
+     * 
+     * @param b - identifica um botão
+     * @param j - identifica uma Label
+     */
     public static void verifyIfExteriorEntranceDoor(JButton b, JLabel j){
         for(Division div:home.getDivisions().values())
             if(div.listExteriorEntranceDoor().size()!=0){
@@ -69,7 +99,13 @@ public class Dashboard implements Serializable{
             }
     }
     
-    public static void alarm(JButton j, JLabel jl){
+    /**
+     * É uma janela que tem como opção ligar ou deligar alarme
+     * 
+     * @param j - identifica um botão
+     * @param jl - identifica uma Label
+     */
+    public static void paneAlarm(JButton j, JLabel jl){
         if(j.isEnabled()==true){
             int n = JOptionPane.showConfirmDialog(null,
             "Queres Ligar o Alarme?",
@@ -83,28 +119,43 @@ public class Dashboard implements Serializable{
         }
     }
     
+    /**
+     * Ativa os sensores de movimento
+     * 
+     * @return o estado da deteção do sensor do movimento 
+     */
     public static boolean ativeSensorMoviment(){
-        boolean status=false;
+        boolean detected=false;
         for(Division div:home.getDivisions().values())
             for(Sensor s:div.getSensors().values())
                 if(s instanceof Moviment)
                     if(((Moviment)s).isDetection()==true)
-                        status=true;
+                        detected=true;
         
-        return status;
+        return detected;
     }
     
+    /**
+     * Método que verifica se alguém forçou abrir ou abriu as portas exteriores
+     * 
+     * @return o estado da porta exterior
+     */
     public static boolean movimentExteriorDoorOnHome(){
         boolean status=false;
         for(Division div:home.getDivisions().values())
             for(Door d:div.getDoors())
                 if(d instanceof ExteriorDoor)
-                    if(((ExteriorDoor)d).isStatus()==true || ((ExteriorDoor)d).isLock()==false)
+                    if(((ExteriorDoor)d).isStatus()==true && (((ExteriorDoor)d).isLock()==false || ((ExteriorDoor)d).isLock()==false))
                         status=true;
         
         return status;
     }
     
+    /**
+     * Método que verifica se alguém forçou abrir ou abriu as janelas
+     * 
+     * @return o estado da Janela
+     */
     public static boolean movimentWindowsOnHome(){
         boolean status=false;
         for(Division div:home.getDivisions().values())
@@ -115,13 +166,11 @@ public class Dashboard implements Serializable{
         return status;
     }
     
-    public static void ativeIntruderAlert(){
-        for(IntruderAlert lia:home.listIntruderAlert()){
-            lia.setDetection(true);
-            //lia.getEmail(); //Fazer a função de enviar email
-        }    
-    }
-    
+    /**
+     * Verifica se a componente de segurança está ligado
+     * 
+     * @return o estado da componente de segurança
+     */
     public static boolean verifySecurity(){
         boolean status=false;
         for(Division div:home.getDivisions().values())
@@ -132,15 +181,20 @@ public class Dashboard implements Serializable{
         return status;
     }
     
+    /**
+     * Método que aciona o Alarme e Fecha as Portas exteriores e as Janelas
+     */
     public static void acionarAlarmeAndCloseDoorsWindows(){
         if(verifySecurity()==true)
-            if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){
-                ativeIntruderAlert();            
+            if(ativeSensorMoviment()==true || movimentExteriorDoorOnHome()==true || movimentWindowsOnHome()==true){         
                 sendEmailPolice();
                 JOptionPane.showMessageDialog(null, "Entrada de Intruso");
             }
     }
     
+    /**
+     * Método que envia um Email à policia
+     */
     public static void sendEmailPolice(){
         for(Map.Entry<Integer,Contact> c:Dashboard.getHome().getContacts().entrySet())
             if(c.getValue().getType()==0){
@@ -152,6 +206,9 @@ public class Dashboard implements Serializable{
             }    
     }
     
+    /**
+     * Método que envia um Email aos Bombeiros
+     */
     public static void sendEmailBombeiros(){
         for(Map.Entry<Integer,Contact> c:Dashboard.getHome().getContacts().entrySet())
             if(c.getValue().getType()==1){
@@ -163,6 +220,11 @@ public class Dashboard implements Serializable{
             }    
     }
     
+    /**
+     * Método que verifica se o estado da deteção de gas ligou
+     * 
+     * @return o estado da deteção de gas
+     */
     public static boolean existOnSensorGas(){
         boolean status=false;
         for (Division div:home.getDivisions().values())
@@ -174,6 +236,11 @@ public class Dashboard implements Serializable{
         return status;
     }
     
+    /**
+     * Método que verifica se o estado da deteção de fumo ligou
+     * 
+     * @return o estado da deteção de fumo
+     */
     public static boolean existOnSensorSmoke(){
         boolean status=false;
         for (Division div:home.getDivisions().values())
@@ -185,22 +252,22 @@ public class Dashboard implements Serializable{
         return status;
     }
     
-    public static void ativeSoundAlert(){
-        for(SoundAlert lia:home.listSoundAlert()){
-            lia.setDetection(true);
-            //lia.getEmail(); //Fazer a função de enviar email
-        }    
-    }
-    
+    /**
+     * Método que aciona o Alarme sonoro quando é detetado uma fuga de gas ou de incêndio
+     */
     public static void acionarAlarmeGasSmoke(){
-            for (Division div:home.getDivisions().values())
-                if(existOnSensorGas()==true || existOnSensorSmoke()==true){
-                    ativeSoundAlert();
-                    Dashboard.sendEmailBombeiros();
-                    JOptionPane.showMessageDialog(null, "Alerta Sonoro");
-                }
+        for (Division div:home.getDivisions().values())
+            if(existOnSensorGas()==true || existOnSensorSmoke()==true){
+                Dashboard.sendEmailBombeiros();
+                JOptionPane.showMessageDialog(null, "Alerta Sonoro");
+            }
     }
     
+    /**
+     * Método que pôes todas as portas interiores numa JComboBox
+     * 
+     * @param j - identifica uma ComboBox
+     */
     public static void allDoors(JComboBox j){
         for (Division div:home.getDivisions().values())
             for(Door d:div.getDoors())
@@ -209,6 +276,11 @@ public class Dashboard implements Serializable{
         
     }
     
+    /**
+     * Exceção caso o TextField não for do tipo inteiro
+     * 
+     * @param str - Identifica uma TextField
+     */
     public static void toInteger(JTextField str){
         try{
             Integer.parseInt(str.getText());
@@ -219,6 +291,14 @@ public class Dashboard implements Serializable{
         
     }
     
+    /**
+     * Método que regista os dados do sensor de movimento no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorMoviment(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -228,6 +308,14 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
+    /**
+     * Método que regista os dados do sensor de Luz Natural no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorNaturaLight(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -237,6 +325,14 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
+    /**
+     * Método que regista os dados do sensor de Temperatura no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorTemperature(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -246,6 +342,14 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
+    /**
+     * Método que regista os dados do sensor de Vento no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorWind(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -255,6 +359,14 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
+    /**
+     * Método que regista os dados do sensor de Gas no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorGas(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -264,6 +376,14 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
+    /**
+     * Método que regista os dados do sensor de Fumo no ficheiro txt 
+     * 
+     * @param div -identifica a divisão
+     * @param n - identifica o key da divisão
+     * @param modelo1 - identifica DefaultTableModel
+     * @param jTable3 - identifica JTable
+     */
     public static void registoSensorSmoke(int div,int n,DefaultTableModel modelo1,JTable jTable3){
         Date date = new Date(); 
         DateFormat formato = new SimpleDateFormat("HH:mm:ss");
@@ -273,15 +393,18 @@ public class Dashboard implements Serializable{
         File.saveRSensores(a);
     }
     
-    public static void load(JTextArea a){
+    /**
+     * Carrrega os registos dos sensores que estão num ficheiro txt
+     * 
+     * @param a - Identifica a TextArea 
+     */
+    public static void loadRegisterSensor(JTextArea a){
         a.setText(null);
         String[] loads= File.loadRSensores(); 
         for(String l:loads){
             a.append(l.toString());
             a.append("\n");
         }
-         
     }
-    
     
 }

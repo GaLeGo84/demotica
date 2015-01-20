@@ -3763,7 +3763,7 @@ public class DashBoardExe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton58MouseReleased
 
     private void jButton12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseReleased
-        Dashboard.alarm(jButton12,jLabel24);
+        Dashboard.paneAlarm(jButton12,jLabel24);
     }//GEN-LAST:event_jButton12MouseReleased
 
     private void jButton59MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton59MouseReleased
