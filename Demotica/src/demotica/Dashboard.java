@@ -236,7 +236,6 @@ public class Dashboard implements Serializable{
      * Método que aciona o Alarme sonoro quando é detetado uma fuga de gas ou de incêndio
      */
     public static void acionarAlarmeGasSmoke(){
-        for (Division div:home.getDivisions().values())
             if(existOnSensorGas()==true || existOnSensorSmoke()==true){
                 Dashboard.sendEmailBombeiros();
                 JOptionPane.showMessageDialog(null, "Alerta Sonoro");

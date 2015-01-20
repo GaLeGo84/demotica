@@ -1,1 +1,8 @@
-﻿
+﻿14:38:35 - Sensor de Fumo{Deteção=true};
+14:38:54 - Sensor de Fumo{Deteção=false};
+14:41:08 - Sensor de Fumo{Deteção=true};
+14:41:24 - Sensor de Fumo{Deteção=false};
+14:41:35 - Sensor Gás{Deteção=true};
+14:41:51 - Sensor Gás{Deteção=false};
+14:42:12 - Sensor Movimento{time=1421768532518, interval=2, detection=true};
+14:42:23 - Sensor Movimento{time=1421768534568, interval=2, detection=false};
