@@ -6,3 +6,12 @@
 14:41:51 - Sensor Gás{Deteção=false};
 14:42:12 - Sensor Movimento{time=1421768532518, interval=2, detection=true};
 14:42:23 - Sensor Movimento{time=1421768534568, interval=2, detection=false};
+22:48:25 - Sensor Luz Natural{Valor=2};
+22:49:01 - Sensor Movimento{time=1421797741329, interval=2, detection=true};
+22:49:38 - Sensor Luz Natural{Valor=2};
+22:50:06 - Sensor Movimento{time=1421797806649, interval=5, detection=true};
+22:51:30 - Sensor Temperatura{Valor=2};
+22:51:36 - Sensor Luz Natural{Valor=2};
+22:51:58 - Sensor Movimento{time=1421797918415, interval=5, detection=true};
+22:52:34 - Sensor Luz Natural{Valor=2};
+22:52:49 - Sensor Movimento{time=1421797969619, interval=12, detection=true};

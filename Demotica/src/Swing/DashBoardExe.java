@@ -3502,6 +3502,9 @@ public class DashBoardExe extends javax.swing.JFrame {
     private void jTable4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseReleased
         DefaultTableModel modelo1 = (DefaultTableModel) jTable4.getModel();
         tfid7.setText(modelo1.getValueAt(jTable4.getSelectedRow(), 2).toString());
+        tfid7.setEnabled(true);
+        jButton20.setEnabled(true);
+        jButton52.setEnabled(true);
     }//GEN-LAST:event_jTable4MouseReleased
 
     private void jButton20MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseReleased
