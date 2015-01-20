@@ -100,26 +100,6 @@ public class Dashboard implements Serializable{
     }
     
     /**
-     * É uma janela que tem como opção ligar ou deligar alarme
-     * 
-     * @param j - identifica um botão
-     * @param jl - identifica uma Label
-     */
-    public static void paneAlarm(JButton j, JLabel jl){
-        if(j.isEnabled()==true){
-            int n = JOptionPane.showConfirmDialog(null,
-            "Queres Ligar o Alarme?",
-            "Alarme",
-            JOptionPane.YES_NO_OPTION);
-            if(n==0){
-                jl.setText("Ligado");
-                for(Division div:home.getDivisions().values())
-                    div.onComponentSegurança();
-            }
-        }
-    }
-    
-    /**
      * Ativa os sensores de movimento
      * 
      * @return o estado da deteção do sensor do movimento 

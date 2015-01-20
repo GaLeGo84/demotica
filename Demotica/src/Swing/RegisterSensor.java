@@ -143,20 +143,15 @@ public class RegisterSensor extends javax.swing.JFrame {
         @Override
         public void run() {
             try{
-            while (true) {  
-                Dashboard.loadRegisterSensor(jTextArea1);
+                while (true) {  
+                    Dashboard.loadRegisterSensor(jTextArea1);
 
-            Thread.sleep(1000); 
-            }
-        }catch (InterruptedException e) {}
+                Thread.sleep(1000); 
+                }
+            }catch (InterruptedException e) {}
             
-        }
-        
+        }  
     }
-    
-    
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog jDialog1;
     private javax.swing.JScrollPane jScrollPane1;

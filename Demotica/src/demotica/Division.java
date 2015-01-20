@@ -464,8 +464,7 @@ public class Division implements Serializable{
          for (Sensor s:sensors.values())
             if(s instanceof Wind)
                 s.setStatus(false);
-        
-        //home.alerTryOpenwindowsDoors();
+
     }
     
     public boolean verifyOnSensorGas(){
