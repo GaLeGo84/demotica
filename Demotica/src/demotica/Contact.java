@@ -3,10 +3,12 @@
  */
 package demotica;
 
+import java.io.Serializable;
+
 /**
  * @author Rodolfo Melo, Henrique Melo, Frrancisco Simas
  */
-public class Contact {
+public class Contact implements Serializable{
 
     private int type;
     private String email;
